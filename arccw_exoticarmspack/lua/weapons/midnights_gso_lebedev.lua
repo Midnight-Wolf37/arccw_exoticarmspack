@@ -66,8 +66,8 @@ SWEP.ShootPitch = 100 -- pitch of shoot sound
 
 SWEP.FirstShootSound = "weapons/arccw/eap/lebby/shot-unsil.wav"
 SWEP.ShootSound = "weapons/arccw/eap/lebby/shot-unsil.wav"
-SWEP.ShootSoundSilenced = "weapons/arccw/m16/fire_sup.wav"
-SWEP.DistantShootSound = "arccw_go/sg556/sg556-1-distant.wav"
+SWEP.ShootSoundSilenced = "weapons/arccw/m16/fire_sup.wav" --change this sound
+SWEP.DistantShootSound = "arccw_go/sg556/sg556-1-distant.wav" --and this
 
 SWEP.MeleeSwingSound = "weapons/arccw/eap/lebby/draw.wav"
 SWEP.MeleeMissSound = "weapons/iceaxe/iceaxe_swing1.wav"
@@ -99,7 +99,7 @@ SWEP.HoldtypeHolstered = "passive"
 SWEP.HoldtypeActive = "pistol"
 SWEP.HoldtypeSights = "revolver"
 
-SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
+SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2 --gotta change this shit to pistol
 
 SWEP.ActivePos = Vector(0, 0, 0)
 SWEP.ActiveAng = Angle(0, 0, 0)
@@ -147,7 +147,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Tactical",
-        Slot = {"tac", "foregrip"},
+        Slot = {"tac", "foregrip"}, --probs gonna make this foregrip_lp only but w/e
         Bone = "body",
         Offset = {
             vpos = Vector(0, -0.401, 4.505),
@@ -168,7 +168,7 @@ SWEP.Attachments = {
         PrintName = "Magazine",
         Slot = "lebby_mag",
         DefaultAttName = "14-Round standard mag",
-		DefaultAttIcon = Material("entities/acwatt_go_m4_mag_10_50.png", "mips smooth")
+		DefaultAttIcon = Material("entities/acwatt_go_m4_mag_10_50.png", "mips smooth") --needs better icon
     },
     {
         PrintName = "Stock",
@@ -403,7 +403,7 @@ SWEP.Animations = {
 		LHIKIn = 0.5,
 		LHIKOut = 0.2,
 	},
-	["reload_rare_empty_extend"] = {
+	["reload_rare_empty_extend"] = { -- fix some of the spacing all along this section ig
 		Source = "reload_rare_empty_rushed",
 		TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
 		SoundTable = {
