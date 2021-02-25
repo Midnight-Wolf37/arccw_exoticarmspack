@@ -12,7 +12,7 @@ Currently Implemented:
 
 Weapons:
 
-> PL-15 Lebedev
+- PL-15 Lebedev
 
 Attachments:
 
