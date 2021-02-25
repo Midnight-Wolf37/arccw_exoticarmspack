@@ -1,0 +1,25 @@
+Vertexlitgeneric
+{
+"$basetexture"                "models\weapons\arccw\eap\atts\VP70/vp70"
+"$bumpmap"                    "models\weapons\arccw\eap\atts\VP70/vp70_normal"
+
+"$envmap" 					  "env_cubemap"
+"$envmapfresnel"			  "1"
+"$envmapfresnelminmaxexp"	  "[0 5 .5]"
+"$envmaptint" 				  "[ 0.08 0.08 0.2 ]"	
+
+"$halflambert"                "1"
+
+"$normalmapalphaenvmapmask"   "1"
+"$normalmapalphaphongmask"	  "1"
+
+"$phong" 					  "1"
+"$phongboost" 				  "2"
+"$phongexponenttexture"       "models\weapons\arccw\eap\atts\VP70/vp70_exponent"
+"$phongfresnelranges" 		  "[0.1 0.05 0.40]"
+
+"$rimlight" 				  "1"
+"$rimlightexponent" 		  "63"	
+"$rimlightboost"			  "0.6"
+"$rimmask" 					  "1"
+}
