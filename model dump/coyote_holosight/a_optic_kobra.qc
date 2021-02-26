@@ -1,6 +1,6 @@
 // Created by Crowbar 0.71
 
-$modelname "models/weapons/arccw/eap/atts/eap_optic_coyote.mdl"
+$modelname "weapons/arccw/eap/atts/eap_optic_coyote.mdl"
 
 $bodygroup "main"
 {
@@ -29,12 +29,9 @@ $hboxset "default"
 
 $attachment "holosight" "holosight" 0 0 0 rotate 0 0 0
 
-$definebone "A_Optic" "" 0.000000 0.000000 0.000000 0.000000 89.999985 -89.999985 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000
-$definebone "KOBRA_S" "A_Optic" 0.000000 0.000000 0.000000 -0.000057 -179.999969 -90.000038 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
-$definebone "A_RenderReticle" "KOBRA_S" 0.000001 -1.723137 0.966823 -0.000000 -89.999931 90.000038 0.000000 0.000000 0.000000 -0.000000 0.000000 -0.000000
-$definebone "root" "" 0.000000 -0.001697 0.000902 -0.000057 -0.000115 -0.000057 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000
-$definebone "holosight" "root" -0.000000 -1.056786 0.975329 0.000000 -89.999931 90.000038 0.000000 0.000000 0.000000 0.000000 -0.000000 -0.000000
- 
+$definebone "holosight" "" 0.000000 -1.587723 1.375704 -0.000000 -90.000000 89.999985 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000
+$definebone "root" "" 0.000000 0.000000 0.000000 -0.000000 90.000000 -89.999985 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000
+
 $collisionmodel "coyote.smd"
 {
     $mass 10
@@ -47,10 +44,7 @@ $collisionmodel "coyote.smd"
 
 
 $sequence "idle" {
-	"anims\idle.smd"
-	activity "ACT_VM_IDLE" 1
-	fadein 0.2
-	fadeout 0.2
+	"coyote_hsp.smd"
 	fps 30
 	loop
 }
