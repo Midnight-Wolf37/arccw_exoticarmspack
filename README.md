@@ -5,7 +5,7 @@ Take on the world and turn heads of gun enthusiasts with Exotic Arms.
 
 
 
-Version 0.0.1 Beta
+Version 0.0.2 Beta
 
 
 Currently Implemented:
@@ -16,28 +16,35 @@ Weapons:
 
 Attachments:
 
+- Coyote Sight 
 - Flex Seal Slugs
 - Mercenary Style
 - Anti-Air Shell
 - VP70 Stock
 
 Work in progress:
+
 Weapons:
+
 - SITES Spectre M4
 - Sturmgewehr 44
 - AEK-971
 - VP70
 - Howa Type 64 
 - Magpul FMG-9
+- Jianshe CS/LS5
+
 Attachments:
+
 - FBI Load
 - Sci-Fi holosight
 - Grab bag
 - Dragon's Fang
 
 Planned:
+
 Weapons:
-- Jianshe CS/LS5
+
 - Calico M950
 - OTs-14 Groza
 - HK XM29 OICW
