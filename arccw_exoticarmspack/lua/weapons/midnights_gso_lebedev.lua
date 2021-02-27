@@ -206,7 +206,6 @@ SWEP.Attachments = {
 
 SWEP.Hook_SelectReloadAnimation = function(wep, anim)
 	
-	local whentheimpostersus = math.random(1, 100)
 	
 	if wep.Attachments[4].Installed == "lebby_mag_extend" then
 		if anim == "reload" then
@@ -219,18 +218,6 @@ SWEP.Hook_SelectReloadAnimation = function(wep, anim)
 	if wep.Attachments[7].Installed == "perk_fastreload" then
 		if anim == "reload_empty" then
 			return "reload_empty_rushed"
-		end
-	end
-	
-	if whentheimpostersus  <= 7 then
-		if anim == "reload" or anim == "reload_empty" then
-			return "reload_rare"
-		elseif anim == "reload_extend" then
-			return "reload_rare_extend"
-		elseif anim == "reload_empty_rushed" then
-			return "reload_rare_empty"
-		elseif anim == "reload_empty_extend_rushed" then
-			return "reload_rare_empty_extend"
 		end
 	end
 	
@@ -267,6 +254,7 @@ SWEP.Animations = {
     },
     ["reload"] = {
         Source = "reload",
+		RareSource = "reload_rare",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         Checkpoints = {16, 30},
         FrameRate = 30,
@@ -276,6 +264,7 @@ SWEP.Animations = {
     },
     ["reload_empty"] = {
         Source = "reload_empty",
+		RareSource = "reload_rare",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         FrameRate = 30,
         LHIK = true,
@@ -284,6 +273,7 @@ SWEP.Animations = {
     },
 	["reload_empty_rushed"] = {
         Source = "reload_empty_rushed",
+		RareSource = "reload_rare_empty_rushed",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         FrameRate = 30,
         LHIK = true,
@@ -292,6 +282,7 @@ SWEP.Animations = {
 	},
     ["reload_extend"] = {
         Source = "reload_extend",
+		RareSource = "reload_rare",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         Checkpoints = {16, 30},
         FrameRate = 30,
@@ -301,6 +292,7 @@ SWEP.Animations = {
     },
     ["reload_empty_extend"] = {
         Source = "reload_empty",
+		RareSource = "reload_rare",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         FrameRate = 60,
         LHIK = true,
@@ -309,127 +301,12 @@ SWEP.Animations = {
     },
 	["reload_empty_extend_rushed"] = {
         Source = "reload_empty_extend_rushed",
+		RareSource = "reload_rare_empty_rushed",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         FrameRate = 60,
         LHIK = true,
         LHIKIn = 0.7,
         LHIKOut = 0.2,
-	},
-	["reload_rare"] = {
-		Source = "reload_rare",
-		TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-		SoundTable = {
-			{
-				t = 30/60,
-				ind = 0,
-				bg = 1
-			},
-			{
-				t = 30/60,
-				ind = 1,
-				bg = 2
-			},
-			{
-				t = 125/60,
-				ind = 0,
-				bg = 0
-			},
-			{
-				t = 125/60,
-				ind = 1,
-				bg = 0
-			},
-		},
-		LHIK = true,
-		LHIKIn = 0.5,
-		LHIKOut = 0.2,
-	},
-	["reload_rare_extend"] = {
-		Source = "reload_rare",
-		TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-		SoundTable = {
-			{
-				t = 30/60,
-				ind = 0,
-				bg = 1
-			},
-			{
-				t = 30/60,
-				ind = 1,
-				bg = 2
-			},
-			{
-				t = 125/60,
-				ind = 0,
-				bg = 0
-			},
-			{
-				t = 125/60,
-				ind = 1,
-				bg = 1
-			},
-		},
-		LHIK = true,
-		LHIKIn = 0.5,
-		LHIKOut = 0.2,
-	},
-	["reload_rare_empty"] = {
-		Source = "reload_rare_empty_rushed",
-		TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-		SoundTable = {
-			{
-				t = 39/60,
-				ind = 0,
-				bg = 1
-			},
-			{
-				t = 39/60,
-				ind = 1,
-				bg = 2
-			},
-			{
-				t = 140/60,
-				ind = 0,
-				bg = 0
-			},
-			{
-				t = 140/60,
-				ind = 1,
-				bg = 0
-			},
-		},
-		LHIK = true,
-		LHIKIn = 0.5,
-		LHIKOut = 0.2,
-	},
-	["reload_rare_empty_extend"] = {
-		Source = "reload_rare_empty_rushed",
-		TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-		SoundTable = {
-			{
-				t = 39/60,
-				ind = 0,
-				bg = 1
-			},
-			{
-				t = 39/60,
-				ind = 1,
-				bg = 2
-			},
-			{
-				t = 140/60,
-				ind = 0,
-				bg = 0
-			},
-			{
-				t = 140/60,
-				ind = 1,
-				bg = 0
-			},
-		},
-		LHIK = true,
-		LHIKIn = 0.5,
-		LHIKOut = 0.2,
 	},
     ["enter_inspect"] = false,
     ["idle_inspect"] = false,
