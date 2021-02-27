@@ -117,7 +117,7 @@ SWEP.BarrelLength = 24
 
 SWEP.AttachmentElements = {
     ["lebby_mag_extend"] = {
-		VMbodygroups = {{ind = 1, bg = 1}}
+		VMBodygroups = {{ind = 1, bg = 1}}
 	},
 }
 
