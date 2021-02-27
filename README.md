@@ -53,3 +53,4 @@ Weapons:
 - Daewoo USAS-12
 - Franchi SPAS-12 & PA-8
 - Chiappa Triple Threat
+- Winchester Liberator
