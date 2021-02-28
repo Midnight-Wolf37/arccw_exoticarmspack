@@ -91,7 +91,7 @@ SWEP.SightedSpeedMult = 0.7
 SWEP.SightTime = 0.235
 
 SWEP.IronSightStruct = {
-    Pos = Vector(-4.961, 0, -0.48),
+    Pos = Vector(-4.66, -1.781, 0.4),
 	Ang = Angle(0, 0, 0),
     Magnification = 1.1,
     SwitchToSound = "", -- sound that plays when switching to this sight
@@ -136,16 +136,14 @@ SWEP.AttachmentElements = {
 				Model = "models/weapons/arccw_go/atts/stock_buftube.mdl",
 				Bone = "main",
 				Offset = {
-					pos = Vector(0.001, -1.8, 23),
+					pos = Vector(0, -1.839, -2.741),
 					ang = Angle(90, 0 , -90),
 				},
-				Scale = Vector(1, 1, 1),
-				IsMuzzleDevice = true
+				Scale = Vector(1, 1, 1)
 			}
         }
 	},
     ["handguard_sd"] = {
-		NameChange = "Colt M231 FPW",
         VMBodygroups = {
 			{ind = 3, bg = 2}
         },
@@ -196,7 +194,7 @@ SWEP.Attachments = {
         Bone = "main",
         DefaultAttName = "ironsights",
         Offset = {
-            vpos = Vector(0.06, -3.25, 2),
+            vpos = Vector(0, -3.766, 1.187),
             vang = Angle(90, 0, -90),
         },
         VMScale = Vector(1, 1, 1),
@@ -208,7 +206,7 @@ SWEP.Attachments = {
         Slot = "foregrip",
         Bone = "main",
         Offset = {
-            vpos = Vector(0.238, -0.659, 9.711),
+            vpos = Vector(0, -0.987, 10.715),
             vang = Angle(90, 0, -90),
         },
     },
@@ -217,7 +215,7 @@ SWEP.Attachments = {
         Slot = "tac",
         Bone = "main",
         Offset = {
-            vpos = Vector(-1.173, -1.852, 10.909),
+            vpos = Vector(-0.95, -2, 11.484),
             vang = Angle(90, 0, 180),
         },
     },
@@ -231,7 +229,7 @@ SWEP.Attachments = {
         Slot = "muzzle",
         Bone = "main",
         Offset = {
-            vpos = Vector(0.001, -1.8, 20.995),
+            vpos = Vector(0, -2.129, 12.576),
             vang = Angle(90, 0, -90),
         },
         WMScale = Vector(0.7, 0.7, 0.7),
@@ -247,7 +245,7 @@ SWEP.Attachments = {
         Slot = {"ls5_stock", "go_stock", "go_stock_none"},
 		Bone = "main",
 		Offset = {
-            vpos = Vector(0, -1.8, 0),
+            vpos = Vector(0, -1.839, -2.741),
             vang = Angle(90, 0, -90),
         },
         DefaultAttName = "unfolded Stock",
@@ -268,7 +266,7 @@ SWEP.Attachments = {
         FreeSlot = true,
         Bone = "main", -- relevant bone any attachments will be mostly referring to
         Offset = {
-            vpos = Vector(0.5, -0.5, 1), -- offset that the attachment will be relative to the bone
+            vpos = Vector(0.629, -2.36, 2.328), -- offset that the attachment will be relative to the bone
             vang = Angle(90, 0, -90),
         },
     }
