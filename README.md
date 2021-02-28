@@ -5,7 +5,7 @@ Take on the world and turn heads of gun enthusiasts with Exotic Arms.
 
 
 
-Version 0.0.2 Beta
+Version 0.0.3 Beta
 
 
 Currently Implemented:
@@ -13,6 +13,7 @@ Currently Implemented:
 Weapons:
 
 - PL-15 Lebedev
+- Jianshe CS/LS5
 
 Attachments:
 
@@ -32,7 +33,6 @@ Weapons:
 - VP70
 - Howa Type 64 
 - Magpul FMG-9
-- Jianshe CS/LS5
 
 Attachments:
 
