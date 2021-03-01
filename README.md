@@ -27,19 +27,19 @@ Work in progress:
 
 Weapons:
 
-- SITES Spectre M4
-- Sturmgewehr 44
+- SITES Spectre M4 (75%)
+- HK VP70 (48%)
+- Howa Type 64 (
 - AEK-971
-- VP70
-- Howa Type 64 
-- Magpul FMG-9
+- Sturmgewehr 44
+- Magpul FMG-9 (10%)
 
 Attachments:
 
-- FBI Load
 - Sci-Fi holosight
 - Grab bag
 - Dragon's Fang
+- Metrodrip, Boomermobile, & Donut charms
 
 Planned:
 
