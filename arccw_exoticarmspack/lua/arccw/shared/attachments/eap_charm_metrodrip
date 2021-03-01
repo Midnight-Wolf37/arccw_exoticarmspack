@@ -1,0 +1,12 @@
+att.PrintName = "Metrodrip"
+att.Icon = nil
+att.Description = "How about you pick up some bitches."
+att.Slot = "charm"
+
+att.Charm = true
+att.CharmBone = "Charm"
+att.CharmModel = "weapons\arccw\eap\atts\eap_charm_metrodrip.mdl"
+att.CharmOffset = Vector(0, 0, 0)
+att.CharmScale = Vector(1, 1, 1)
+att.CharmSkin = 0
+att.CharmBodygroups = ""
