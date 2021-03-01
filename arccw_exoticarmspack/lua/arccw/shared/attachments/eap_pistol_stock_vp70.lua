@@ -1,5 +1,5 @@
 att.PrintName = "VP70 Pistol Stock"
-att.Icon = Material("entities/acwatt_go_stock_pistol_bt.png", "mips smooth")
+att.Icon = Material("entities/pistol_stock_vp70.png", "mips smooth")
 att.Description = "Thumbhole stock from the VP70 machine pistol that adds a 3-round burst and drastically increases fire rate."
 att.Desc_Pros = {
 }
@@ -28,4 +28,5 @@ att.Mult_Recoil = 0.85
 att.Mult_MoveDispersion = 0.85
 att.Mult_MoveSpeed = 0.95
 att.Mult_DrawSpeed = 1.5
+
 
