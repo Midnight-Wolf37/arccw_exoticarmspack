@@ -1,0 +1,31 @@
+att.PrintName = "Pink Frosted Sprinkle Donut"
+att.Icon = nil
+att.Description = ""
+att.Desc_Pros = { "5% buff to all stats." }
+att.Desc_Cons = { "I lied. It doesn't buff *all* stats." }
+att.Slot = "charm"
+
+att.Mult_Damage = 1.05
+att.Mult_DamageMin = 1.05
+att.Mult_Range = 1.05
+att.Mult_Penetration = 1.05
+
+att.Mult_HeatCapacity = 1.05
+att.Mult_FixTime = 0.95
+att.Mult_HeatDissipation = 1.05
+att.Mult_HeatDelayTime = 0.95
+
+att.Mult_RPM = 1.05
+
+att.Mult_HipDispersion = 0.95
+
+att.Mult_Recoil = 1.05
+att.Mult_RecoilSide = 1.05
+att.Mult_VisualRecoilMult = 1.05
+
+att.Mult_ReloadTime = 0.95
+att.Mult_DrawTime = 0.95
+att.Mult_SightTime = 0.95
+att.Mult_CycleTime = 0.95
+
+att.AttachSound = "shutup.wav"
