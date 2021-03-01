@@ -1,6 +1,6 @@
 SWEP.Base = "arccw_base"
 SWEP.Spawnable = true -- this obviously has to be set to true
-SWEP.Category = "ArcCW - Midnight's Arsenal" -- edit this if you like
+SWEP.Category = "ArcCW - Exotic Arms" -- edit this if you like
 SWEP.AdminOnly = false
 
 SWEP.PrintName = "CS/LS5"
@@ -38,7 +38,7 @@ SWEP.PhysBulletMuzzleVelocity = 900
 
 SWEP.Recoil = 0.4
 SWEP.RecoilSide = 0.275
-SWEP.RecoilRise = 0.2
+SWEP.RecoilRise = 0.3
 
 SWEP.Delay = 60 / 800 -- 60 / RPM.
 SWEP.Num = 1 -- number of shots per trigger pull.
@@ -54,17 +54,17 @@ SWEP.Firemodes = {
     }
 }
 
-SWEP.NPCWeaponType = "weapon_ar2"
+SWEP.NPCWeaponType = "weapon_smg"
 SWEP.NPCWeight = 100
 
 SWEP.AccuracyMOA = 5 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
 SWEP.HipDispersion = 275 -- inaccuracy added by hip firing.
 SWEP.MoveDispersion = 200
 
-SWEP.Primary.Ammo = "smg1" -- what ammo type the gun uses
+SWEP.Primary.Ammo = "pistol" -- what ammo type the gun uses
 SWEP.MagID = "stanag" -- the magazine pool this gun draws from
 
-SWEP.ShootVol = 100 -- volume of shoot sound
+SWEP.ShootVol = 120 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
 
 SWEP.FirstShootSound = "weapons/arccw/eap/csls5/fire.wav"
@@ -123,7 +123,7 @@ SWEP.AttachmentElements = {
 	["go_stock_none"] = {
 		VMBodygroups = {{ind = 4, bg = 3}}
 	},
-	["eap_stock_fold"] = {
+	["eap_stock_folded"] = {
 		VMBodygroups = {{ind = 4, bg = 1}}
 	},
 	["ls5_stock_wood"] = {
@@ -152,7 +152,7 @@ SWEP.AttachmentElements = {
 				Model = "models/props_junk/PopCan01a.mdl",
 				Bone = "main",
 				Offset = {
-					pos = Vector(0.001, -1.8, 23),
+					pos = Vector(0, -2.129, 13.576),
 					ang = Angle(90, 0 , -90),
 				},
 				Scale = Vector(0, 0, 0),
@@ -161,7 +161,7 @@ SWEP.AttachmentElements = {
         },
 		AttPosMods = {
             [5] = {
-                vpos = Vector(0.001, -1.8, 23),
+				vpos = Vector(0, -0.987, 9.715)
             }
         }
     },
@@ -172,7 +172,8 @@ SWEP.AttachmentElements = {
         VMBodygroups = {{ind = 1, bg = 1}}
     },
 	["eap_mag_drum_9mm"] = {
-        VMBodygroups = {{ind = 1, bg = 2}}
+        VMBodygroups = {{ind = 1, bg = 2}},
+		Mult_ReloadTime = 1.1
     }
 }
 
@@ -237,19 +238,18 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Magazine",
-        Slot = { "ls5_mag", "eap_9mm_drum" },
-        DefaultAttName = "30-Round 5.56mm STANAG Mag"
+        Slot = { "ls5_mag", "eap_mag_9mm_drum" },
+        DefaultAttName = "30-Round 9mm Parabellum"
     },
     {
         PrintName = "Stock",
-        Slot = {"ls5_stock", "go_stock", "go_stock_none"},
+        Slot = {"ls5_stock", "eap_folded_stock", "go_stock", "go_stock_none"},
 		Bone = "main",
 		Offset = {
             vpos = Vector(0, -1.839, -2.741),
             vang = Angle(90, 0, -90),
         },
-        DefaultAttName = "unfolded Stock",
-		DefaultAttIcon = Material("entities/m16_stock_default.png", "mips smooth")
+        DefaultAttName = "Unfolded Stock"
     },
     {
         PrintName = "Ammo Type",
@@ -275,12 +275,9 @@ SWEP.Attachments = {
 
 SWEP.Hook_SelectReloadAnimation = function(wep, anim)
 
-	if wep.Attachments[6].Installed == "eap_mag_drum_9mm" then
-		if anim == "reload_empty" then
-			return "reload_drum_empty"
-		elseif anim == "reload" then
-			return "reload_drum"
-		end
+  local ret = anim
+  if wep.Attachments[6].Installed == "eap_mag_drum_9mm" then ret = ret .. "_drum" end
+  if ret ~= anim then return ret end
 end
 	
 SWEP.Animations = {
@@ -289,7 +286,7 @@ SWEP.Animations = {
 		Time = 2
     },
     ["draw"] = {
-        Source = "draw"
+        Source = "draw",
     },
     ["ready"] = {
         Source = "deploy",
@@ -322,7 +319,7 @@ SWEP.Animations = {
         LHIKIn = 1/30,
         LHIKOut = 0.2,
     },
-	["reload_drum_empty"] = {
+	["reload_empty_drum"] = {
         Source = "reload_drum_empty",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         FrameRate = 60,
@@ -338,10 +335,8 @@ SWEP.Animations = {
         LHIKIn = 0.7,
         LHIKOut = 0.2,
 	},
-    ["enter_inspect"] = false
-	},
-    ["idle_inspect"] = false
-	},
-    ["exit_inspect"] = false
-	}
+    ["enter_inspect"] = false,
+    ["idle_inspect"] = false,
+    ["exit_inspect"] = false,
 }
+
