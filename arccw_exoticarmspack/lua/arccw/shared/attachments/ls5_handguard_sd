@@ -1,5 +1,5 @@
 att.PrintName = "INT-SD Handguard"
-att.Icon = Material("entities/acwatt_muzz_mp5sd.png")
+att.Icon = Material("entities/ls5_hg_sd.png")
 att.Description = "Integrated suppressor that offers better handling than a standalone suppressor."
 att.Desc_Pros = {
 }
