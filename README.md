@@ -3,7 +3,9 @@ A collection of little-known and rarely-seen guns from across the world, each wi
 
 Take on the world and turn heads of gun enthusiasts with Exotic Arms.
 
+Requires Arctic's Customizeable Weapons (ArcCW) base and the Gunsmith Offensive (GSO) to work properly.
 
+Current Version:
 
 Version 0.0.3 Beta
 
