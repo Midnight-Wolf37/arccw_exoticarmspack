@@ -1,5 +1,5 @@
 att.PrintName = "Wooden Handguard"
-att.Icon = Material("entities/arccw_mifl_fas2_mp5_hg_fg.png", "mips smooth")
+att.Icon = Material("entities/ls5_hg_wood.png", "mips smooth")
 att.Description = "A sturdy and comfy lower handguard derived from AK furniture to help control."
 att.SortOrder = 0
 att.Desc_Pros = {
