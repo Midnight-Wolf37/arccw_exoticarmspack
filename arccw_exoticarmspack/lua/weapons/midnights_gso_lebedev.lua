@@ -1,6 +1,6 @@
 SWEP.Base = "arccw_base"
 SWEP.Spawnable = true -- this obviously has to be set to true
-SWEP.Category = "ArcCW - Midnight's Arsenal" -- edit this if you like
+SWEP.Category = "ArcCW - Exotic Arms" -- edit this if you like
 SWEP.AdminOnly = false
 
 SWEP.PrintName = "PL-15 Lebedev"
@@ -125,7 +125,7 @@ SWEP.ExtraSightDist = 10
 SWEP.GuaranteeLaser = true
 
 SWEP.WorldModelOffset = {
-    pos = Vector(-9, 6, -3.5),
+    pos = Vector(-9, -5, -3.5),
     ang = Angle(-10, 0, 180),
 	scale = 1.1
 }
@@ -139,7 +139,7 @@ SWEP.Attachments = {
         Bone = "slide",
         DefaultAttName = "Iron Sights",
         Offset = {
-            vpos = Vector(0.06, -2, -0.2),
+            vpos = Vector(0, 0, -0.1),
             vang = Angle(-90, 90, 90),
         },
         VMScale = Vector(0.75, 0.75, 0.75),
@@ -188,7 +188,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Perk",
-        Slot = "perk"
+        Slot = "go_perk"
     },
     {
         PrintName = "Charm",
@@ -197,7 +197,7 @@ SWEP.Attachments = {
         Bone = "slide", -- relevant bone any attachments will be mostly referring to
         Offset = {
             vpos = Vector(0.398, -5.321, 0.14), -- offset that the attachment will be relative to the bone
-            vang = Angle(90, 0, -90),
+            vang = Angle(-90, 90, 90),
         },
 		VMScale = Vector(0.75, 0.75, 0.75)
     },
@@ -206,31 +206,18 @@ SWEP.Attachments = {
 
 SWEP.Hook_SelectReloadAnimation = function(wep, anim)
 	
-	
-	if wep.Attachments[4].Installed == "lebby_mag_extend" then
-		if anim == "reload" then
-			return "reload_extend"
-		elseif anim == "reload_empty" then
-			return "reload_empty_extend"
-		end
-	end
-	
-	if wep.Attachments[7].Installed == "perk_fastreload" then
-		if anim == "reload_empty" then
-			return "reload_empty_rushed"
-		end
-	end
-	
-	
+  local ret = anim
+  if wep.Attachments[4].Installed == "lebby_mag_extend" then ret = ret .. "_extend" end
+  if wep.Attachments[7].Installed == "go_perk_fastreload" then ret = ret .. "_rushed" end
+  if ret ~= anim then return ret end
+  
 end
-	
+
+
 SWEP.Animations = {
     ["idle"] = {
         Source = "idle",
     },
-	["idle_empty_rushed"] = {
-		Source = "idle_empty_rushed"
-	},
     ["draw"] = {
         Source = "draw"
     },
@@ -244,15 +231,21 @@ SWEP.Animations = {
         Source = "fire",
         ShellEjectAt = 0,
     },
-	["fire_empty_rushed"] = {
-        Source = "fire_empty_rushed",
-        ShellEjectAt = 0,
-    },
     ["fire_iron"] = {
         Source = "fire",
 		ShellEjectAt = 0,
     },
     ["reload"] = {
+        Source = "reload",
+		RareSource = "reload_rare",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        Checkpoints = {16, 30},
+        FrameRate = 30,
+        LHIK = true,
+        LHIKIn = 1/30,
+        LHIKOut = 0.2,
+    },
+	["reload_rushed"] = {
         Source = "reload",
 		RareSource = "reload_rare",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
@@ -290,8 +283,18 @@ SWEP.Animations = {
         LHIKIn = 1/30,
         LHIKOut = 0.2,
     },
+    ["reload_extend_rushed"] = {
+        Source = "reload_extend",
+		RareSource = "reload_rare",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        Checkpoints = {16, 30},
+        FrameRate = 30,
+        LHIK = true,
+        LHIKIn = 1/30,
+        LHIKOut = 0.2,
+    },
     ["reload_empty_extend"] = {
-        Source = "reload_empty",
+        Source = "reload_extend_empty",
 		RareSource = "reload_rare",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         FrameRate = 60,
@@ -300,15 +303,13 @@ SWEP.Animations = {
         LHIKOut = 0.2,
     },
 	["reload_empty_extend_rushed"] = {
-        Source = "reload_empty_extend_rushed",
+        Source = "reload_extend_empty_rushed",
 		RareSource = "reload_rare_empty_rushed",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         FrameRate = 60,
         LHIK = true,
-        LHIKIn = 0.7,
+        LHIKIn = 1/30,
         LHIKOut = 0.2,
 	},
-    ["enter_inspect"] = false,
-    ["idle_inspect"] = false,
-    ["exit_inspect"] = false
 }
+
