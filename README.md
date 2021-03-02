@@ -31,7 +31,7 @@ Weapons:
 
 - SITES Spectre M4 (75%)
 - HK VP70 (48%)
-- Howa Type 64 (
+- Howa Type 64 (85%)
 - AEK-971
 - Sturmgewehr 44
 - Magpul FMG-9 (10%)
@@ -50,7 +50,7 @@ Weapons:
 - Calico M950
 - OTs-14 Groza
 - HK XM29 OICW
-- Stoner 63
+- HK HK21
 - Pancor Jackhammer Mk. 3
 - Daewoo USAS-12
 - Franchi SPAS-12 & PA-8
