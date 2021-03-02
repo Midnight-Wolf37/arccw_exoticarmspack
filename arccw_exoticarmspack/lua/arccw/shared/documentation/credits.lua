@@ -8,12 +8,15 @@ Original CS:GO addon - Pavlienda
 Sounds - Navaro & zen1th
 
 "Jianshe CS/LS5"
-Original Model - 
-Baked normals & Normal maps - 
+Original Model - sharksplitter
+Baked normals & Normal maps - Kingston Cartel
 Diffuse map - Midnight_Wolf
-Wooden furniture - Matias Hollman https://devassets.com/assets/modern-weapons/
+Wooden furniture - Matias Hollman "https://devassets.com/assets/modern-weapons/"
 SD handguard - slogkot
 Sounds - Navaro
+
+"SITES Spectre M4"
+Original CS:GO addon - 4echo
 
 "Attachments"
 Boomermobile - Lonewolfie
