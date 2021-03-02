@@ -3,6 +3,9 @@
 Well, with all the assets here drawn from all corners of the interwebs, might as well jot them down somewhere."
 Here's everything and everyone that has contributed to this pack, gun by gun:
 
+All animations, lua coding, and model editing/compiling was done by me.
+All models belong to their rightful owners. 
+
 "PL-15 Lebedev"
 Original CS:GO addon - Pavlienda
 Sounds - Navaro & zen1th
@@ -19,7 +22,4 @@ Sounds - Navaro
 Original CS:GO addon - 4echo
 
 "Attachments"
-Boomermobile - Lonewolfie
-Pistol & SMG mags - slogkot
-
-Magpul mags - 
+SMG mags - slogkot
