@@ -7,8 +7,8 @@ Requires Arctic's Customizeable Weapons (ArcCW) base and the Gunsmith Offensive 
 
 Current Version:
 
-Version 0.0.3 Beta
-
+Version 0.0.4 Alpha
+!!DO NOT DOWNLOAD!! MANY THINGS UNIMPLEMENTED AND BROKEN!!
 
 Currently Implemented:
 
