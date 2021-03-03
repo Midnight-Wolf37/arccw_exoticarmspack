@@ -29,7 +29,7 @@ Work in progress:
 
 Weapons:
 
-- SITES Spectre M4 (75%)
+- SITES Spectre M4 (85%)
 - HK VP70 (48%)
 - Howa Type 64 (85%)
 - AEK-971
