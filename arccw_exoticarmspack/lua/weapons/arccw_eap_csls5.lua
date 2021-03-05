@@ -123,7 +123,7 @@ SWEP.AttachmentElements = {
 	["go_stock_none"] = {
 		VMBodygroups = {{ind = 4, bg = 3}}
 	},
-	["eap_stock_folded"] = {
+	["ls5_stock_folded"] = {
 		VMBodygroups = {{ind = 4, bg = 1}}
 	},
 	["ls5_stock_wood"] = {
@@ -243,7 +243,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Stock",
-        Slot = {"ls5_stock", "eap_folded_stock", "go_stock", "go_stock_none"},
+        Slot = {"ls5_stock", "go_stock", "go_stock_none"},
 		Bone = "main",
 		Offset = {
             vpos = Vector(0, -1.839, -2.741),
@@ -339,4 +339,3 @@ SWEP.Animations = {
     ["idle_inspect"] = false,
     ["exit_inspect"] = false,
 }
-

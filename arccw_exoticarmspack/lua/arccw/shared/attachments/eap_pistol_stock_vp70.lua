@@ -29,4 +29,3 @@ att.Mult_MoveDispersion = 0.85
 att.Mult_MoveSpeed = 0.95
 att.Mult_DrawSpeed = 1.5
 
-

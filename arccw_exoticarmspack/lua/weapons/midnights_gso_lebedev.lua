@@ -119,13 +119,26 @@ SWEP.AttachmentElements = {
     ["lebby_mag_extend"] = {
 		VMBodygroups = {{ind = 1, bg = 1}}
 	},
+    ["rail"] = {
+        VMElements = {
+			{
+				Model = "models/weapons/arccw_go/atts/pistol_rail.mdl",
+				Bone = "body",
+				Offset = {
+					pos = Vector(0, -0.359, 4.084),
+					ang = Angle(90, 0 , -90),
+				},
+				Scale = Vector(0.711, 0.711, 0.711)
+			}
+        }
+    }
 }
 
 SWEP.ExtraSightDist = 10
 SWEP.GuaranteeLaser = true
 
 SWEP.WorldModelOffset = {
-    pos = Vector(-9, -5, -3.5),
+    pos = Vector(0, 0, 0),
     ang = Angle(-10, 0, 180),
 	scale = 1.1
 }
@@ -136,14 +149,14 @@ SWEP.Attachments = {
     {
         PrintName = "Optic",
         Slot = "optic_lp",
-        Bone = "slide",
+        Bone = "body",
         DefaultAttName = "Iron Sights",
         Offset = {
-            vpos = Vector(0, 0, -0.1),
-            vang = Angle(-90, 90, 90),
+            vpos = Vector(0, -1.98, 2.234),
+            vang = Angle(90, 0, -90),
         },
-        VMScale = Vector(0.75, 0.75, 0.75),
-        CorrectiveAng = Angle(-90, 0, 0),
+        CorrectiveAng = Angle(0, 0, 0),
+        InstalledEles = {"rail"}
     },
     {
         PrintName = "Tactical",
@@ -167,8 +180,7 @@ SWEP.Attachments = {
     {
         PrintName = "Magazine",
         Slot = "lebby_mag",
-        DefaultAttName = "14-Round standard mag",
-		DefaultAttIcon = Material("entities/acwatt_go_m4_mag_10_50.png", "mips smooth")
+        DefaultAttName = "14-Round standard mag"
     },
     {
         PrintName = "Stock",
@@ -188,7 +200,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Perk",
-        Slot = "go_perk"
+        Slot = {"go_perk", "go_perk_pistol"}
     },
     {
         PrintName = "Charm",
@@ -312,4 +324,3 @@ SWEP.Animations = {
         LHIKOut = 0.2,
 	},
 }
-
