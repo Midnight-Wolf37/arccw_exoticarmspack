@@ -7,8 +7,9 @@ Requires Arctic's Customizeable Weapons (ArcCW) base and the Gunsmith Offensive 
 
 Current Version:
 
-Version 0.0.4 Alpha
-!!DO NOT DOWNLOAD!! MANY THINGS UNIMPLEMENTED AND BROKEN!!
+Version 0.0.4 Beta
+
+ok all good feel free to download now :)
 
 Currently Implemented:
 
@@ -16,11 +17,14 @@ Weapons:
 
 - PL-15 Lebedev
 - Jianshe CS/LS5
+- SITES Spectre M4
 
 Attachments:
 
 - Coyote Sight 
 - Flex Seal Slugs
+- Dragon's Fang
+- FBI Load
 - Mercenary Style
 - Anti-Air Shell
 - VP70 Stock
@@ -29,8 +33,7 @@ Work in progress:
 
 Weapons:
 
-- SITES Spectre M4 (85%)
-- HK VP70 (48%)
+- HK VP70 (60%)
 - Howa Type 64 (85%)
 - AEK-971
 - Sturmgewehr 44
@@ -40,7 +43,6 @@ Attachments:
 
 - Sci-Fi holosight
 - Grab bag
-- Dragon's Fang
 - Metrodrip, Boomermobile, & Donut charms
 
 Planned:
