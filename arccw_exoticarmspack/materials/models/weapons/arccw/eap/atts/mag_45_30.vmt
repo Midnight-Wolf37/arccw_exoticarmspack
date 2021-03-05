@@ -1,0 +1,15 @@
+"VertexLitGeneric"
+{
+	"$basetexture"			"models\weapons\arccw\eap\atts\mag_45_30"
+	"$bumpmap" 			"models\weapons\arccw\eap\atts\mag_45_30_n"
+    "$color2"			"[0.8 0.79 0.77]"
+
+	$envmap env_cubemap
+	"$envmaptint" "[.02 .02 .02]"
+	"$basemapalphaphongmask" 	"1"
+	"$phong" 			"1"
+	"$phongboost"			"0.02"
+	"$phongexponent" 		"10"
+	"$phongfresnelranges"		"[0 30 7]"
+	"$halflambert"			"1"
+}
