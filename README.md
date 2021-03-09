@@ -3,7 +3,7 @@ A collection of little-known and rarely-seen guns from across the world, each wi
 
 Take on the world and turn heads of gun enthusiasts with Exotic Arms.
 
-Requires Arctic's Customizeable Weapons (ArcCW) base and the Gunsmith Offensive (GSO) to work properly.
+Requires Arctic's Customizeable Weapons (ArcCW) base and Gunsmith Offensive (GSO) to work properly.
 
 Current Version:
 
@@ -34,8 +34,8 @@ Work in progress:
 Weapons:
 
 - HK VP70 (60%)
-- Howa Type 64 (85%)
-- AEK-971
+- Howa Type 64 (55%)
+- AEK-971 (80%)
 - Sturmgewehr 44
 - Magpul FMG-9 (10%)
 
