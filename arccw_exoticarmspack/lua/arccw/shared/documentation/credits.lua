@@ -21,5 +21,12 @@ Sounds - Navaro
 "SITES Spectre M4"
 Original CS:GO addon - 4echo
 
+"AEK-971"
+Original Model & Textures - Adept1993 & Street-you
+Railed handguard & 9mm magazine - Krycek & Noodum
+RPK-74 magazine - Paul Yakushev
+Vikhr & AS VAL parts - DMG
+AMD-65 parts - Deadpixel, Macroane, & Toasty Fresh
+
 "Attachments"
 SMG mags - slogkot
