@@ -202,6 +202,9 @@ SWEP.AttachmentElements = {
             {ind = 5, bg = 2},
         },
     },
+    ["eap_stock_wood"] = {
+       VMBodygroups = {{ ind = 5, bg = 4 }},
+    },
     ["eap_aek_mag_545_45"] = {
         VMBodygroups = {
             {ind = 1, bg = 1},
