@@ -1,0 +1,21 @@
+"VertexlitGeneric"
+{
+	"$basetexture" 	"models\weapons\arccw\eap\atts\woodfurniture2"
+	"$bumpmap" 	"models\weapons\arccw\eap\atts\woodfurniture2_n"
+
+	"$phong"                      "1"
+	"$phongboost"                 "0.15"
+	"$phongexponent"		"35"
+	"$phongfresnelranges"         "[5 10 10]"
+	"$phongtint"		      "[1.05 1 1.1]"
+	"$phongalbedotint"            "1"
+	"$phongalbedoboost"           "145"
+
+	"$envmap"                     "env_cubemap"
+	"$envmapfresnel"		"0.5"
+	"$envmaptint"                   "[.015 .015 .015]"
+	"$halflambert"                "1"
+	"$normalmapalphaenvmapmask"		"1"
+	"$normalmapalphaphongmask"	"1"
+
+}

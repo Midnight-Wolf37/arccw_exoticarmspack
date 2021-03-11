@@ -1,0 +1,15 @@
+"VertexLitGeneric"
+{
+"$basetexture" "models\weapons\arccw\eap\atts\hg_val"
+"$bumpmap" 	"models\weapons\arccw\eap\atts\hg_val_n"
+"$halflambert" 	"1"
+"$phong" 		"1"
+"$phongexponent" 	"15"
+"$phongboost" "0.2"
+"$phongfresnelranges" "[1 3 6]"
+"$phongalbedotint" "1"
+}
+
+
+
+
