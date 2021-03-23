@@ -7,9 +7,7 @@ Requires Arctic's Customizeable Weapons (ArcCW) base and Gunsmith Offensive (GSO
 
 Current Version:
 
-Version 0.0.5 Beta
-
-some stuff unimplemeted or broken. you have been warned.
+Version 0.0.6 Beta
 
 Currently Implemented:
 
@@ -19,6 +17,8 @@ Weapons:
 - Jianshe CS/LS5
 - SITES Spectre M4
 - AEK-971
+- Sturmgewehr 44
+- Magpul FMG-9
 
 Attachments:
 
@@ -36,9 +36,8 @@ Weapons:
 
 - HK VP70 (60%)
 - Howa Type 64 (55%)
-- Sturmgewehr 44
-- Magpul FMG-9 (10%)
 - Chiappa Triple Threat
+- Franchi SPAS-12 & PA-8
 - HK XM29 OICW
 - Bren Ten
 
@@ -57,5 +56,4 @@ Weapons:
 - HK HK21
 - Pancor Jackhammer Mk. 3
 - Daewoo USAS-12
-- Franchi SPAS-12 & PA-8
 - Winchester Liberator
