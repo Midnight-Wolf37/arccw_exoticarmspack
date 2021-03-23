@@ -3,7 +3,8 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Exotic Arms" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "CS/LS5"
+SWEP.PrintName = "JC/LGM"
+SWEP.TrueName = "CS/LS5"
 SWEP.Trivia_Class = "Submachine Gun"
 SWEP.Trivia_Desc = "Chinese SMG for urban CQC, utilizing design elements from the MP5 and other western SMGs."
 SWEP.Trivia_Manufacturer = "Jianshe Industries"
@@ -11,6 +12,11 @@ SWEP.Trivia_Calibre = "9x19mm Parabellum"
 SWEP.Trivia_Mechanism = "Gas-Operated"
 SWEP.Trivia_Country = "China"
 SWEP.Trivia_Year = 2012
+
+
+if GetConVar("arccw_truenames"):GetBool() then
+    SWEP.PrintName = SWEP.TrueName
+end
 
 SWEP.Slot = 2
 
@@ -126,7 +132,7 @@ SWEP.AttachmentElements = {
 	["ls5_stock_folded"] = {
 		VMBodygroups = {{ind = 4, bg = 1}}
 	},
-	["ls5_stock_wood"] = {
+	["eap_stock_wood"] = {
 		VMBodygroups = {{ind = 4, bg = 2}}
 	},
 	["go_stock"] = {
@@ -243,7 +249,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Stock",
-        Slot = {"ls5_stock", "go_stock", "go_stock_none"},
+        Slot = {"ls5_stock", "eap_stock_wood", "go_stock", "go_stock_none"},
 		Bone = "main",
 		Offset = {
             vpos = Vector(0, -1.839, -2.741),
