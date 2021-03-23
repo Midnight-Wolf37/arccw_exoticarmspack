@@ -151,3 +151,66 @@ sound.Add({
 	volume = 		1.0,
 	sound = 			"weapons/arccw/eap/aek/boltforward.wav"
 })
+
+sound.Add({
+	name = 			"eap_stg.magin",
+	channel = 		CHAN_AUTO,
+	volume = 		1.0,
+	sound = 			"weapons/arccw/eap/stg44/magin.wav"
+})
+
+sound.Add({
+	name = 			"eap_stg.magout",
+	channel = 		CHAN_AUTO,
+	volume = 		1.0,
+	sound = 			"weapons/arccw/eap/stg44/magout.wav"
+})
+
+sound.Add({
+	name = 			"eap_stg.boltback",
+	channel = 		CHAN_AUTO,
+	volume = 		1.0,
+	sound = 			"weapons/arccw/eap/stg44/boltpull.wav"
+})
+
+sound.Add({
+	name = 			"eap_stg.boltrelease",
+	channel = 		CHAN_AUTO,
+	volume = 		1.0,
+	sound = 			"weapons/arccw/eap/stg44/boltrelease.wav"
+})
+
+sound.Add({
+	name = 			"eap_fmg.magin",
+	channel = 		CHAN_AUTO,
+	volume = 		1.0,
+	sound = 			"weapons/arccw/eap/fmg9/magin.wav"
+})
+
+sound.Add({
+	name = 			"eap_fmg.magout",
+	channel = 		CHAN_AUTO,
+	volume = 		1.0,
+	sound = 			"weapons/arccw/eap/fmg9/magout.wav"
+})
+
+sound.Add({
+	name = 			"eap_fmg.foley",
+	channel = 		CHAN_AUTO,
+	volume = 		1.0,
+	sound = 			"weapons/arccw/eap/fmg9/foley.wav"
+})
+
+sound.Add({
+	name = 			"eap_fmg.boltrelease",
+	channel = 		CHAN_AUTO,
+	volume = 		1.0,
+	sound = 			"weapons/arccw/eap/fmg9/boltrelease.wav"
+})
+
+sound.Add({
+	name = 			"eap_fmg.open",
+	channel = 		CHAN_AUTO,
+	volume = 		1.0,
+	sound = 			"weapons/arccw/eap/fmg9/buzzlightyear.wav"
+})

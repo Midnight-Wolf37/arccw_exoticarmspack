@@ -1,5 +1,5 @@
 att.PrintName = "Railed Handguard"
-att.Icon = Material("entities/arccw_mifl_fas2_mp5_hg_fg.png", "mips smooth")
+att.Icon = nil
 att.Description = "Tactical RIS that can conveniently mount more accessories. Lower weight improves mobility but rail surface is hard to grip."
 att.SortOrder = 0
 att.Desc_Pros = {

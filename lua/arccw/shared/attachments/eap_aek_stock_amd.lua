@@ -11,5 +11,5 @@ att.Slot = "eap_aek_stock"
 
 att.Mult_Recoil = 1.2
 
-att.Mult_SightTime = 1.2
+att.Mult_SightTime = 0.8
 att.Mult_MoveSpeed = 1.15

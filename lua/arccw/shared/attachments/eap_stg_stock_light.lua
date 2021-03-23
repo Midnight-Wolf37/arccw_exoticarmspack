@@ -1,0 +1,13 @@
+att.PrintName = "Light Stock"
+att.Icon = nil
+att.Description = "Lightweight under-folding stock that improves mobility, but dampens recoil less."
+att.Desc_Pros = {
+}
+att.Desc_Cons = {
+}
+att.AutoStats = true
+att.Slot = "eap_stg_stock"
+
+att.Mult_Recoil = 1.2
+att.Mult_SightTime = 1.2
+att.Mult_SpeedMult = 1.15

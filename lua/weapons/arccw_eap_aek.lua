@@ -3,7 +3,8 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Exotic Arms" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "AEK-971"
+SWEP.PrintName = "A-545"
+SWEP.TrueName = "AEK-971"
 SWEP.Trivia_Class = "Assault Rifle"
 SWEP.Trivia_Desc = "Rapid-fire Soviet rifle with technology decades ahead of its time."
 SWEP.Trivia_Manufacturer = "Degtyarev Plant"
@@ -11,6 +12,10 @@ SWEP.Trivia_Calibre = "5.45x39mm Soviet"
 SWEP.Trivia_Mechanism = "Gas-Operated, Balanced Recoil"
 SWEP.Trivia_Country = "Russia"
 SWEP.Trivia_Year = 1978
+
+if GetConVar("arccw_truenames"):GetBool() then
+    SWEP.PrintName = SWEP.TrueName
+end
 
 SWEP.Slot = 2
 
@@ -23,9 +28,9 @@ SWEP.ViewModelFlip = false
 
 SWEP.DefaultBodygroups = "000000000000"
 
-SWEP.Damage = 24
-SWEP.DamageMin = 19 -- damage done at maximum range
-SWEP.Range = 100 -- in METRES
+SWEP.Damage = 32
+SWEP.DamageMin = 22 -- damage done at maximum range
+SWEP.Range = 80 -- in METRES
 SWEP.Penetration = 14
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
@@ -36,7 +41,7 @@ SWEP.Primary.ClipSize = 30 -- DefaultClip is automatically set.
 
 SWEP.PhysBulletMuzzleVelocity = 700
 
-SWEP.Recoil = 0.5
+SWEP.Recoil = 0.7
 SWEP.RecoilSide = 0.3
 SWEP.RecoilRise = 0.1
 
@@ -60,8 +65,8 @@ SWEP.Firemodes = {
 SWEP.NPCWeaponType = "weapon_ar2"
 SWEP.NPCWeight = 200
 
-SWEP.AccuracyMOA = 6 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
-SWEP.HipDispersion = 750 -- inaccuracy added by hip firing.
+SWEP.AccuracyMOA = 4.8 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
+SWEP.HipDispersion = 600 -- inaccuracy added by hip firing.
 SWEP.MoveDispersion = 200
 
 SWEP.Primary.Ammo = "smg1" -- what ammo type the gun uses
@@ -71,7 +76,7 @@ SWEP.ShootVol = 120 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
 
 SWEP.ShootSound = "weapons/arccw/eap/aek/AKM-1.wav"
-SWEP.ShootSoundSilenced = "arccw_go/m4a1/m4a1_silencer_01.wav"
+SWEP.ShootSoundSilenced = "weapons/arccw/eap/aek/fire_sup.wav"
 SWEP.DistantShootSound = "arccw_go/ak47/ak47-1-distant.wav"
 
 SWEP.MeleeSwingSound = "arccw_go/m249/m249_draw.wav"
@@ -93,8 +98,8 @@ SWEP.SightedSpeedMult = 0.75
 SWEP.SightTime = 0.30
 
 SWEP.IronSightStruct = {
-    Pos = Vector(-2.8169, -3, 0.4504),
-    Ang = Angle(0.16, 0.125, -2.412),
+    Pos = Vector(-5.781, -5.869, -0.48),
+    Ang = Angle(0, 0, 0),
     Magnification = 1.1,
     SwitchToSound = "", -- sound that plays when switching to this sight
     CrosshairInSights = false
@@ -127,9 +132,6 @@ SWEP.AttachmentElements = {
     ["sidemount"] = {
         VMBodygroups = {{ind = 7, bg = 1}},
     },
-    ["mountring"] = {
-        VMBodygroups = {{ind = 6, bg = 1}},
-    },
     ["eap_aek_barrel_short"] = {
         VMBodygroups = {
             {ind = 2, bg = 1},
@@ -148,7 +150,7 @@ SWEP.AttachmentElements = {
         },
         AttPosMods = {
             [7] = {
-                vpos = Vector(0, -3.4, 32),
+                vpos = Vector(0, 0, -4),
             }
         },
     },
@@ -156,7 +158,8 @@ SWEP.AttachmentElements = {
         VMBodygroups = {
             {ind = 2, bg = 3},
             {ind = 3, bg = 3},
-            {ind = 4, bg = 3}
+            {ind = 4, bg = 3},
+            {ind = 6, bg = 1}
         },
     },
     ["no_fh"] = {
@@ -170,6 +173,7 @@ SWEP.AttachmentElements = {
     ["eap_aek_handguard_vikhr"] = {
         VMBodygroups = {
             {ind = 3, bg = 2},
+            {ind = 6, bg = 1}
         },
     },
     ["go_stock_none"] = {
@@ -186,13 +190,13 @@ SWEP.AttachmentElements = {
                 Model = "models/weapons/arccw_go/atts/stock_buftube.mdl",
                 Bone = "main",
                 Offset = {
-                    pos = Vector(0, -2.75, -1.5),
+                    pos = Vector(0, -1.412, -1.95),
                     ang = Angle(90, 0, -90),
                 },
             }
         },
     },
-    ["eap_aek_stock_fold"] = {
+    ["eap_aek_stock_folded"] = {
         VMBodygroups = {
             {ind = 5, bg = 1},
         },
@@ -200,6 +204,11 @@ SWEP.AttachmentElements = {
     ["eap_aek_stock_amd"] = {
         VMBodygroups = {
             {ind = 5, bg = 2},
+        },
+    },
+    ["ls5_stock_wood"] = {
+        VMBodygroups = {
+            {ind = 5, bg = 4},
         },
     },
     ["eap_aek_mag_545_45"] = {
@@ -213,32 +222,37 @@ SWEP.AttachmentElements = {
         },
     },
     ["eap_aek_mag_762_30"] = {
+        NameChange = "AEK-973",
         VMBodygroups = {
             {ind = 1, bg = 3},
         },
     },
     ["eap_aek_mag_762_30_poly"] = {
+        NameChange = "AEK-973",
         VMBodygroups = {
             {ind = 1, bg = 4},
         },
     },
-    ["eap_aek_mag_762_pmag"] = {
+    ["eap_aek_mag_762_pmag30"] = {
+        NameChange = "AEK-973",
         VMBodygroups = {
             {ind = 1, bg = 5},
         },
     },
     ["eap_aek_mag_762_40"] = {
+        NameChange = "AEK-973",
         VMBodygroups = {
             {ind = 1, bg = 6},
         },
     },
     ["eap_aek_mag_762_40_poly"] = {
-        NameChange = "AK-74",
+        NameChange = "AEK-973",
         VMBodygroups = {
             {ind = 1, bg = 7},
         },
     },
     ["eap_aek_mag_20"] = {
+        NameChange = "AEK-973",
         VMBodygroups = {
             {ind = 1, bg = 8},
         },
@@ -254,11 +268,13 @@ SWEP.AttachmentElements = {
         },
     },
     ["eap_aek_mag_556"] = {
+        NameChange = "AEK-972",
         VMBodygroups = {
             {ind = 1, bg = 11},
         },
     },
     ["eap_aek_mag_9mm"] = {
+        NameChange = "AEK-918",
         VMBodygroups = {
             {ind = 1, bg = 12},
         },
@@ -282,8 +298,8 @@ SWEP.Attachments = {
         Bone = "main",
         DefaultAttName = "Iron Sights",
         Offset = {
-            vpos = Vector(-2.8069, -1, -0.9297 ),
-            vang = Angle(0, 0, 0),
+            vpos = Vector(0, -4, 3 ),
+            vang = Angle(90, 0, -90),
         },
         InstalledEles = {"sidemount"},
         CorrectiveAng = Angle(0, 0, 0)
@@ -292,6 +308,10 @@ SWEP.Attachments = {
         PrintName = "Backup Optic",
         Slot = "backup",
         Bone = "main",
+        Offset = {
+            vpos = Vector(0, 2.05, 9),
+            vang = Angle(90, 0, -90),
+        },
         CorrectiveAng = Angle(0, 0, 0),
         RequireFlags = { "eap_aek_handguard_railed"}
     },
@@ -300,10 +320,11 @@ SWEP.Attachments = {
         Slot = "foregrip",
         Bone = "main",
         Offset = {
-            vpos = Vector(0, -2.05, 13),
+            vpos = Vector(0, -2.05, 9),
             vang = Angle(90, 0, -90),
         },
-        MergeSlots = { 13 }
+        MergeSlots = { 13 },
+        ExcludeFlags = { "eap_aek_handguard_vikhr" }
     },
     {
         PrintName = "Tactical",
@@ -324,6 +345,10 @@ SWEP.Attachments = {
         PrintName = "Handguard",
         Slot = "eap_aek_handguard",
         Bone = "main",
+        Offset = {
+            vpos = Vector(0, -2.05, 13),
+            vang = Angle(90, 0, -90),
+        },
         DefaultAttName = "Polymer handguard"
     },
     {
@@ -332,10 +357,11 @@ SWEP.Attachments = {
         Slot = "muzzle",
         Bone = "muzzle",
         Offset = {
-            vpos = Vector(0, -3.4, 25),
+            vpos = Vector(-0.12, 0, 0),
             vang = Angle(90, 0, -90),
         },
-        InstalledEles = {"no_fh"}
+        InstalledEles = {"no_fh"},
+        ExcludeFlags = { "eap_aek_handguard_val" }
     },
     {
         PrintName = "Magazine",
@@ -344,11 +370,11 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Stock",
-        Slot = {"eap_aek_stock", "go_stock_none", "go_stock" },
+        Slot = {"eap_aek_stock", "eap_stock_wood", "go_stock_none", "go_stock" },
         DefaultAttName = "Standard Stock",
         Bone = "main",
         Offset = {
-            vpos = Vector(0, -2.75, -1.5),
+            vpos = Vector(0, -1.412, -1.2),
             vang = Angle(90, 0, -90),
         },
     },
@@ -374,8 +400,12 @@ SWEP.Attachments = {
     {
         Hidden = true,
         Slot = "ubgl",
-        Bone = "main"
-    }
+        Bone = "main",
+        Offset = {
+            vpos = Vector(0, -2.05, 9),
+            vang = Angle(90, 0, -90),
+        },
+    },
 }
 
 SWEP.Hook_SelectReloadAnimation = function(wep, anim)
