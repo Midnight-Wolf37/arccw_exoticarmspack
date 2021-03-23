@@ -1,6 +1,6 @@
-att.PrintName = "AS Val Handguard"
+att.PrintName = "Schalldampfer Handguard"
 att.Icon = nil
-att.Description = "Integrally suppressed handguard from an AS Val rifle. Better handling compared to a standalone suppressor."
+att.Description = "Post-war experimental integrated silencer. Better handling compared to a standalone suppressor."
 att.SortOrder = 0
 att.Desc_Pros = {
 }
@@ -8,7 +8,7 @@ att.Desc_Cons = {
     "Cannot mount muzzle attachments"
 }
 att.AutoStats = true
-att.Slot = "eap_aek_handguard"
+att.Slot = "eap_stg_handguard"
 
 att.Silencer = true
 att.Override_MuzzleEffect = "muzzleflash_suppressed"
@@ -22,5 +22,3 @@ att.Mult_SightTime = 1.1
 
 att.Override_PhysTracerProfile = 7
 att.Override_TracerNum = 0
-
-att.Override_MuzzleEffectAttachment = 4

@@ -1,6 +1,6 @@
 att.PrintName = "Vikhr Handguard"
-att.Icon = Material("entities/arccw_mifl_fas2_mp5_hg_fg.png", "mips smooth")
-att.Description = "Handguard taken from an SR-3M Vikhr. Integrated grip improves control."
+att.Icon = nil
+att.Description = "Handguard taken from an SR-3M Vikhr. Integrated grip improves control at the cost of handling."
 att.SortOrder = 0
 att.Desc_Pros = {
 }
@@ -12,6 +12,7 @@ att.Slot = "eap_aek_handguard"
 
 att.Mult_Recoil = 0.9
 att.Mult_RecoilSide = 0.7
+att.Mult_HipDispersion = 1.15
 
 att.Mult_SightTime = 1.15
 att.Mult_MoveSpeed = 0.95
@@ -20,4 +21,4 @@ att.LHIK = true
 
 att.Model = "models/weapons/arccw/mifl_atts/fas2/grip_famas_felin.mdl"
 
-att.ModelOffset = Vector(3.8, 0, 0)
+att.ModelOffset = Vector(0, 0, 0)

@@ -1,6 +1,6 @@
-att.PrintName = "45-Round 5.45x39mm RPK74 Mag"
-att.Icon = Material("entities/eap_mag_45.png", "mips smooth")
-att.Description = "extended 5.45 mag from the RPK74 Squad Automatic Weapon."
+att.PrintName = "45-Round 5.45mm RPK74 Mag"
+att.Icon = nil
+att.Description = "Extended magazine intended for support usage."
 att.SortOrder = 30
 att.Desc_Pros = {
     "pro.magcap"
@@ -11,3 +11,6 @@ att.AutoStats = true
 att.Slot = "eap_aek_mag"
 
 att.Override_ClipSize = 45
+
+att.Mult_ReloadTime = 1.05
+att.Mult_SightTime = 1.1
