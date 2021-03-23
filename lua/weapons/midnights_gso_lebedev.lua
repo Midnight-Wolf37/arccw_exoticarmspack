@@ -3,7 +3,8 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Exotic Arms" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "PL-15 Lebedev"
+SWEP.PrintName = "P17-K"
+SWEP.TrueName = "PL-15 Lebedev"
 SWEP.Trivia_Class = "Pistol"
 SWEP.Trivia_Desc = "Futuristic-looking Russian pistol designed to be as ergonomic as possible."
 SWEP.Trivia_Manufacturer = "Kalashnikov Concern"
@@ -11,6 +12,11 @@ SWEP.Trivia_Calibre = "9x19mm Parabellum"
 SWEP.Trivia_Mechanism = "Short Recoil"
 SWEP.Trivia_Country = "Russian Federation"
 SWEP.Trivia_Year = 2017
+
+
+if GetConVar("arccw_truenames"):GetBool() then
+    SWEP.PrintName = SWEP.TrueName
+end
 
 SWEP.Slot = 1
 
@@ -64,9 +70,9 @@ SWEP.MagID = "lebedev" -- the magazine pool this gun draws from
 SWEP.ShootVol = 110 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
 
-SWEP.FirstShootSound = "weapons/arccw/eap/lebby/shot-unsil.wav"
-SWEP.ShootSound = "weapons/arccw/eap/lebby/shot-unsil.wav"
-SWEP.ShootSoundSilenced = "weapons/arccw/m16/fire_sup.wav"
+SWEP.FirstShootSound = "weapons/arccw/eap/lebby/pistol_fire2.wav"
+SWEP.ShootSound = "weapons/arccw/eap/lebby/pistol_fire2.wav"
+SWEP.ShootSoundSilenced = "weapons/arccw/eap/lebby/fire_sup.wav"
 SWEP.DistantShootSound = "arccw_go/sg556/sg556-1-distant.wav"
 
 SWEP.MeleeSwingSound = "weapons/arccw/eap/lebby/draw.wav"
@@ -230,6 +236,9 @@ SWEP.Animations = {
     ["idle"] = {
         Source = "idle",
     },
+    ["idle_empty"] = {
+        Source = "idle_empty"
+    },
     ["draw"] = {
         Source = "draw"
     },
@@ -247,6 +256,10 @@ SWEP.Animations = {
         Source = "fire",
 		ShellEjectAt = 0,
     },
+    ["fire_empty"] = {
+        Source = "fire_empty",
+        ShellEjectAt = 0,
+    }
     ["reload"] = {
         Source = "reload",
 		RareSource = "reload_rare",
@@ -269,7 +282,7 @@ SWEP.Animations = {
     },
     ["reload_empty"] = {
         Source = "reload_empty",
-		RareSource = "reload_rare",
+		RareSource = "reload_rare_empty",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         FrameRate = 30,
         LHIK = true,
@@ -278,7 +291,7 @@ SWEP.Animations = {
     },
 	["reload_empty_rushed"] = {
         Source = "reload_empty_rushed",
-		RareSource = "reload_rare_empty_rushed",
+		RareSource = "reload_rare_empty",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         FrameRate = 30,
         LHIK = true,
@@ -307,7 +320,7 @@ SWEP.Animations = {
     },
     ["reload_empty_extend"] = {
         Source = "reload_extend_empty",
-		RareSource = "reload_rare",
+		RareSource = "reload_rare_empty",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         FrameRate = 60,
         LHIK = true,
@@ -316,7 +329,7 @@ SWEP.Animations = {
     },
 	["reload_empty_extend_rushed"] = {
         Source = "reload_extend_empty_rushed",
-		RareSource = "reload_rare_empty_rushed",
+		RareSource = "reload_rare_empty",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         FrameRate = 60,
         LHIK = true,
