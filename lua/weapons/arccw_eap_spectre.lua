@@ -3,7 +3,8 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Exotic Arms" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Spectre M4"
+SWEP.PrintName = "Modello 4 Phantom"
+SWEP.TrueName = "Spectre M4"
 SWEP.Trivia_Class = "Submachine Gun"
 SWEP.Trivia_Desc = "Compact, lightweight SMG with good handling and unique high-capacity quad-stack mags."
 SWEP.Trivia_Manufacturer = "SITES"
@@ -11,6 +12,11 @@ SWEP.Trivia_Calibre = "9mm Parabellum"
 SWEP.Trivia_Mechanism = "Short Recoil"
 SWEP.Trivia_Country = "Italy"
 SWEP.Trivia_Year = 1980
+
+
+if GetConVar("arccw_truenames"):GetBool() then
+    SWEP.PrintName = SWEP.TrueName
+end
 
 SWEP.Slot = 2
 
