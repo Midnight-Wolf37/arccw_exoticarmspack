@@ -18,7 +18,7 @@ Weapons:
 - SITES Spectre M4
 - AEK-971
 - Sturmgewehr 44
-- Magpul FMG-9
+- Magpul FMG-9 (currently using CS+ attachments)
 
 Attachments:
 
