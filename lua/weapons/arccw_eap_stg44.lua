@@ -156,6 +156,12 @@ SWEP.AttachmentElements = {
     ["eap_stg_barrel_long"] = {
         VMBodygroups = {{ind = 2, bg = 2}, {ind = 6, bg = 1}},
         AddSuffix = "L",
+        AttPosMods = {
+            [4] = {
+                vpos = Vector(0, 0, 3),
+                vang = Angle(90, 0, -90),
+            }
+        }
     },
     ["eap_stg_barrel_short"] = {
         VMBodygroups = {{ind = 2, bg = 1}, {ind = 6, bg = 2}},
@@ -215,15 +221,27 @@ SWEP.Attachments = {
             vpos = Vector(0, -0.927, 10.218), 
             vang = Angle(90, 0, -90),
         },
+        MergeSlots = {12}
     },
     {
         PrintName = "Tactical",
         Slot = "tac",
         Bone = "main",
         Offset = {
-            vpos = Vector(1, -1.23, 2.65),
-            vang = Angle(90, 90, 0),
+            vpos = Vector(-0.741, -1.255, 8.144),
+            vang = Angle(90, 0, 180),
         },
+    },
+    {
+        PrintName = "Muzzle",
+        DefaultAttName = "Standard Muzzle",
+        Slot = "muzzle",
+        Bone = "muzzle",
+        Offset = {
+            vpos = Vector(0, 0, 0),
+            vang = Angle(90, 0, -90),
+        },
+        ExcludeFlags = {"eap_stg_handguard_sd"}
     },
     {
         PrintName = "Barrel",
@@ -238,17 +256,6 @@ SWEP.Attachments = {
     {
         PrintName = "Magazine",
         Slot = "eap_stg_mag"
-    },
-    {
-        PrintName = "Muzzle",
-        DefaultAttName = "Standard Muzzle",
-        Slot = "muzzle",
-        Bone = "main",
-        Offset = {
-            vpos = Vector(0, 0, 0),
-            vang = Angle(90, 0, -90),
-        },
-        ExcludeFlags = {"eap_stg_handguard_sd"}
     },
     {
         PrintName = "Stock",
@@ -275,16 +282,26 @@ SWEP.Attachments = {
         FreeSlot = true,
         Bone = "main", -- relevant bone any attachments will be mostly referring to
         Offset = {
-            vpos = Vector(0.320, -0.576, 3.476), -- offset that the attachment will be relative to the bone
+            vpos = Vector(0.662, -1.083, 2.762), -- offset that the attachment will be relative to the bone
             vang = Angle(90, 0, -90),
         },
     },
+    {
+        Hidden = "true",
+        Slot = "ubgl",
+        Bone = "main",
+        Offset = {
+            vpos = Vector(0, -0.7, 6.232),
+            vang = Angle(90, 0, -90),
+        },
+        VMScale = Vector(0.877, 0.877, 0.877)
+    }
 }
 
 SWEP.Hook_SelectReloadAnimation = function(wep, anim)
 	
     local ret = anim
-    if wep.Attachments[6].Installed == "eap_stg_mag_drum" then ret = ret .. "_drum" end
+    if wep.Attachments[7].Installed == "eap_stg_mag_drum" then ret = ret .. "_drum" end
     if ret ~= anim then return ret end
     
   end
