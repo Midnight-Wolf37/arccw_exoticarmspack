@@ -7,7 +7,7 @@ Requires Arctic's Customizeable Weapons (ArcCW) base and Gunsmith Offensive (GSO
 
 Current Version:
 
-Version 0.0.6 Beta
+Version 0.0.8 Beta
 
 Currently Implemented:
 
@@ -34,7 +34,7 @@ Work in progress:
 
 Weapons:
 
-- HK VP70 (60%)
+- HK VP70 (struggling to animate this stupid thing)
 - Howa Type 64 (55%)
 - Chiappa Triple Threat
 - Franchi SPAS-12 & PA-8
@@ -57,3 +57,5 @@ Weapons:
 - Pancor Jackhammer Mk. 3
 - Daewoo USAS-12
 - Winchester Liberator
+- Zip 22
+- Pribor-3B
