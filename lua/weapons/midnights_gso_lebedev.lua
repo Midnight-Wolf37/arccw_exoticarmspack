@@ -259,7 +259,7 @@ SWEP.Animations = {
     ["fire_empty"] = {
         Source = "fire_empty",
         ShellEjectAt = 0,
-    }
+    },
     ["reload"] = {
         Source = "reload",
 		RareSource = "reload_rare",
