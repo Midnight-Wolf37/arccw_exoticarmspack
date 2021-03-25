@@ -139,7 +139,8 @@ SWEP.AttachmentElements = {
         },
         AttPosMods = {
             [7] = {
-                vpos = Vector(0, -3.4, 15.5),
+                vpos = Vector(0, -0.332, -5.115),
+                vang = Angle(90, 0 , -90),
             }
         },
     },
@@ -150,7 +151,8 @@ SWEP.AttachmentElements = {
         },
         AttPosMods = {
             [7] = {
-                vpos = Vector(0, 0, -4),
+                vpos = Vector(0, -0.332, -7.929),
+                vang = Angle(90, 0 , -90),
             }
         },
     },
@@ -169,6 +171,16 @@ SWEP.AttachmentElements = {
         VMBodygroups = {
             {ind = 3, bg = 1},
         },
+        AttPosMods = {
+            [3] = {
+                vpos = Vector(-0.009, -0.986, 10.357),
+                vang = Angle(90, 0, -90),
+            },
+            [4] = {
+                vpos = Vector(-0.601, -2.138, 8.281),
+                vang = Angle(90, 0, 180),
+            },
+        }
     },
     ["eap_aek_handguard_vikhr"] = {
         VMBodygroups = {
@@ -279,6 +291,19 @@ SWEP.AttachmentElements = {
             {ind = 1, bg = 12},
         },
     },
+    ["backuprail"] = {
+        VMElements = {
+            {
+                Model = "models/weapons/arccw/atts/backup_rail.mdl",
+                Bone = "main",
+                Offset = {
+                    pos = Vector(-0.087, -3.876, 10.494),
+                    ang = Angle(0, 90, 0), 
+                },
+                Scale = Vector(0.819, 0.819, 0.819),
+            },
+        },
+    },
 }
 
 SWEP.ExtraSightDist = 10
@@ -309,10 +334,11 @@ SWEP.Attachments = {
         Slot = "backup",
         Bone = "main",
         Offset = {
-            vpos = Vector(0, 2.05, 9),
+            vpos = Vector(-0.249, -3.981, 10.494),
             vang = Angle(90, 0, -90),
         },
         CorrectiveAng = Angle(0, 0, 0),
+        MergeSlots = { 14 },
         RequireFlags = { "eap_aek_handguard_railed"}
     },
     {
@@ -320,7 +346,7 @@ SWEP.Attachments = {
         Slot = "foregrip",
         Bone = "main",
         Offset = {
-            vpos = Vector(0, -2.05, 9),
+            vpos = Vector(-0.009, -1.157, 10.357),
             vang = Angle(90, 0, -90),
         },
         MergeSlots = { 13 },
@@ -331,8 +357,8 @@ SWEP.Attachments = {
         Slot = "tac",
         Bone = "main",
         Offset = {
-            vpos = Vector(1.24, -4, 3),
-            vang = Angle(90, 0, 0),
+            vpos = Vector(-0.879, -2.31, 9.876),
+            vang = Angle(90, 0, 180),
         },
     },
     {
@@ -357,7 +383,7 @@ SWEP.Attachments = {
         Slot = "muzzle",
         Bone = "muzzle",
         Offset = {
-            vpos = Vector(-0.12, 0, 0),
+            vpos = Vector(-0.08, -0.332, -1.053),
             vang = Angle(90, 0, -90),
         },
         InstalledEles = {"no_fh"},
@@ -406,6 +432,17 @@ SWEP.Attachments = {
             vang = Angle(90, 0, -90),
         },
     },
+    {
+        Hidden = true,
+        Slot = "optic_lp",
+        Bone = "main",
+        Offset = {
+            vpos = Vector(-0.636, -4.25, 9.986),
+            vang = Angle(90, 0, -45),
+        },
+        InstalledEles = { "backuprail" },
+        RequireFlags = { "eap_aek_handguard_railed"}
+    }
 }
 
 SWEP.Hook_SelectReloadAnimation = function(wep, anim)
@@ -475,3 +512,4 @@ SWEP.Animations = {
     ["idle_inspect"] = false,
     ["exit_inspect"] = false,
 }
+
