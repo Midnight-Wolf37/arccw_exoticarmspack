@@ -137,6 +137,9 @@ SWEP.AttachmentElements = {
     ["eap_stg_stock_light"] = {
         VMBodygroups = {{ind = 1, bg = 1}}
     },
+    ["eap_stg_stock_thumb"] = {
+        VMBodygroups = {{ind = 1, bg = 2}}
+    },
     ["go_stock"] = {
 		VMBodygroups = {{ind = 1, bg = 3}},
         VMElements = {
@@ -166,9 +169,21 @@ SWEP.AttachmentElements = {
     ["eap_stg_barrel_short"] = {
         VMBodygroups = {{ind = 2, bg = 1}, {ind = 6, bg = 2}},
         AddSuffix = "C",
+        AttPosMods = {
+            [4] = {
+                vpos = Vector(0, 0, -3),
+                vang = Angle(90, 0, -90),
+            }
+        }
     },
     ["eap_stg_handguard_sd"] = {
         VMBodygroups = {{ind = 2, bg = 3}, {ind = 4, bg = 2}, {ind = 6, bg = 3}},
+        AttPosMods = {
+            [2] = {
+                vpos = Vector(0, 0, 10.218),
+                vang = Angle(90, 0, -90),
+            }
+        },
         AddSuffix = "SD",
     },
     ["rail"] = {
@@ -176,6 +191,12 @@ SWEP.AttachmentElements = {
     },
     ["eap_stg_handguard_holger"] = {
         VMBodygroups = {{ind = 4, bg = 1}},
+        AttPosMods = {
+            [2] = {
+                vpos = Vector(0, 0, 10.218),
+                vang = Angle(90, 0, -90),
+            }
+        },
         NameChange = "Holger-44",
         TrueNameChange = "G-44",
     },
@@ -200,6 +221,16 @@ SWEP.GuaranteeLaser = true
 
 SWEP.MirrorVMWM = true
 
+SWEP.Hook_ModifyBodygroups = function(wep, data)
+    local vm = data.vm
+    local eles = data.eles
+    for i, k in pairs(eles or {}) do
+        if k == "rail" then
+            vm:SetBodygroup(6, 4)
+        end
+    end
+end
+
 SWEP.Attachments = {
     {
         PrintName = "Optic",
@@ -218,7 +249,7 @@ SWEP.Attachments = {
         Slot = "foregrip",
         Bone = "main",
         Offset = {
-            vpos = Vector(0, -0.927, 10.218), 
+            vpos = Vector(0, -0.75, 10.218), 
             vang = Angle(90, 0, -90),
         },
         MergeSlots = {12}
