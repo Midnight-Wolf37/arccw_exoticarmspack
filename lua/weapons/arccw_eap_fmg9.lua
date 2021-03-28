@@ -39,8 +39,7 @@ SWEP.MuzzleVelocity = 1050 -- projectile or phys bullet muzzle velocity
 SWEP.ChamberSize = 1 -- how many rounds can be chambered.
 SWEP.Primary.ClipSize = 32 -- DefaultClip is automatically set.
 
-SWEP.ExtendedClipSize = 50
-SWEP.ReducedClipSize = 17
+
 
 SWEP.PhysBulletMuzzleVelocity = 320
 
@@ -139,11 +138,11 @@ SWEP.AttachmentElements = {
     ["carryhandle"] = {
         VMBodygroups = {{ind = 2, bg = 1}},
     },
-    ["extendedmag"] = {
-        VMBodygroups = {{ind = 1, bg = 1}},
-    },
-    ["reducedmag"] = {
+    ["eap_mag_drum_9mm"] = {
         VMBodygroups = {{ind = 1, bg = 2}},
+    },
+    ["eap_fmg_mag_short"] = {
+        VMBodygroups = {{ind = 1, bg = 1}},
     },
     ["foregrip"] = {
         VMBodygroups = {{ind = 4, bg = 1}},
@@ -199,8 +198,13 @@ SWEP.Attachments = {
         },
     },
     {
+        PrintName = "Magazine",
+        Slot = { "eap_fmg_mag", "eap_mag_9mm_drum" },
+        DefaultAttName = "33-Round 9mm G18 Mag"
+    }
+    {
         PrintName = "Ammo Type",
-        Slot = "ammo",
+        Slot = "go_ammo",
         DefaultAttName = "Standard Ammo"
     },
     {
@@ -227,22 +231,12 @@ SWEP.Attachments = {
 SWEP.Hook_SelectReloadAnimation = function(wep, anim)
 	
     local ret = anim
-    if wep.Attachments[7].Installed == "go_perk_fastreload" then ret = ret .. "_rushed" end
-    if wep:GetCapacity() == wep.ReducedClipSize then ret = ret .. "_short" end
-    if wep:GetCapacity() == wep.ExtendedClipSize then ret = ret .. "_drum" end
+    if wep.Attachments[8].Installed == "go_perk_fastreload" then ret = ret .. "_rushed" end
+    if wep.Attachments[5].Installed == "eap_mag_drum_9mm" then ret = ret .. "_drum" end
+    if wep.Attachments[5].Installed == "eap_fmg_mag_short" then ret = ret .. "_rushed" end
     if ret ~= anim then return ret end
-    
 end
 
-SWEP.Hook_SelectReloadAnimation = function(wep, anim)
-    if wep:GetCapacity() != wep.ReducedClipSize then return end
-
-    if anim == "reload" then
-        return "reload_60"
-    elseif anim == "reload_empty" then
-        return "reload_60_empty"
-    end
-end
 SWEP.Animations = {
     ["idle"] = {
         Source = "idle"
