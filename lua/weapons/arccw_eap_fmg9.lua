@@ -201,7 +201,7 @@ SWEP.Attachments = {
         PrintName = "Magazine",
         Slot = { "eap_fmg_mag", "eap_mag_9mm_drum" },
         DefaultAttName = "33-Round 9mm G18 Mag"
-    }
+    },
     {
         PrintName = "Ammo Type",
         Slot = "go_ammo",
