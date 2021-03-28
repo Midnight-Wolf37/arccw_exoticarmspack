@@ -18,7 +18,8 @@ Weapons:
 - SITES Spectre M4
 - AEK-971
 - Sturmgewehr 44
-- Magpul FMG-9 (currently using CS+ attachments)
+- Magpul FMG-9
+- HK VP70
 
 Attachments:
 
@@ -34,7 +35,6 @@ Work in progress:
 
 Weapons:
 
-- HK VP70 (struggling to animate this stupid thing)
 - Howa Type 64 (55%)
 - Chiappa Triple Threat
 - Franchi SPAS-12 & PA-8

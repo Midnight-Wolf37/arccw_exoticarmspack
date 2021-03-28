@@ -214,3 +214,38 @@ sound.Add({
 	volume = 		1.0,
 	sound = 			"weapons/arccw/eap/fmg9/buzzlightyear.wav"
 })
+
+sound.Add({
+	name = 			"eap_vp70.magout",
+	channel = 		CHAN_AUTO,
+	volume = 		1.0,
+	sound = 			"weapons/arccw/eap/vp70/magout.wav"
+})
+
+sound.Add({
+	name = 			"eap_vp70.magin",
+	channel = 		CHAN_AUTO,
+	volume = 		1.0,
+	sound = 			"weapons/arccw/eap/vp70/magin.wav"
+})
+
+sound.Add({
+	name = 			"eap_vp70.draw",
+	channel = 		CHAN_AUTO,
+	volume = 		1.0,
+	sound = 			"weapons/arccw/eap/lebby/draw.wav"
+})
+
+sound.Add({
+	name = 			"eap_vp70.slideback",
+	channel = 		CHAN_AUTO,
+	volume = 		1.0,
+	sound = 			"weapons/arccw/eap/vp70/slideback.wav"
+})
+
+sound.Add({
+	name = 			"eap_vp70.sliderelease",
+	channel = 		CHAN_AUTO,
+	volume = 		1.0,
+	sound = 			"weapons/arccw/eap/vp70/sliderelease.wav"
+})
