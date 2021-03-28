@@ -94,8 +94,8 @@ SWEP.SightedSpeedMult = 0.7
 SWEP.SightTime = 0.27
 
 SWEP.IronSightStruct = {
-    Pos = Vector(-4.961, 0, -0.48),
-	Ang = Angle(0, 0, 0),
+    Pos = Vector(-5.461, -14.655, 1.598),
+    Ang = Vector(0.49, 0, 0),
     Magnification = 1.1,
     SwitchToSound = "", -- sound that plays when switching to this sight
     CrosshairInSights = false
@@ -133,6 +133,11 @@ SWEP.AttachmentElements = {
     ["eap_vp70_slide_long"] = {
 		VMBodygroups = {{ind = 2, bg = 1}},
 		AddSuffix = "L",
+        AttPosMods = {
+            [4] = {
+                vpos = Vector(0, 0, 2),
+            },
+        },
     },
     ["eap_mag_drum_9mm"] = {
 		VMBodygroups = {{ind = 3, bg = 2}},
@@ -156,7 +161,7 @@ SWEP.Attachments = {
         Bone = "main",
         DefaultAttName = "Iron Sights",
         Offset = {
-            vpos = Vector(0.06, -3.25, 2),
+            vpos = Vector(0, -2.217, 3.782),
             vang = Angle(90, 0, -90),
         },
         VMScale = Vector(1, 1, 1),
@@ -167,8 +172,8 @@ SWEP.Attachments = {
         Slot = "tac",
         Bone = "main",
         Offset = {
-            vpos = Vector(-1.173, -1.852, 10.909),
-            vang = Angle(90, 0, 180),
+            vpos = Vector(0, -0.879, 5.494),
+            vang = Angle(90, 0, -90),
         },
     },
     {
@@ -195,7 +200,7 @@ SWEP.Attachments = {
         Slot = {"eap_vp70_stock", "go_pistol_stock_bt"},
 		Bone = "main",
 		Offset = {
-            vpos = Vector(0, -1.8, 0),
+            vpos = Vector(0, -1.058, -2.056),
             vang = Angle(90, 0, -90),
         },
         DefaultAttName = "No Stock",
@@ -216,7 +221,7 @@ SWEP.Attachments = {
         FreeSlot = true,
         Bone = "main", -- relevant bone any attachments will be mostly referring to
         Offset = {
-            vpos = Vector(0.5, -0.5, 1), -- offset that the attachment will be relative to the bone
+            vpos = Vector(0.398, -1.348, 3.914), -- offset that the attachment will be relative to the bone
             vang = Angle(90, 0, -90),
         },
     },
