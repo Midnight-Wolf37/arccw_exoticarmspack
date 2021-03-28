@@ -6,7 +6,7 @@ att.Desc_Pros = {
 att.Desc_Cons = {
 }
 att.AutoStats = true
-att.Slot = "eap_vp70_barrel"
+att.Slot = "eap_vp70_slide"
 
 att.Mult_Range = 1.5
 att.Mult_Recoil = 0.75
