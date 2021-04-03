@@ -44,7 +44,7 @@ SWEP.PhysBulletMuzzleVelocity = 900
 
 SWEP.Recoil = 0.6
 SWEP.RecoilSide = 0.25
-SWEP.RecoilRise = 0.05
+SWEP.RecoilRise = 0.1
 
 SWEP.Delay = 60 / 850 -- 60 / RPM.
 SWEP.Num = 1 -- number of shots per trigger pull.
@@ -72,7 +72,7 @@ SWEP.ShootPitch = 100 -- pitch of shoot sound
 
 SWEP.FirstShootSound = "weapons/arccw/eap/vp70/fire.wav"
 SWEP.ShootSound = "weapons/arccw/eap/vp70/fire.wav"
-SWEP.ShootSoundSilenced = "weapons/arccw/lebby/fire_sup.wav"
+SWEP.ShootSoundSilenced = "weapons/arccw/eap/lebby/fire_sup.wav"
 SWEP.DistantShootSound = "arccw_go/sg556/sg556-1-distant.wav"
 
 SWEP.MeleeSwingSound = "arccw_go/m249/m249_draw.wav"
