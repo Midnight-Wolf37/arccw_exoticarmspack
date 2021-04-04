@@ -7,7 +7,7 @@ Requires Arctic's Customizeable Weapons (ArcCW) base and Gunsmith Offensive (GSO
 
 Current Version:
 
-Version 0.0.8 Beta
+Version 0.1 Beta
 
 Currently Implemented:
 
@@ -20,6 +20,7 @@ Weapons:
 - Sturmgewehr 44
 - Magpul FMG-9
 - HK VP70
+- Bren Ten
 
 Attachments:
 
@@ -35,11 +36,11 @@ Work in progress:
 
 Weapons:
 
-- Howa Type 64 (55%)
+- Howa Type 64
 - Chiappa Triple Threat
 - Franchi SPAS-12 & PA-8
 - HK XM29 OICW
-- Bren Ten
+- OTs-14 Groza
 
 Attachments:
 
@@ -52,7 +53,6 @@ Planned:
 Weapons:
 
 - Calico M950
-- OTs-14 Groza
 - HK HK21
 - Pancor Jackhammer Mk. 3
 - Daewoo USAS-12
