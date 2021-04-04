@@ -13,13 +13,17 @@ SWEP.Trivia_Mechanism = "Short Recoil"
 SWEP.Trivia_Country = "USA"
 SWEP.Trivia_Year = 1983
 
+if GetConVar("arccw_truenames"):GetBool() then
+    SWEP.PrintName = SWEP.TrueName
+end
+
 SWEP.Slot = 1
 
 SWEP.UseHands = true
 
 SWEP.ViewModel = "models/weapons/arccw/eap/c_brenten.mdl"
 SWEP.WorldModel = "models/weapons/arccw/eap/c_brenten.mdl"
-SWEP.ViewModelFOV = 60
+SWEP.ViewModelFOV = 70
 SWEP.ViewModelFlip = false
 
 SWEP.Defaultmaingroups = "0000000000"
@@ -38,8 +42,8 @@ SWEP.Primary.ClipSize = 10 -- DefaultClip is automatically set.
 SWEP.PhysBulletMuzzleVelocity = 900
 
 SWEP.Recoil = 0.56
-SWEP.RecoilSide = 0.2
-SWEP.RecoilRise = 0.1
+SWEP.RecoilSide = 0.3
+SWEP.RecoilRise = 0.3
 
 SWEP.Delay = 60 / 800 -- 60 / RPM.
 SWEP.Num = 1 -- number of shots per trigger pull.
@@ -56,8 +60,8 @@ SWEP.NPCWeaponType = "weapon_pistol"
 SWEP.NPCWeight = 100
 
 SWEP.AccuracyMOA = 6 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
-SWEP.HipDispersion = 125 -- inaccuracy added by hip firing.
-SWEP.MoveDispersion = 25
+SWEP.HipDispersion = 200 -- inaccuracy added by hip firing.
+SWEP.MoveDispersion = 50
 
 SWEP.Primary.Ammo = "pistol" -- what ammo type the gun uses
 SWEP.MagID = "lebedev" -- the magazine pool this gun draws from
@@ -65,10 +69,8 @@ SWEP.MagID = "lebedev" -- the magazine pool this gun draws from
 SWEP.ShootVol = 110 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
 
-SWEP.FirstShootSound = "weapons/arccw/eap/brenten/p228-1.wav"
-SWEP.ShootSound = "weapons/arccw/eap/brenten/p228-1.wav"
-SWEP.ShootSoundSilenced = "weapons/arccw/m16/fire_sup.wav"
-SWEP.DistantShootSound = "arccw_go/sg556/sg556-1-distant.wav"
+SWEP.ShootSound = "weapons/arccw/eap/brenten/fire.wav"
+SWEP.ShootSoundSilenced = "weapons/arccw/eap/brenten/fire_sup.wav"
 
 SWEP.MeleeSwingSound = "weapons/arccw/eap/lebby/draw.wav"
 SWEP.MeleeMissSound = "weapons/iceaxe/iceaxe_swing1.wav"
@@ -85,7 +87,7 @@ SWEP.ShellRotateAngle = Angle(0, 180, 0)
 SWEP.CaseEffectAttachment = 1 -- which attachment to put the case effect on
 
 SWEP.SpeedMult = 0.99
-SWEP.SightedSpeedMult = 0.75
+SWEP.SightedSpeedMult = 0.8
 SWEP.SightTime = 0.2
 
 SWEP.IronSightStruct = {
@@ -105,8 +107,8 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 SWEP.ActivePos = Vector(0, 0, 0)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
-SWEP.CrouchPos = Vector(-8, 0, 1)
-SWEP.CrouchAng = Angle(0, 0, -45)
+SWEP.CrouchPos = Vector(-4, 0, -1)
+SWEP.CrouchAng = Angle(0, 0, -10)
 
 SWEP.HolsterPos = Vector(3, 3, 0)
 SWEP.HolsterAng = Angle(-7.036, 30.016, 0)
@@ -120,17 +122,23 @@ SWEP.AttachmentElements = {
     ["eap_brenten_mag_extend"] = {
 		VMBodygroups = {{ind = 1, bg = 1}}
 	},
+    ["eap_brenten_mag_bumper"] = {
+		VMBodygroups = {{ind = 1, bg = 2}}
+	},
     ["eap_brenten_slide_short"] = {
         VMBodygroups = {{ind = 2, bg = 2}}
     },
     ["eap_brenten_slide_long"] = {
         VMBodygroups = {{ind = 2, bg = 1}}
     },
+    ["eap_brenten_slide_railed"] = {
+        VMBodygroups = {{ind = 2, bg = 0}, {ind = 3, bg = 1}}
+    },
     ["rail"] = {
         VMElements = {
 			{
 				Model = "models/weapons/arccw_go/atts/pistol_rail.mdl",
-				Bone = "Weapon_Root",
+				Bone = "main",
 				Offset = {
 					pos = Vector(0, -0.359, 4.084),
 					ang = Angle(90, 0 , -90),
@@ -159,7 +167,7 @@ SWEP.Attachments = {
     {
         PrintName = "Optic",
         Slot = "optic_lp",
-        Bone = "Weapon_Root",
+        Bone = "main",
         DefaultAttName = "Iron Sights",
         Offset = {
             vpos = Vector(0, -1.98, 2.234),
@@ -171,21 +179,22 @@ SWEP.Attachments = {
     {
         PrintName = "Tactical",
         Slot = {"tac", "foregrip_lp"},
-        Bone = "Weapon_Root",
+        Bone = "main",
         Offset = {
             vpos = Vector(0, -0.401, 4.505),
             vang = Angle(90, 0, -90),
         },
+        MergeSlots = {11},
     },
     {
         PrintName = "Muzzle",
         Slot = "muzzle",
-        Bone = "Weapon_Root",
+        Bone = "main",
         Offset = {
-            vpos = Vector(0, -1.158, 5.448),
+            vpos = Vector(0, 0, 0),
             vang = Angle(90, 0, -90),
         },
-        VMScale = Vector(0.775, 0.775, 0.775)
+        ExcludeFlags = {"eap_brenten_slide_railed"}
     },
     {
         PrintName = "Slide",
@@ -200,7 +209,7 @@ SWEP.Attachments = {
     {
         PrintName = "Stock",
         Slot = "go_stock_pistol_bt",
-		Bone = "Weapon_Root",
+		Bone = "main",
 		Offset = {
             vpos = Vector(0, -0.834, -1.359),
             vang = Angle(90, 0, -90),
@@ -224,15 +233,30 @@ SWEP.Attachments = {
         PrintName = "Charm",
         Slot = "charm",
         FreeSlot = true,
-        Bone = "Weapon_Root", -- relevant bone any attachments will be mostly referring to
+        Bone = "main", -- relevant bone any attachments will be mostly referring to
         Offset = {
             vpos = Vector(0.398, -5.321, 0.14), -- offset that the attachment will be relative to the bone
             vang = Angle(-90, 90, 90),
         },
 		VMScale = Vector(0.75, 0.75, 0.75)
     },
+    {
+        Hidden = true,
+        Slot = "foregrip",
+        Bone = "main",
+        Offset = {
+            vpos = Vector(0, 0, 0),
+            vang = Angle(90, 0, -90),
+        },
+        RequireFlags = {"eap_brenten_slide_railed"}
+    }
 }
 
+SWEP.Hook_TranslateAnimation = function(wep, anim, data)
+    if wep:Clip1() == 0 then
+        return anim .. "_empty"
+    end
+end
 
 SWEP.Hook_SelectReloadAnimation = function(wep, anim)
 	
@@ -245,63 +269,106 @@ end
 
 SWEP.Animations = {
     ["idle"] = {
-        Source = "idle",
+        Source = "idle"
+    },
+    ["idle_empty"] = {
+        Source = "idle_empty"
     },
     ["draw"] = {
-        Source = "draw"
+        Source = "draw",
+        FrameRate = 60,
+        LHIK = true,
+        LHIKIn = 0,
+        LHIKOut = 0.25,
+    },
+    ["draw_empty"] = {
+        Source = "draw_empty",
+        FrameRate = 60,
+        LHIK = true,
+        LHIKIn = 0,
+        LHIKOut = 0.25,
     },
     ["ready"] = {
         Source = "deploy",
+        FrameRate = 60,
+        SoundTable = {
+            {s = "eap_brenten.slideback", t = 13/60},
+            {s = "eap_brenten.slideforward", t = 30/60}
+        },
         LHIK = true,
         LHIKIn = 0,
-        LHIKOut = 0.2,
+        LHIKOut = 0.25
     },
     ["fire"] = {
-        Source = "fire",
+        Source = {"fire"},
+        FrameRate = 60,
         ShellEjectAt = 0,
-    },
-    ["fire_iron"] = {
-        Source = "fire",
-		ShellEjectAt = 0,
     },
     ["fire_empty"] = {
         Source = "fire_empty",
-		ShellEjectAt = 0,
+        FrameRate = 60,
+        ShellEjectAt = 0,
+    },
+    ["fire_iron"] = {
+        Source = "fire_irons",
+        FrameRate = 60,
+        ShellEjectAt = 0,
+    },
+    ["fire_iron_empty"] = {
+        Source = "fire_irons_empty",
+        FrameRate = 60,
+        ShellEjectAt = 0,
     },
     ["reload"] = {
         Source = "reload",
-		RareSource = "reload_rare",
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Checkpoints = {16, 30},
-        FrameRate = 30,
+        FrameRate = 60,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
         LHIK = true,
-        LHIKIn = 1/30,
-        LHIKOut = 0.2,
+        LHIKIn = 14/60,
+        LHIKOut = 10/60,
+        SoundTable = {
+            {s = "eap_brenten.magout", t = 20/60},
+            {s = "eap_brenten.magin", t = 79/60},
+        },
     },
     ["reload_empty"] = {
         Source = "reload_empty",
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        FrameRate = 30,
+        FrameRate = 60,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
         LHIK = true,
-        LHIKIn = 1/30,
-        LHIKOut = 0.2,
+        LHIKIn = 1,
+        LHIKOut = 0.25,
+        SoundTable = {
+            {s = "eap_brenten.magout", t = 20/60},
+            {s = "eap_brenten.magin", t = 79/60},
+            {s = "eap_brenten.slideback", t = 116/60},
+            {s = "eap_brenten.slideforward", t = 124/60}
+        },
     },
-    ["reload_extend"] = {
-        Source = "reload_extend",
-		RareSource = "reload_rare",
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Checkpoints = {16, 30},
-        FrameRate = 30,
+    ["reload"] = {
+        Source = "reload",
+        FrameRate = 60,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
         LHIK = true,
-        LHIKIn = 1/30,
-        LHIKOut = 0.2,
+        LHIKIn = 14/60,
+        LHIKOut = 10/60,
+        SoundTable = {
+            {s = "eap_brenten.magout", t = 20/60},
+            {s = "eap_brenten.magin", t = 79/60},
+        },
     },
     ["reload_empty_extend"] = {
-        Source = "reload_extend_empty",
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        Source = "reload_empty_extend",
         FrameRate = 60,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
         LHIK = true,
-        LHIKIn = 1/30,
-        LHIKOut = 0.2,
+        LHIKIn = 1,
+        LHIKOut = 0.25,
+        SoundTable = {
+            {s = "eap_brenten.magout", t = 20/60},
+            {s = "eap_brenten.magin", t = 79/60},
+            {s = "eap_brenten.slideback", t = 120/60},
+            {s = "eap_brenten.slideforward", t = 128/60}
+        },
     },
 }

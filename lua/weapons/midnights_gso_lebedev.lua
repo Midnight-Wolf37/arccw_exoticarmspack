@@ -126,6 +126,7 @@ SWEP.AttachmentElements = {
 		VMBodygroups = {{ind = 1, bg = 1}}
 	},
     ["rail"] = {
+        ExcludeFlags = {"eap_lebby_carbine"},
         VMElements = {
 			{
 				Model = "models/weapons/arccw_go/atts/pistol_rail.mdl",
@@ -137,6 +138,9 @@ SWEP.AttachmentElements = {
 				Scale = Vector(0.711, 0.711, 0.711)
 			}
         }
+    },
+    ["eap_lebby_carbine"] = {
+        VMBodygroups = {{ind = 2, bg = 1}}
     }
 }
 
@@ -184,6 +188,15 @@ SWEP.Attachments = {
         VMScale = Vector(0.775, 0.775, 0.775)
     },
     {
+        PrintName = "Slide",
+        Slot = "eap_lebby_slide",
+        Bone = "body",
+        Offset = {
+            vpos = Vector(0, 0, 0),
+            vang = Angle(90, 0, -90),
+        }
+    },
+    {
         PrintName = "Magazine",
         Slot = "lebby_mag",
         DefaultAttName = "14-Round standard mag"
@@ -221,12 +234,29 @@ SWEP.Attachments = {
     },
 }
 
+SWEP.Hook_TranslateAnimation = function(wep, anim)
+	
+    local ret = anim
+    if wep.Attachments[4].Installed == "eap_lebby_carbine" then ret = ret .. "_carbine" end
+    if ret ~= anim then return ret end
+    
+end
+
+SWEP.Hook_SelectFireAnimation = function(wep, anim)
+	
+    local ret = anim
+    if wep.Attachments[4].Installed == "eap_lebby_carbine" then ret = ret .. "_carbine" end
+    if ret ~= anim then return ret end
+    
+end
+
 
 SWEP.Hook_SelectReloadAnimation = function(wep, anim)
 	
   local ret = anim
-  if wep.Attachments[4].Installed == "lebby_mag_extend" then ret = ret .. "_extend" end
-  if wep.Attachments[7].Installed == "go_perk_fastreload" then ret = ret .. "_rushed" end
+  if wep.Attachments[4].Installed == "eap_lebby_carbine" then ret = ret .. "_carbine" end
+  if wep.Attachments[5].Installed == "lebby_mag_extend" then ret = ret .. "_extend" end
+  if wep.Attachments[8].Installed == "go_perk_fastreload" then ret = ret .. "_rushed" end
   if ret ~= anim then return ret end
   
 end
@@ -264,6 +294,14 @@ SWEP.Animations = {
         Source = "fire_empty",
         ShellEjectAt = 0,
     },
+    ["fire_carbine"] = {
+        Source = "fire_carbine",
+        ShellEjectAt = 0,
+    },
+    ["fire_empty_carbine"] = {
+        Source = "fire_empty_carbine",
+		ShellEjectAt = 0,
+    },
     ["reload"] = {
         Source = "reload",
 		RareSource = "reload_rare",
@@ -271,7 +309,7 @@ SWEP.Animations = {
         Checkpoints = {16, 30},
         FrameRate = 30,
         LHIK = true,
-        LHIKIn = 1/30,
+        LHIKIn = 10/30,
         LHIKOut = 0.2,
     },
 	["reload_rushed"] = {
@@ -281,7 +319,7 @@ SWEP.Animations = {
         Checkpoints = {16, 30},
         FrameRate = 30,
         LHIK = true,
-        LHIKIn = 1/30,
+        LHIKIn = 10/30,
         LHIKOut = 0.2,
     },
     ["reload_empty"] = {
@@ -290,7 +328,7 @@ SWEP.Animations = {
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         FrameRate = 30,
         LHIK = true,
-        LHIKIn = 1/30,
+        LHIKIn = 10/30,
         LHIKOut = 0.2,
     },
 	["reload_empty_rushed"] = {
@@ -309,7 +347,7 @@ SWEP.Animations = {
         Checkpoints = {16, 30},
         FrameRate = 30,
         LHIK = true,
-        LHIKIn = 1/30,
+        LHIKIn = 10/30,
         LHIKOut = 0.2,
     },
     ["reload_extend_rushed"] = {
@@ -319,7 +357,7 @@ SWEP.Animations = {
         Checkpoints = {16, 30},
         FrameRate = 30,
         LHIK = true,
-        LHIKIn = 1/30,
+        LHIKIn = 10/30,
         LHIKOut = 0.2,
     },
     ["reload_empty_extend"] = {
@@ -328,7 +366,7 @@ SWEP.Animations = {
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         FrameRate = 60,
         LHIK = true,
-        LHIKIn = 1/30,
+        LHIKIn = 10/30,
         LHIKOut = 0.2,
     },
 	["reload_empty_extend_rushed"] = {
@@ -337,8 +375,83 @@ SWEP.Animations = {
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         FrameRate = 60,
         LHIK = true,
-        LHIKIn = 1/30,
+        LHIKIn = 10/30,
+        LHIKOut = 0.2,
+	}, 
+    ["reload_carbine"] = {
+        Source = "reload_extend",
+		RareSource = "reload_rare",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        Checkpoints = {16, 30},
+        FrameRate = 30,
+        LHIK = true,
+        LHIKIn = 10/30,
+        LHIKOut = 0.2,
+    },
+    ["reload_empty_carbine"] = {
+        Source = "reload_empty_carbine",
+		RareSource = "reload_rare_empty",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        FrameRate = 30,
+        LHIK = true,
+        LHIKIn = 10/30,
+        LHIKOut = 0.2,
+    }, 
+    ["reload_carbine_rushed"] = {
+        Source = "reload",
+		RareSource = "reload_rare",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        FrameRate = 30,
+        LHIK = true,
+        LHIKIn = 0.7,
         LHIKOut = 0.2,
 	},
+	["reload_empty_carbine_rushed"] = {
+        Source = "reload_empty_rushed",
+		RareSource = "reload_rare_empty",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        FrameRate = 30,
+        LHIK = true,
+        LHIKIn = 0.7,
+        LHIKOut = 0.2,
+	},
+    ["reload_carbine_extend"] = {
+        Source = "reload_extend",
+		RareSource = "reload_rare",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        Checkpoints = {16, 30},
+        FrameRate = 30,
+        LHIK = true,
+        LHIKIn = 10/30,
+        LHIKOut = 0.2,
+    },
+    ["reload_empty_carbine_extend"] = {
+        Source = "reload_empty_carbine_extend",
+		RareSource = "reload_rare_empty",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        FrameRate = 30,
+        LHIK = true,
+        LHIKIn = 10/30,
+        LHIKOut = 0.2,
+    },
+    ["reload_carbine_extend_rushed"] = {
+        Source = "reload_extend",
+		RareSource = "reload_rare",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        Checkpoints = {16, 30},
+        FrameRate = 30,
+        LHIK = true,
+        LHIKIn = 10/30,
+        LHIKOut = 0.2,
+    },
+	["reload_empty_carbine_extend_rushed"] = {
+        Source = "reload_extend_empty_rushed",
+		RareSource = "reload_rare_empty",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        FrameRate = 60,
+        LHIK = true,
+        LHIKIn = 10/30,
+        LHIKOut = 0.2,
+	}, 
 }
 
