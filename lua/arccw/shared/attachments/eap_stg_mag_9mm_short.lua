@@ -18,8 +18,8 @@ att.Mult_Penetration = 0.5
 att.Mult_Recoil = 0.9
 att.Mult_SightTime = 0.7
 att.Mult_AccuracyMOA = 2
-att.Mult_Damage = 0.75
-att.Mult_DamageMin = 0.75
+att.Mult_Damage = 0.65
+att.Mult_DamageMin = 0.65
 
 att.Override_ClipSize = 24
 att.Override_Ammo = "pistol"
