@@ -45,6 +45,12 @@ SD Handguard - Firearms Source team & Slogkot
 Holger Handguard - Kally
 MP40 Parts - Raynox3d
 
+OTs-14 Groza
+Model & Textures - Moon & Bluehole Games
+Sounds - Navaro & rzen1th
+Mag models the same as the AEK. Check there.
+SAW Barrel - Kally
+
 Credit to Slogkot, Dr Gordon Freeman, & Infinity ward for that drum mag you see on almost every gun.
 
 Special thanks to everyone else who has helped make this pack a possibility.
