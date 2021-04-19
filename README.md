@@ -21,6 +21,7 @@ Weapons:
 - Magpul FMG-9
 - HK VP70
 - Bren Ten
+- OTs-14 Groza
 
 Attachments:
 
@@ -31,6 +32,8 @@ Attachments:
 - Mercenary Style
 - Anti-Air Shell
 - VP70 Stock
+- Donut Charm
+- Grab Bag ammo
 
 Work in progress:
 
@@ -40,21 +43,20 @@ Weapons:
 - Chiappa Triple Threat
 - Franchi SPAS-12 & PA-8
 - HK XM29 OICW
-- OTs-14 Groza
+- Calico M950
+- HK HK21
+- Pancor Jackhammer Mk. 3
 
 Attachments:
 
 - Sci-Fi holosight
 - Grab bag
-- Metrodrip, Boomermobile, & Donut charms
+- Metrodrip & Boomermobile Charms
 
 Planned:
 
 Weapons:
 
-- Calico M950
-- HK HK21
-- Pancor Jackhammer Mk. 3
 - Daewoo USAS-12
 - Winchester Liberator
 - Zip 22
