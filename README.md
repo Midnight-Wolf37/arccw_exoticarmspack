@@ -5,9 +5,11 @@ Take on the world and turn heads of gun enthusiasts with Exotic Arms.
 Requires Arctic's Customizeable Weapons (ArcCW) base and Gunsmith Offensive (GSO) to work properly.
 Make sure to delete this file and the model dump folder when installing.
 
+
 Current Version:
 
 Version 0.5.0 Beta
+
 Changelog:
 - Bren Ten and OTs-14 Groza now available and fully working
 - Grab Bag ammunition type implemented
@@ -18,7 +20,10 @@ Changelog:
 - Fixed CS/LS5 and Spectre crouch positions
 
 
+
+
 Currently Implemented:
+
 Weapons:
 - PL-15 Lebedev
 - Bren Ten (NEW!)
@@ -41,7 +46,11 @@ Attachments:
 - Grab Bag Ammo (NEW!)
 
 
+
+
+
 Work in progress:
+
 Weapons:
 - Howa Type 64
 - Chiappa Triple Threat
@@ -56,7 +65,11 @@ Attachments:
 - Metrodrip, Donut, & Boomermobile charms
 
 
+
+
+
 Planned:
+
 Weapons:
 - Calico M950
 - Zip 22
