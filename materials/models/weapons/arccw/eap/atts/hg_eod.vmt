@@ -1,0 +1,14 @@
+"VertexLitGeneric"
+{
+	"$basetexture"			"models\weapons\arccw\eap\atts\wep_mp5ras_eod_d"
+	"$bumpmap" 			"models\weapons\arccw\eap\atts\wep_mp5ras_eod_n"
+    "$color2"			"[1.5 1.5 1.5]"
+
+	"$envmaptint" "[.01 .01 .01]"
+	"$basemapalphaphongmask" 	"1"
+	"$phong" 			"1"
+	"$phongboost"			"1"
+	"$phongexponent" 		"50"
+	"$phongfresnelranges"		"[0.8 1.9 5]"
+	"$halflambert"			"1"
+}

@@ -249,3 +249,31 @@ sound.Add({
 	volume = 		1.0,
 	sound = 			"weapons/arccw/eap/vp70/sliderelease.wav"
 })
+
+sound.Add({
+	name = 			"eap_brenten.magout",
+	channel = 		CHAN_AUTO,
+	volume = 		1.0,
+	sound = 			"weapons/arccw/eap/brenten/magout.wav"
+})
+
+sound.Add({
+	name = 			"eap_brenten.magin",
+	channel = 		CHAN_AUTO,
+	volume = 		1.0,
+	sound = 			"weapons/arccw/eap/brenten/magin.wav"
+})
+
+sound.Add({
+	name = 			"eap_brenten.slideback",
+	channel = 		CHAN_AUTO,
+	volume = 		1.0,
+	sound = 			"weapons/arccw/eap/brenten/slideback.wav"
+})
+
+sound.Add({
+	name = 			"eap_brenten.slideforward",
+	channel = 		CHAN_AUTO,
+	volume = 		1.0,
+	sound = 			"weapons/arccw/eap/brenten/slideforward.wav"
+})

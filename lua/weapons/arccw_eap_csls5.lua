@@ -46,7 +46,7 @@ SWEP.Recoil = 0.4
 SWEP.RecoilSide = 0.275
 SWEP.RecoilRise = 0.3
 
-SWEP.Delay = 60 / 800 -- 60 / RPM.
+SWEP.Delay = 60 / 820 -- 60 / RPM.
 SWEP.Num = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {
@@ -113,8 +113,8 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 SWEP.ActivePos = Vector(0, 0, 0)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
-SWEP.CrouchPos = Vector(-8, 0, 1)
-SWEP.CrouchAng = Angle(0, 0, -45)
+SWEP.CrouchPos = Vector(-4, 0, -1)
+SWEP.CrouchAng = Angle(0, 0, -10)
 
 SWEP.HolsterPos = Vector(3, 3, 0)
 SWEP.HolsterAng = Angle(-7.036, 30.016, 0)
@@ -174,12 +174,26 @@ SWEP.AttachmentElements = {
 	["handguard_wood"] = {
 		VMBodygroups = {{ind = 3, bg = 1}}
 	},
+	["handguard_eod"] = {
+		VMBodygroups = {{ind = 3, bg = 3}}
+	},
     ["ls5_mag_10mm"] = {
         VMBodygroups = {{ind = 1, bg = 1}}
     },
-	["eap_mag_drum_9mm"] = {
+	["eap_ls5_mag_drum"] = {
         VMBodygroups = {{ind = 1, bg = 2}},
-		Mult_ReloadTime = 1.1
+    },
+	["eap_ls5_mag_45_30"] = {
+        VMBodygroups = {{ind = 1, bg = 3}},
+    },
+	["eap_ls5_mag_15"] = {
+        VMBodygroups = {{ind = 1, bg = 4}},
+    },
+	["eap_ls5_mag_10mm_20"] = {
+        VMBodygroups = {{ind = 1, bg = 5}},
+    },
+	["eap_ls5_mag_45_15"] = {
+        VMBodygroups = {{ind = 1, bg = 6}},
     }
 }
 
@@ -244,7 +258,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Magazine",
-        Slot = { "ls5_mag", "eap_mag_9mm_drum" },
+        Slot = "ls5_mag",
         DefaultAttName = "30-Round 9mm Parabellum"
     },
     {
@@ -282,7 +296,7 @@ SWEP.Attachments = {
 SWEP.Hook_SelectReloadAnimation = function(wep, anim)
 
   local ret = anim
-  if wep.Attachments[6].Installed == "eap_mag_drum_9mm" then ret = ret .. "_drum" end
+  if wep.Attachments[6].Installed == "eap_ls5_mag_drum" then ret = ret .. "_drum" end
   if ret ~= anim then return ret end
 end
 	
@@ -299,6 +313,9 @@ SWEP.Animations = {
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 0.2,
+        SoundTable = {
+            {s = "eap_csls5.slap", t = 21/60}
+        },
     },
     ["fire"] = {
         Source = "fire",
@@ -316,6 +333,10 @@ SWEP.Animations = {
         LHIK = true,
         LHIKIn = 1/30,
         LHIKOut = 0.2,
+        SoundTable = {
+            {s = "eap_csls5.magout", t = 24/60},
+            {s = "eap_csls5.magin", t = 68/60}
+        },
     },
     ["reload_empty"] = {
         Source = "reload_empty",
@@ -324,6 +345,13 @@ SWEP.Animations = {
         LHIK = true,
         LHIKIn = 1/30,
         LHIKOut = 0.2,
+        SoundTable = {
+            {s = "eap_csls5.back", t = 22/60},
+            {s = "eap_csls5.up", t = 30/60},
+            {s = "eap_csls5.magout", t = 68/60},
+            {s = "eap_csls5.magin", t = 105/60},
+            {s = "eap_csls5.slap", t = 145/60}
+        },
     },
 	["reload_empty_drum"] = {
         Source = "reload_drum_empty",
@@ -332,6 +360,13 @@ SWEP.Animations = {
         LHIK = true,
         LHIKIn = 0.7,
         LHIKOut = 0.2,
+        SoundTable = {
+            {s = "eap_csls5.back", t = 22/60},
+            {s = "eap_csls5.up", t = 30/60},
+            {s = "eap_csls5.magout", t = 68/60},
+            {s = "eap_csls5.magin", t = 105/60},
+            {s = "eap_csls5.slap", t = 145/60}
+        },
 	},
 	["reload_drum"] = {
         Source = "reload_drum",
@@ -340,8 +375,9 @@ SWEP.Animations = {
         LHIK = true,
         LHIKIn = 0.7,
         LHIKOut = 0.2,
+        SoundTable = {
+            {s = "eap_csls5.magout", t = 24/60},
+            {s = "eap_csls5.magin", t = 68/60}
+        },
 	},
-    ["enter_inspect"] = false,
-    ["idle_inspect"] = false,
-    ["exit_inspect"] = false,
 }

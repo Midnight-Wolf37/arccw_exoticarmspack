@@ -1,0 +1,17 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/weapons/arccw/eap/groza/T_1P_AKALPHA_DM"
+	"$bumpmap" "models/weapons/arccw/eap/groza/T_1P_AKALPHA_NM"
+	"$PhongExponentTexture" "models/weapons/arccw/eap/groza/T_1P_AKALPHA_RM"
+
+	"$color2"			"[0 0 0]"
+	
+	$envmap						env_cubemap
+	$envmaptint					"[ .13 .13 .13 ]"
+
+	$phong						1
+	$phongboost					30
+	$phongfresnelranges			"[5 10 10]"
+	"$phongalbedotint" 			"1"
+	"$phongalbedoboost" 		"48"
+}

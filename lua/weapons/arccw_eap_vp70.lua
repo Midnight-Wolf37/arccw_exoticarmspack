@@ -90,8 +90,8 @@ SWEP.MuzzleEffectAttachment = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectAttachment = 2 -- which attachment to put the case effect on
 
 SWEP.SpeedMult = 0.93
-SWEP.SightedSpeedMult = 0.7
-SWEP.SightTime = 0.27
+SWEP.SightedSpeedMult = 0.8
+SWEP.SightTime = 0.175
 
 SWEP.IronSightStruct = {
     Pos = Vector(-5.461, -14.655, 1.598),
@@ -139,7 +139,7 @@ SWEP.AttachmentElements = {
             },
         },
     },
-    ["eap_mag_drum_9mm"] = {
+    ["eap_vp70_mag_drum"] = {
 		VMBodygroups = {{ind = 3, bg = 2}},
     },
 }
@@ -192,7 +192,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Magazine",
-        Slot = {"eap_vp70_mag", "eap_mag_9mm_drum"},
+        Slot = "eap_vp70_mag",
         DefaultAttName = "18-Round 9mm Mag"
     },
     {
@@ -232,7 +232,7 @@ SWEP.Hook_SelectReloadAnimation = function(wep, anim)
 	
 	local ret = anim
 	if wep.Attachments[5].Installed == "eap_vp70_mag_extend" then ret = ret .. "_extend" end
-	if wep.Attachments[5].Installed == "eap_mag_drum_9mm" then ret = ret .. "_drum" end
+	if wep.Attachments[5].Installed == "eap_vp70_mag_drum" then ret = ret .. "_drum" end
 	if ret ~= anim then return ret end
 	
 end
@@ -259,7 +259,6 @@ SWEP.Animations = {
     },
     ["fire_iron"] = {
         Source = "fire_irons",
-        Time = 0.5,
         ShellEjectAt = 0,
     },
     ["reload"] = {

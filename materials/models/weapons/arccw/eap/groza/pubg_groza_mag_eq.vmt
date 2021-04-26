@@ -1,0 +1,20 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/weapons/arccw/eap/groza/groza_mag_eq_d"
+	"$bumpmap" "models/weapons/arccw/eap/groza/groza_mag_eq_n"
+                "$ambientocclusion" 1
+                "$ambientoccltexture" "models/weapons/arccw/eap/groza/groza_mag_eq_a"	
+	
+	"$phong" "1"
+	"$phongexponent"				"0"
+	"$phongboost"					"0"
+
+	"$phongalbedotint" 1
+	"$phongexponenttexture" "models/weapons/arccw/eap/groza\exponent"
+
+	"$phongfresnelranges"			"[5 7 8]"
+	
+//	"$envmap" "env_cubemap"
+	"$envmaptint" "[0.35 0.35 0.35]"
+	"$normalmapalphaenvmapmask" "1"
+}

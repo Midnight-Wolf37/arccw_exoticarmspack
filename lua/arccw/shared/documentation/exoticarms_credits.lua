@@ -9,7 +9,7 @@ Model - sharksplitter
 Textures - KingstonCartel (normal map) & Midnight_Wolf (diffuse map)
 Sounds - Navaro
 Wooden Furniture - Matias Hollmann
-SD Handguard & Extra Magazines - Firearms Source team & Slogkot
+SD Handguard, EOD Handguard, & Extra Magazines - Firearms Source team & Slogkot
 
 SITES Spectre M4 / Modello 4 Phantom
 Model - RedRogueXIII
@@ -25,18 +25,15 @@ Rail mount - Overkill Software
 7.62 steel mags & Wooden stock - New World Interactive
 7.62 poly mags - Valve
 5.45 30 & 45 round mags - Paul Yakushev
-AMD-65 parts - 
-SR-3M parts - 
-AS Val parts -
+SR-3M & AS Val Parts - unknown (original gamebanana submissions trashed)
 
 FMG-9 / SMG9 ARES
 Model & Textures - 
 Sounds - Navaro, NightmareMutant, & Magmacow
 
 VP70 / Pistole M70
-Model -
-Textures -
-Sounds -
+Model & Textures - KnechtRuprecht & Xplor3r
+Sounds - various
 
 Sturmgewehr 44 / Maschinenkarabiner 44H
 Model & Textures - Mr. Why, 4Echo, & Infinity Ward
@@ -44,6 +41,17 @@ Sounds - Navaro, NightmareMutant, & Magmacow
 SD Handguard - Firearms Source team & Slogkot
 Holger Handguard - Kally
 MP40 Parts - Raynox3d
+
+OTs-14 Groza / Thunderstorm-762
+Model & Textures - Bluehole Games (original model) & Moon (extracting & model port)
+Sounds - Navaro & rzen1th
+Railed Handguard - New World Interactive
+Magazine Models - Kally, Paul Yakushev, Unknown (9x39 30rd same as AEK)
+
+Bren Ten / Crockett 83/10
+Model & Textures - lukelcc & RETOUR
+Sounds - MagmaCow
+Executioner muzzle & Competition magazine - unknown
 
 Credit to Slogkot, Dr Gordon Freeman, & Infinity ward for that drum mag you see on almost every gun.
 

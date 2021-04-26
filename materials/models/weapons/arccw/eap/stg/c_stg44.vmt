@@ -1,0 +1,15 @@
+"VertexLitGeneric"
+{
+	$basetexture				"models\weapons\arccw\eap\stg\c_stg44_d"
+	$bumpmap					"models\weapons\arccw\eap\stg\c_stg44_n"
+	$phongexponenttexture		"models\weapons\arccw\eap\stg\c_stg44_e"
+	
+	$envmap						env_cubemap
+	$envmaptint					"[ .02 .02 .02 ]"
+	$normalmapalphaenvmapmask	"1"	
+	
+	$phong						1
+	$phongexponent				10
+	$phongboost					3
+	$phongfresnelranges			"[0.25 0.5 1]"
+}
