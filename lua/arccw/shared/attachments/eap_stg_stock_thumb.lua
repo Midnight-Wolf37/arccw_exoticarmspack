@@ -1,7 +1,7 @@
 att.PrintName = "Thumbhole Stock"
 att.Icon = nil
 att.Description = "Lengthened thumbhole stock from a sporting rifle. Greatly reduces recoil, but is considerably more cumbersome."
-att.SortOrder = 15
+att.SortOrder = 999
 att.Desc_Pros = {
 }
 att.Desc_Cons = {

@@ -1,6 +1,7 @@
 att.PrintName = "20-Round 7.92mm Mag"
 att.Icon = nil
 att.Description = "Compact folded stock configuration increases handling at the cost of recoil."
+att.SortOrder = 20 + 792
 att.Desc_Pros = {
 }
 att.Desc_Cons = {

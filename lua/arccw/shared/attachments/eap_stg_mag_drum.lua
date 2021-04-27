@@ -1,7 +1,7 @@
 att.PrintName = "60-Round 7.92mm Drum Mag"
 att.Icon = nil
 att.Description = "Drum magazine that doubles the amount of rounds available. Excellent capacity but quite cumbersome."
-att.SortOrder = 50
+att.SortOrder = 60 + 792
 att.Desc_Pros = {
     "pro.magcap"
 }

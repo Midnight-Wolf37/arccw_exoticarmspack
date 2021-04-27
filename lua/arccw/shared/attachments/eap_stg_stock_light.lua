@@ -1,6 +1,7 @@
 att.PrintName = "Light Stock"
 att.Icon = nil
 att.Description = "Lightweight under-folding stock that improves mobility, but dampens recoil less."
+att.SortOrder = 1000
 att.Desc_Pros = {
 }
 att.Desc_Cons = {

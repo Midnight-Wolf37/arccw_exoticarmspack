@@ -107,8 +107,8 @@ SWEP.HoldtypeSights = "revolver"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
-SWEP.ActivePos = Vector(0, 0, 0)
-SWEP.ActiveAng = Angle(0, 0, 0)
+SWEP.ActivePos = Vector(-2.25, -5, 0)
+SWEP.ActiveAng = Angle(0, -1, -5.75)
 
 SWEP.CrouchPos = Vector(-4, 0, -1)
 SWEP.CrouchAng = Angle(0, 0, -10)

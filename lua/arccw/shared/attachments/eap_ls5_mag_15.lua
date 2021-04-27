@@ -1,7 +1,7 @@
 att.PrintName = "15-Round 9mm Mag"
 att.Icon = Material("entities/eap_mag_10mm.png", "mips smooth")
 att.Description = "Shortened magazine that is easier to maneuver."
-att.SortOrder = 15
+att.SortOrder = 15 + 900
 att.Desc_Pros = {
 }
 att.Desc_Cons = {

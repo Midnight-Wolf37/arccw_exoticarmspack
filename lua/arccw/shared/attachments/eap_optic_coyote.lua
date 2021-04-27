@@ -2,7 +2,7 @@ att.PrintName = "Coyote (Holo)"
 att.Icon = Material("entities/eap_optic_coyote.png", "smooth")
 att.Description = "Chinese reflex sight identifiable by the fang-like hood over the lens. Unobstructive compared to other reflex sights."
 
-att.SortOrder = 1
+att.SortOrder = 100
 
 att.Desc_Pros = {
 	"You might know what the text on the frame means.",
