@@ -8,9 +8,11 @@ Make sure to delete this file and the model dump folder when installing.
 
 Current Version:
 
-Version 0.5.0 Beta
+Version 0.5.1 Beta
 
 Changelog:
+- Reworked idle positions
+- Added Groza suppressor as a standalone attachment
 - Bren Ten and OTs-14 Groza now available and fully working
 - Grab Bag ammunition type implemented
 - Numerous large textures compressed and some removed, file size now nearly 400mb smaller
@@ -44,6 +46,7 @@ Attachments:
 - Anti-Air Shell
 - VP70 Stock
 - Grab Bag Ammo (NEW!)
+- Groza suppressor (NEW!)
 
 
 
