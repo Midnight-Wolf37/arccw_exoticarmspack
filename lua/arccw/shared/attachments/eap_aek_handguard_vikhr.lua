@@ -19,6 +19,6 @@ att.Mult_MoveSpeed = 0.95
 
 att.LHIK = true
 
-att.Model = "models/weapons/arccw/mifl_atts/fas2/grip_famas_felin.mdl"
+att.Model = "models/weapons/arccw/eap/models/atts/thesusgrip.mdl"
 
 att.ModelOffset = Vector(0, 0, 0)

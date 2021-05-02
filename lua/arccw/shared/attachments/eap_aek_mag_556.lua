@@ -9,11 +9,14 @@ att.Desc_Cons = {
 att.AutoStats = true
 att.Slot = "eap_aek_mag"
 
-att.Mult_Penetration = 1.1
-att.Mult_AccuracyMOA = 0.9
-att.Mult_HipDispersion = 0.85
-att.Mult_Recoil = 1.05
-att.Mult_Damage = 0.9
 
+att.Mult_Damage = 0.85
+att.Mult_DamageMin = 0.85
+att.Mult_Penetration = 1.2
+att.Mult_Range = 0.8
+att.Mult_Recoil = 0.7
+att.Mult_RecoilSide = 0.5
+att.Mult_RPM = 1.35
 
+att.Override_Ammo = "smg1"
 att.Override_Trivia_Calibre = "5.56x45mm NATO"

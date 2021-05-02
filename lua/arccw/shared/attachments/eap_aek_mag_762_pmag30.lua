@@ -9,9 +9,13 @@ att.Desc_Cons = {
 att.AutoStats = true
 att.Slot = "eap_aek_mag"
 
-att.Mult_Recoil = 1.25
-att.Mult_RecoilSide = 1.03
-att.Mult_AccuracyMOA = 1.2
+
+att.Mult_Damage = 1.1
+att.Mult_DamageMin = 1.1
+att.Mult_Penetration = 1.2
+att.Mult_Range = 1.2
+att.Mult_Recoil = 1.2
+att.Mult_RPM = 0.9
 
 att.Mult_SightTime = 1
 att.Mult_MoveSpeed = 1.05

@@ -9,14 +9,15 @@ Model - sharksplitter
 Textures - KingstonCartel (normal map) & Midnight_Wolf (diffuse map)
 Sounds - Navaro
 Wooden Furniture - Matias Hollmann
-SD Handguard, EOD Handguard, & Extra Magazines - Firearms Source team & Slogkot
+SD Handguard & Extra Magazines - Firearms Source team
+EOD Handguard - Arby26
 
 SITES Spectre M4 / Modello 4 Phantom
 Model - RedRogueXIII
 Textures - 4Echo
 Sounds - KillerExe_01
 Rail mount - Overkill Software
-Extra Magazines - Firearms Source team & Slogkot
+Extra Magazines - Firearms Source team
 
 AEK-971 / A-545
 Model & Textures - adept1993 & Street-you
@@ -28,7 +29,7 @@ Rail mount - Overkill Software
 SR-3M & AS Val Parts - unknown (original gamebanana submissions trashed)
 
 FMG-9 / SMG9 ARES
-Model & Textures - 
+Model & Textures - Skaveria
 Sounds - Navaro, NightmareMutant, & Magmacow
 
 VP70 / Pistole M70
@@ -38,7 +39,7 @@ Sounds - various
 Sturmgewehr 44 / Maschinenkarabiner 44H
 Model & Textures - Mr. Why, 4Echo, & Infinity Ward
 Sounds - Navaro, NightmareMutant, & Magmacow
-SD Handguard - Firearms Source team & Slogkot
+SD Handguard - Firearms Source team
 Holger Handguard - Kally
 MP40 Parts - Raynox3d
 
@@ -53,6 +54,14 @@ Model & Textures - lukelcc & RETOUR
 Sounds - MagmaCow
 Executioner muzzle & Competition magazine - unknown
 
-Credit to Slogkot, Dr Gordon Freeman, & Infinity ward for that drum mag you see on almost every gun.
+General:
+Credit to Dr Gordon Freeman & Infinity ward for that drum mag you see on almost every gun.
+Credit to Pavlienda for making the hand rig used to animate all the weapons.
 
-Special thanks to everyone else who has helped make this pack a possibility.
+Special thanks to everyone else who has helped make this pack a possibility, including:
+    - rzen1th, who made a few amazing sounds and fixed idle positions
+    - slogkot/fleshy mammal, who lent me a few models from his FAS2 pack to use, gave me advice, and helped me improve as an animator
+    - russianlad, who also helped me improve as an animator
+
+And an extra special thanks to YOU for downloading this!
+
