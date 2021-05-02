@@ -1,5 +1,5 @@
 att.PrintName = "270mm Ukorochenniy Barrel"
-att.Icon = aterial("entities/groza_barrel_short.png", "mips smooth")
+att.Icon = Material("entities/groza_barrel_short.png", "mips smooth")
 att.Description = "Compact barrel that lacks a handguard."
 att.Desc_Pros = {
 }

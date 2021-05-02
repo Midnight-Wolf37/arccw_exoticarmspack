@@ -11,7 +11,7 @@ Make sure to delete this file and the model dump folder when installing.
 
 Current Version:
 
-Version 1.0.1
+Version 1.0.2
 
 Changelog:
 - Balanced AEK mag stats
@@ -19,6 +19,9 @@ Changelog:
 - fixed VP70 firing sound
 - fixed filepath for Vikhr LHIK
 - added attachment icons
+- tweaked worldmodel positions
+- fixed groza backup optics
+- corrected muzzle flash angles
 
 
 

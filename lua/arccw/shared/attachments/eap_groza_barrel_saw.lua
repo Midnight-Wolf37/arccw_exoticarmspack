@@ -1,5 +1,5 @@
 att.PrintName = "590mm SAW Barrel"
-att.Icon = aterial("entities/groza_barrel_rpk.png", "mips smooth")
+att.Icon = Material("entities/groza_barrel_rpk.png", "mips smooth")
 att.Description = "Extended barrel that makes the rifle into a squad automatic weapon. Also includes integrated bipod."
 att.Desc_Pros = {
 }

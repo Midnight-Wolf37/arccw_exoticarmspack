@@ -90,8 +90,13 @@ SWEP.IronSightStruct = {
 }
 
 SWEP.HoldtypeHolstered = "passive"
-SWEP.HoldtypeActive = "smg1"
+SWEP.HoldtypeActive = "smg"
 SWEP.HoldtypeSights = "rpg"
+
+SWEP.WorldModelOffset = {
+    pos = Vector(-16.5, 6, -3),
+    ang = Angle(-10, 0, 180)
+}
 
 SWEP.ActivePos = Vector(0, 0, 0)
 SWEP.ActiveAng = Angle(0, 0, 0)
@@ -249,7 +254,7 @@ SWEP.Attachments = {
             vang = Angle(0, 0, -90)
         },
         CorrectiveAng = Angle(0, 0, 0),
-        RequiredFlags = { "eap_groza_barrel_railed" },
+        RequireFlags = { "eap_groza_barrel_railed" },
         MergeSlots = {13}
     },
     {
@@ -324,12 +329,14 @@ SWEP.Attachments = {
     {
         Hidden = true,
         Slot = "optic_lp",
+        Bone = "main",
         Offset = {
             vpos = Vector(6.118, -2.657, 0.646),
-            vang = Angle(0, 0, -90)
+            vang = Angle(0, 0, -45)
         },
+        CorrectiveAng = Angle(0, 0, 0),
         InstalledEles = { "backuprail" },
-        RequiredFlags = { "eap_groza_barrel_railed" }
+        RequireFlags = { "eap_groza_barrel_railed" }
     },
 }
     

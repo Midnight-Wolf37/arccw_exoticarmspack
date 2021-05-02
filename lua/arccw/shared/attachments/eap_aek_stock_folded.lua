@@ -1,5 +1,5 @@
 att.PrintName = "Folded Stock"
-att.Icon = Material("entities/ls5_stock_folded.png", "mips smooth")
+att.Icon = Material("entities/eap_aek_stock_fold.png", "mips smooth")
 att.Description = "Compact folded stock configuration increases handling at the cost of recoil."
 att.Desc_Pros = {
 }

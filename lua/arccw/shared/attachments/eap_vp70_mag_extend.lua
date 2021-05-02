@@ -1,5 +1,5 @@
 att.PrintName = "30-Round 9mm Magazine"
-att.Icon = Material("entities/eap_vp70_bigmag.png", "mips smooth")
+att.Icon = Material("entities/vp70_bigmag.png", "mips smooth")
 att.Description = "Extended magazine with extra capacity. Medium length balances increased capacity with increased weight."
 att.Desc_Pros = {
     "pro.magcap"

@@ -148,7 +148,7 @@ SWEP.ExtraSightDist = 10
 SWEP.GuaranteeLaser = true
 
 SWEP.WorldModelOffset = {
-    pos = Vector(-9, 6, -3.5),
+    pos = Vector( -21.4, 7, -1.7),
     ang = Angle(-10, 0, 180),
 }
 

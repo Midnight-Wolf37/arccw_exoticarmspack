@@ -129,7 +129,7 @@ SWEP.CustomizeAng = Angle(5, 30, 30)
 SWEP.BarrelLength = 24
 
 SWEP.WorldModelOffset = {
-    pos = Vector(-10, 3, -5),
+    pos = Vector(-10, 7, -4),
     ang = Angle(-10, 0, 180)
 }
 

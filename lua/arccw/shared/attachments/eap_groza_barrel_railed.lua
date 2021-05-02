@@ -1,5 +1,5 @@
 att.PrintName = "590mm RIS Barrel"
-att.Icon = aterial("entities/groza_ris.png", "mips smooth")
+att.Icon = Material("entities/groza_ris.png", "mips smooth")
 att.Description = "Extended barrel with rail interface system that allows for more attachment mounting."
 att.Desc_Pros = {
     "Allows for the mounting of backup optics"
