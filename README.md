@@ -11,13 +11,14 @@ Make sure to delete this file and the model dump folder when installing.
 
 Current Version:
 
-Version 1.0.0
+Version 1.0.1
 
 Changelog:
 - Balanced AEK mag stats
 - renamed lebedev files to suit naming conventions
 - fixed VP70 firing sound
-
+- fixed filepath for Vikhr LHIK
+- added attachment icons
 
 
 
@@ -25,14 +26,14 @@ Currently Implemented:
 
 Weapons:
 - PL-15 Lebedev
-- Bren Ten (NEW!)
+- Bren Ten
 - HK VP70
 - Jianshe CS/LS5
 - SITES Spectre M4
 - Magpul FMG-9
 - AEK-971
 - Sturmgewehr 44
-- OTs-14 Groza (NEW!)
+- OTs-14 Groza
 
 Attachments:
 - Coyote Sight 
@@ -42,8 +43,8 @@ Attachments:
 - Mercenary Style
 - Anti-Air Shell
 - VP70 Stock
-- Grab Bag Ammo (NEW!)
-- Groza suppressor (NEW!)
+- Grab Bag Ammo
+- Groza suppressor
 
 
 
