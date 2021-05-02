@@ -1,5 +1,5 @@
 att.PrintName = "30-Round 7.62mm Magpul PMAG"
-att.Icon = nil
+att.Icon = Material("entities/aek_mag_762_pmag.png", "smooth")
 att.Description = "Even lighter weight polymer magazine that speeds up reloading compared to standard and bakelite 7.62 mags."
 att.SortOrder = 30 + 762 
 att.Desc_Pros = {

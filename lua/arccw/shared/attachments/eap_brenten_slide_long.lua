@@ -1,5 +1,5 @@
 att.PrintName = "157mm Limited Production Slide"
-att.Icon = nil
+att.Icon = Material("entities/bren_longslide.png", "mips smooth")
 att.Description = "Rare long slide that improves range and accuracy, but limits rate of fire."
 att.Desc_Pros = {
 }

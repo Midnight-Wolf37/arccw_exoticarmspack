@@ -1,5 +1,5 @@
 att.PrintName = "Grab Bag"
-att.Icon = nil
+att.Icon = Material("entities/grabbag.png", "mips smooth")
 att.Description = "Your mags seem to have been loaded with every type of ammo available! Each trigger pull is a different surprise!"
 att.Desc_Pros = {
     "Random ammo type on every shot."

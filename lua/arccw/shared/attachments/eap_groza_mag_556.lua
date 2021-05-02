@@ -1,5 +1,5 @@
 att.PrintName = "30-Round 5.56mm Mag"
-att.Icon = nil
+att.Icon = Material("entities/aek_mag_556.png", "mips smooth")
 att.Description = "Caliber conversion to 5.56 NATO, unconventional for a Russian gun. Better penetration and recoil, but lesser damage."
 att.Desc_Pros = {
 }

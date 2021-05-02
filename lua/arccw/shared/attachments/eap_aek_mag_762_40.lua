@@ -1,5 +1,5 @@
 att.PrintName = "40-Round 7.62mm RPK Mag"
-att.Icon = nil
+att.Icon = Material("entities/acwatt_go_ak_mag_40_steel.png", "mips smooth")
 att.Description = "Extended 7.62x39mm magazine, intended."
 att.SortOrder = 40 + 762  + 2
 att.Desc_Pros = {

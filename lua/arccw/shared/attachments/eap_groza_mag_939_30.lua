@@ -1,5 +1,5 @@
 att.PrintName = "30-Round 9x39mm Mag"
-att.Icon = nil
+att.Icon = Material("entities/aek_mag_939_30.png", "mips smooth")
 att.Description = "Magazine with load intended for subsonic close-range operations. Stealthy and destructive"
 att.Desc_Pros = {
     "pro.invistracers"

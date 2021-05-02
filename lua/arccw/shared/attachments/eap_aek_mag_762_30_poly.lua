@@ -1,5 +1,5 @@
 att.PrintName = "30-Round 7.62mm Polymer Mag"
-att.Icon = nil
+att.Icon = Material("entities/acwatt_go_ak_mag_30.png", "mips smooth")
 att.Description = "Lightweight polymer magazine that speeds up reloading compared to standard 7.62 mags."
 att.SortOrder = 30 + 762  + 1
 att.Desc_Pros = {

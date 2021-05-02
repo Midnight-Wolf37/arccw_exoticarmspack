@@ -1,5 +1,5 @@
 att.PrintName = "237mm Vityaz Barrel"
-att.Icon = nil
+att.Icon = Material("entities/aek_peepee.png", "smooth")
 att.Description = "Compact SMG barrel from the PP19 Vityaz."
 att.Desc_Pros = {
 }

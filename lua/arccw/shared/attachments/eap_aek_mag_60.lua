@@ -1,5 +1,5 @@
 att.PrintName = "60-Round 5.45mm Casket Mag"
-att.Icon = nil
+att.Icon = Material("entities/acwatt_go_ak_mag_60_545.png", "mips smooth")
 att.Description = "Fairly uncommon casket mag, offering exceptional capacity, at the cost of being quite cumbersome."
 att.SortOrder = 60
 att.Desc_Pros = {

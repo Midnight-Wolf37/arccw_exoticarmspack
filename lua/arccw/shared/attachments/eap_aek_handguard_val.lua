@@ -1,5 +1,5 @@
 att.PrintName = "AS Val Handguard"
-att.Icon = nil
+att.Icon = Material("entities/aek_val.png", "smooth")
 att.Description = "Integrally suppressed handguard from an AS Val rifle. Better handling compared to a standalone suppressor."
 att.SortOrder = 0
 att.Desc_Pros = {

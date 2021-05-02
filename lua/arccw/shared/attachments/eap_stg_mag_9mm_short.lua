@@ -1,5 +1,5 @@
 att.PrintName = "24-Round 9mm MP40 Mag"
-att.Icon = nil
+att.Icon = Material("entities/stg_mag_mp40_sgort.png", "smooth")
 att.Description = "SMG conversion, allowing the weapon to fire 9mm parabellum. Better close range stopping power at the cost of ballistics."
 att.Desc_Pros = {
 }

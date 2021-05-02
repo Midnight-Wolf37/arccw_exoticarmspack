@@ -1,5 +1,5 @@
 att.PrintName = "60-Round 5.45mm Mag"
-att.Icon = nil
+att.Icon = Material("entities/acwatt_go_ak_mag_60_545.png", "mips smooth")
 att.Description = "Lighter caliber conversion. Less recoil and better accuracy at the cost of stopping power."
 att.Desc_Pros = {
 }

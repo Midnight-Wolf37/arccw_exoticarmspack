@@ -1,5 +1,5 @@
 att.PrintName = "Executioner Muzzle Extension"
-att.Icon = nil
+att.Icon = Material("entities/bren_exec.png", "mips smooth")
 att.Description = "Combination match counterweight, muzzle brake, and rail interface system. Greatly improves accuracy at the cost of mobility."
 att.Desc_Pros = {
 }

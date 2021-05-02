@@ -1,5 +1,5 @@
 att.PrintName = "40-Round 7.62mm Mag"
-att.Icon = nil
+att.Icon = Material("entities/acwatt_go_ak_mag_40_steel.png", "mips smooth")
 att.Description = "Extended magazine used by the RPK Squad Automatic Weapon."
 att.Desc_Pros = {
 	"pro.magcap"

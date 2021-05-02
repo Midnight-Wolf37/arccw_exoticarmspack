@@ -1,5 +1,5 @@
 att.PrintName = "10-Round 7.62mm Mag"
-att.Icon = nil
+att.Icon = Material("entities/acwatt_go_ak_mag_10.png", "mips smooth")
 att.Description = "Small magazine with lighter load. Improves handling."
 att.Desc_Pros = {}
 att.Desc_Cons = {"con.magcap"}

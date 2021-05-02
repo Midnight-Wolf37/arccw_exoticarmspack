@@ -1,5 +1,5 @@
 att.PrintName = "370mm Karabiner Barrel"
-att.Icon = nil
+att.Icon = Material("entities/stg_barrel_short.png", "smooth")
 att.Description = "Shortened barrel that increases mobility and handling at the cost of ballistic performance and range."
 
 att.SortOrder = 100

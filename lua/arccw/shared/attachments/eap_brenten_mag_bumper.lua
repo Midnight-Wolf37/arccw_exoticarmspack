@@ -1,5 +1,5 @@
 att.PrintName = "Competition Mag"
-att.Icon = nil
+att.Icon = Material("entities/bren_bumper.png", "mips smooth")
 att.Description = "Magazine fitted with extension bumper for ease of reloading during competition. Increases capacity without hindering reload speed."
 att.Desc_Pros = {
     "pro.magcap"

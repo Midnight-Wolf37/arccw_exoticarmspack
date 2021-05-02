@@ -1,5 +1,5 @@
 att.PrintName = "EOD Handguard"
-att.Icon = nil
+att.Icon = Material("entities/ls5_hg_eod.png", "mips smooth")
 att.Description = "Unique handguard used by hazard containment units, designed to accomdate for underbarrel weapons. Barrel shroud offers slightly more range and recoil control."
 att.Desc_Pros = {
 }

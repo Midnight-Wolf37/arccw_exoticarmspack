@@ -1,5 +1,5 @@
 att.PrintName = "30-Round 9mm Vityaz Mag"
-att.Icon = nil
+att.Icon = Material("entities/aek_pp19.png", "smooth")
 att.Description = "9mm Parabellum conversion from a PP-19 Vityaz SMG. Improves close range weapon dynamics, but lacks range and power."
 att.SortOrder = 30
 att.Desc_Pros = {

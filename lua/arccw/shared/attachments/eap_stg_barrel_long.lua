@@ -1,5 +1,5 @@
 att.PrintName = "550mm Marksman Barrel"
-att.Icon = nil
+att.Icon = Material("entities/stg_barrel_long.png", "smooth")
 att.Description = "Experimental marksman barrel that greatly helps accuracy."
 
 att.SortOrder = 100

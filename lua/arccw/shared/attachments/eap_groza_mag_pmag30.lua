@@ -1,5 +1,5 @@
 att.PrintName = "30-Round 7.62mm Mag"
-att.Icon = nil
+att.Icon = Material("entities/aek_mag_762_pmag.png", "mips smooth")
 att.Description = "Lightweight polymer magazine that speeds up reloading and improves handling."
 att.Desc_Pros = {}
 att.Desc_Cons = {}

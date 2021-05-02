@@ -1,5 +1,5 @@
 att.PrintName = "Schalldampfer Handguard"
-att.Icon = nil
+att.Icon = Material("entities/stg_barrel_sd.png", "smooth")
 att.Description = "Post-war experimental integrated silencer. Better handling compared to a standalone suppressor."
 att.SortOrder = 0
 att.Desc_Pros = {

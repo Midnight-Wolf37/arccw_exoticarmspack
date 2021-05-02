@@ -1,5 +1,5 @@
 att.PrintName = "Spetsnaz Silencer"
-att.Icon = nil
+att.Icon = Material("entities/eap_supp_groza.png", "smooth")
 att.Description = "Large proprietary silencer made for special operations. Whisper quiet."
 att.Desc_Pros = {
 }

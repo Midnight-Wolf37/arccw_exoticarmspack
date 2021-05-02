@@ -1,5 +1,5 @@
 att.PrintName = "30-Round 7.62mm Steel Mag"
-att.Icon = nil
+att.Icon = Material("entities/acwatt_go_ak_mag_30.png", "mips smooth")
 att.Description = "7.62x39mm conversion, improves power and range at the cost of recoil."
 att.SortOrder = 30 + 762 + 3
 att.Desc_Pros = {

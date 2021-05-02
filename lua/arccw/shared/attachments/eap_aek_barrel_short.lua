@@ -1,5 +1,5 @@
 att.PrintName = "314mm Carbine Barrel"
-att.Icon = nil
+att.Icon = Material("entities/aek_carbine.png", "smooth")
 att.Description = "Slightly shorter barrel derived from the AK-100 series carbines. "
 att.Desc_Pros = {
 }

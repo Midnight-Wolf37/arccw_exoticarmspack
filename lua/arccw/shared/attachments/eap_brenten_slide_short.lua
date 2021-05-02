@@ -1,5 +1,5 @@
 att.PrintName = "97mm Snub Slide"
-att.Icon = nil
+att.Icon = Material("entities/bren_shortslide.png", "mips smooth")
 att.Description = "Compact slide that improves weapon handling and trigger response. Without an underbarrel rail, it is impossible to mount an optic or LAM."
 att.Desc_Pros = {
 }

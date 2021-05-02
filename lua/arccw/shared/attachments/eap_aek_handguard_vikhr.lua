@@ -1,5 +1,5 @@
 att.PrintName = "Vikhr Handguard"
-att.Icon = nil
+att.Icon = Material("entities/aek_vikhr.png", "smooth")
 att.Description = "Handguard taken from an SR-3M Vikhr. Integrated grip improves control at the cost of handling."
 att.SortOrder = 0
 att.Desc_Pros = {
@@ -19,6 +19,6 @@ att.Mult_MoveSpeed = 0.95
 
 att.LHIK = true
 
-att.Model = "models/weapons/arccw/eap/models/atts/thesusgrip.mdl"
+att.Model = "models/weapons/arccw/eap/atts/thesusgrip.mdl"
 
 att.ModelOffset = Vector(0, 0, 0)

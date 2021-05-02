@@ -1,5 +1,5 @@
 att.PrintName = "30-Round 5.56mm AK-101 Mag"
-att.Icon = nil
+att.Icon = Material("entities/aek_mag_556.png", "smooth")
 att.Description = "5.56x45mm NATO Conversion. Benefits accuracy and penetration, but lacks stopping power and kicks harder."
 att.SortOrder = 30
 att.Desc_Pros = {

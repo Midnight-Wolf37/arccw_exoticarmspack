@@ -1,5 +1,5 @@
 att.PrintName = "20-Round 10mm Auto Mag"
-att.Icon = nil
+att.Icon = Material("entities/eap_mag_10mm.png", "mips smooth")
 att.Description = "10mm Auto conversion that increases all-around damage."
 att.SortOrder = 20 + 100
 att.Desc_Pros = {

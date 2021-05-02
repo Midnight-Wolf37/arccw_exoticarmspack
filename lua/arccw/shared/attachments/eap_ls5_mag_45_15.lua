@@ -1,5 +1,5 @@
 att.PrintName = "15-Round .45 ACP"
-att.Icon = nil
+att.Icon = Material("entities/eap_mag_45.png", "mips smooth")
 att.Description = ".45 ACP conversion that feeds from UMP mags. Improved close range stopping power at the cost of recoil."
 att.SortOrder = 15 + 200
 att.Desc_Pros = {
