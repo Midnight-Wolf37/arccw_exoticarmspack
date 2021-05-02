@@ -2,24 +2,21 @@
 A collection of little-known and rarely-seen guns from across the world, each with their own quirks and unique customization features. 
 Take on the world and turn heads of gun enthusiasts with Exotic Arms.
 
-Requires Arctic's Customizeable Weapons (ArcCW) base and Gunsmith Offensive (GSO) to work properly.
+Requires Arctic's Customizeable Weapons (ArcCW) base and Gunsmith Offensive (GSO) to work properly. 
+
+May also require Counter-Strike+ (CS+) for certain weapons that don't have GSO-style bodygroups.
+
 Make sure to delete this file and the model dump folder when installing.
 
 
 Current Version:
 
-Version 0.5.1 Beta
+Version 1.0.0
 
 Changelog:
-- Reworked idle positions
-- Added Groza suppressor as a standalone attachment
-- Bren Ten and OTs-14 Groza now available and fully working
-- Grab Bag ammunition type implemented
-- Numerous large textures compressed and some removed, file size now nearly 400mb smaller
-- Coyote sortorder number increased, now easier to locate
-- EOD handguard, short magazines, & .45 ACP conversion now available for the CS/LS5, as well as reworked animations.
-- Reworked VP70 sound and anims, also added spawnmenu icon
-- Fixed CS/LS5 and Spectre crouch positions
+- Balanced AEK mag stats
+- renamed lebedev files to suit naming conventions
+- fixed VP70 firing sound
 
 
 
