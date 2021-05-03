@@ -11,7 +11,7 @@ Make sure to delete this file and the model dump folder when installing.
 
 Current Version:
 
-Version 1.0.3
+Version 1.0.4
 
 Changelog:
 - Fixed backup rail model path
