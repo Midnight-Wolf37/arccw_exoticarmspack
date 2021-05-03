@@ -294,7 +294,7 @@ SWEP.AttachmentElements = {
     ["backuprail"] = {
         VMElements = {
             {
-                Model = "models/weapons/arccw/atts/backup_rail.mdl",
+                Model = "models/weapons/arccw/eap/atts/backup_rail.mdl",
                 Bone = "main",
                 Offset = {
                     pos = Vector(-0.087, -3.876, 10.494),

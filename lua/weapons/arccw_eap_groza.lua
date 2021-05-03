@@ -109,6 +109,8 @@ SWEP.CrouchAng = Angle(0, 0, -10)
 
 SWEP.BarrelLength = 24
 
+SWEP.MirrorVMWM = true
+
 SWEP.AttachmentElements = {
     ["rail"] = {
         VMBodyGroups = {{ind = 5, bg = 1}},
@@ -193,7 +195,7 @@ SWEP.AttachmentElements = {
     ["backuprail"] = {
         VMElements = {
 			{
-				Model = "models/weapons/arccw/atts/backup_rail.mdl",
+				Model = "models/weapons/arccw/eap/atts/backup_rail.mdl",
 				Bone = "main",
 				Offset = {
 					pos = Vector(6.753, -2.236, 0),

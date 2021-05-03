@@ -17,3 +17,4 @@ att.Mult_Recoil = 1.2
 att.Mult_RPM = 0.9
 
 att.Override_Trivia_Calibre = "7.62x39mm Soviet"
+att.Override_Ammo = "ar2"

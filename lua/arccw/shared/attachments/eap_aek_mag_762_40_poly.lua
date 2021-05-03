@@ -23,3 +23,4 @@ att.Mult_SightTime = 1.1
 att.Mult_MoveSpeed = 0.95
 
 att.Override_Trivia_Calibre = "7.62x39mm Soviet"
+att.Override_Ammo = "ar2"

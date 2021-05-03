@@ -11,17 +11,13 @@ Make sure to delete this file and the model dump folder when installing.
 
 Current Version:
 
-Version 1.0.2
+Version 1.0.3
 
 Changelog:
-- Balanced AEK mag stats
-- renamed lebedev files to suit naming conventions
-- fixed VP70 firing sound
-- fixed filepath for Vikhr LHIK
-- added attachment icons
-- tweaked worldmodel positions
-- fixed groza backup optics
-- corrected muzzle flash angles
+- Fixed backup rail model path
+- Aligned muzzleflash & eject positions on the CS/LS5, Bren Ten, Lebedev & AEK
+- Fixed an issue where 7.62x39 caliber conversions for the AEK would not change the ammo type
+- Fixed an issue where attachments for the worldmodel on the OTs-14 Groza would appear under the gun
 
 
 

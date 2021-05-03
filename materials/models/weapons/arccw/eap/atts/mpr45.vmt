@@ -1,0 +1,5 @@
+"VertexLitGeneric"
+{
+	"$basetexture"	"models\weapons\arccw\eap\atts\mpr45"
+    "$translucent" "1"
+}
