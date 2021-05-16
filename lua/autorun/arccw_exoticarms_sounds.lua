@@ -277,3 +277,30 @@ sound.Add({
 	volume = 		1.0,
 	sound = 			"weapons/arccw/eap/brenten/slideforward.wav"
 })
+sound.Add({
+	name = 			"eap_usas.magout",
+	channel = 		CHAN_AUTO,
+	volume = 		1.0,
+	sound = 			"weapons/arccw/eap/usas/clipout.wav"
+})
+
+sound.Add({
+	name = 			"eap_usas.magin",
+	channel = 		CHAN_AUTO,
+	volume = 		1.0,
+	sound = 			"weapons/arccw/eap/usas/magin.ogg"
+})
+
+sound.Add({
+	name = 			"eap_usas.boltback",
+	channel = 		CHAN_AUTO,
+	volume = 		1.0,
+	sound = 			"weapons/arccw/eap/usas/chback.ogg"
+})
+
+sound.Add({
+	name = 			"eap_usas.boltrelease",
+	channel = 		CHAN_AUTO,
+	volume = 		1.0,
+	sound = 			"weapons/arccw/eap/usas/chamber.ogg"
+})
