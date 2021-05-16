@@ -21,6 +21,7 @@ Extra Magazines - Firearms Source team
 
 AEK-971 / A-545
 Model & Textures - adept1993 & Street-you
+Texture exporting - 8Z
 Sounds - Navaro & rzen1th
 Rail mount - Overkill Software
 7.62 steel mags & Wooden stock - New World Interactive
@@ -54,12 +55,18 @@ Model & Textures - lukelcc & RETOUR
 Sounds - MagmaCow
 Executioner muzzle & Competition magazine - unknown
 
+USAS-12 / Syasgeon-89
+Model & Textures - EA / DICE (BF3 Model)
+10 & 20 Round Magazines - Pete3D
+Misc. Parts - White Snow
+Sounds - rzen1th & Midnight_Wolf
+
 General:
 Credit to Dr Gordon Freeman & Infinity ward for that drum mag you see on almost every gun.
 Credit to Pavlienda for making the hand rig used to animate all the weapons.
 
 Special thanks to everyone else who has helped make this pack a possibility, including:
-    - rzen1th, who made a few amazing sounds and fixed idle positions
+    - rzen1th, who made some amazing sounds and fixed idle positions
     - slogkot/fleshy mammal, who lent me a few models from his FAS2 pack to use, gave me advice, and helped me improve as an animator
     - russianlad, who also helped me improve as an animator
 
