@@ -11,14 +11,10 @@ Make sure to delete this file and the model dump folder when installing.
 
 Current Version:
 
-Version 1.0.4
+Version 1.1
 
 Changelog:
-- Fixed backup rail model path
-- Aligned muzzleflash & eject positions on the CS/LS5, Bren Ten, Lebedev & AEK
-- Fixed an issue where 7.62x39 caliber conversions for the AEK would not change the ammo type
-- Fixed an issue where attachments for the worldmodel on the OTs-14 Groza would appear under the gun
-
+- Added USAS-12
 
 
 Currently Implemented:
@@ -33,6 +29,7 @@ Weapons:
 - AEK-971
 - Sturmgewehr 44
 - OTs-14 Groza
+- Daewoo USAS-12 (NEW!)
 
 Attachments:
 - Coyote Sight 
@@ -56,7 +53,6 @@ Weapons:
 - Chiappa Triple Threat
 - Franchi SPAS-12 
 - HK XM29 OICW
-- Daewoo USAS-12
 - HK HK21 
 - Pancor Jackhammer Mk. 3
 
