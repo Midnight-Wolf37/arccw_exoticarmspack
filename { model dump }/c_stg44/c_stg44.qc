@@ -55,7 +55,7 @@ $contents "solid"
 
 $illumposition 0.257 -8.337 -25.648
 
-$cdmaterials "models\weapons\arccw\eap\"
+$cdmaterials "models\weapons\arccw\eap\stg\"
 $cdmaterials "models\weapons\arccw\eap\atts\"
 
 $definebone "main" "" 0.000000 0.103180 1.263949 -0.000000 0.000000 89.999985 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000
@@ -157,10 +157,10 @@ $bonemerge "ValveBiped.Bip01_R_Finger0"
 $bonemerge "ValveBiped.Bip01_R_Finger01"
 $bonemerge "ValveBiped.Bip01_R_Finger02"
 $bonemerge "mag"
-$attachment "muzzle" "muzzle" 0 0 0 rotate 90 0 -90
+$attachment "muzzle" "muzzle" 0 0 0 rotate -90 0 0
 $attachment "shell" "eject" 0 0 0 rotate 180 0 0
-$attachment "muzzle_short" "muzzle_short" 0 0 0 rotate 90 0 -90
-$attachment "muzzle_long" "muzzle_long" 0 0 0 rotate 90 0 -90
+$attachment "muzzle_short" "muzzle_short" 0 0 0 rotate -90 0 0
+$attachment "muzzle_long" "muzzle_long" 0 0 0 rotate -90 0 0
 
 $cbox 0 0 0 0 0 0
 

@@ -183,7 +183,7 @@ $bonemerge "mag"
 
 
 
-$attachment "1" "muzzle" 0 0 0 rotate 90 0 0
+$attachment "1" "muzzle" 0 0 0 rotate -90 180 90
 $attachment "2" "eject" 0 0 0 rotate 30 -165 0
 $attachment "3" "muzzle_short" 0 0 0 rotate 90 0 -90
 $attachment "4" "muzzle_val" 0 0 0 rotate 90 0 -90

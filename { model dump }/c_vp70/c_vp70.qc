@@ -1,0 +1,240 @@
+// Created by Crowbar 0.71
+
+$modelname "weapons\arccw\eap\c_vp70.mdl"
+
+$bodygroup "studio"
+{
+	studio "main.smd"
+	blank
+}
+$bodygroup "stock"
+{
+	blank
+	studio "stock.smd"
+}
+$bodygroup "slide"
+{
+	studio "frame_default.smd"
+	studio "frame_longslide.smd"
+}
+$bodygroup "mag"
+{
+	studio "mag.smd"
+	studio "mag_extend.smd"
+	studio "mag_50.smd"
+}
+
+$surfaceprop "default"
+
+$contents "solid"
+
+$illumposition 0.257 -8.337 -25.648
+
+$cdmaterials "models\weapons\arccw\eap\atts\"
+$cdmaterials "models\weapons\arccw\eap\atts\vp70\"
+
+$definebone "main" "" 0.489924 -3.663678 2.303976 -0.000000 0.000000 89.999985 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000
+$definebone "muzzle_long" "main" 0.000000 1.428661 8.835356 -0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000
+$definebone "eject" "main" -0.491436 1.730414 1.295730 -0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000
+$definebone "muzzle" "main" 0.000000 1.468284 6.235691 -0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000
+$definebone "trigger" "main" 0.000000 -0.484486 2.158475 -0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000
+$definebone "slide" "main" 0.000000 1.258703 1.597689 -0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000
+$definebone "ValveBiped.Bip01_Spine4" "" 0.000006 0.000000 0.000000 -79.749939 -89.999931 -90.000038 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000
+$definebone "ValveBiped.Bip01_L_Clavicle" "ValveBiped.Bip01_Spine4" 2.033348 1.000767 1.937660 -73.711861 168.619339 91.480484 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+$definebone "ValveBiped.Bip01_L_UpperArm" "ValveBiped.Bip01_L_Clavicle" 6.028145 0.000004 0.000000 37.411453 -9.513162 -165.469635 0.000000 0.000000 0.000000 0.000003 0.000000 0.000003
+$definebone "ValveBiped.Bip01_L_Forearm" "ValveBiped.Bip01_L_UpperArm" 11.692553 0.000081 -0.000005 -0.000113 -0.441694 -0.000170 0.000000 -0.000000 0.000000 0.000003 0.000000 0.000002
+$definebone "ValveBiped.Bip01_L_Hand" "ValveBiped.Bip01_L_Forearm" 22.176559 0.030851 -0.000072 37.699364 12.017385 175.620972 -0.000002 0.000000 0.000000 0.000000 0.000005 -0.000000
+$definebone "ValveBiped.Bip01_L_Finger4" "ValveBiped.Bip01_L_Hand" 3.859707 -0.142419 -1.191975 8.682490 -50.431561 -26.821815 0.000001 -0.000004 0.000000 -0.000003 0.000011 0.000002
+$definebone "ValveBiped.Bip01_L_Finger41" "ValveBiped.Bip01_L_Finger4" 1.312565 -0.000011 0.000005 -0.000175 -25.194269 0.000003 -0.000001 0.000004 0.000000 -0.000003 0.000002 0.000003
+$definebone "ValveBiped.Bip01_L_Finger42" "ValveBiped.Bip01_L_Finger41" 0.729365 -0.000004 -0.000003 -0.000172 -13.997593 0.000061 0.000001 0.000000 0.000000 -0.000002 -0.000005 0.000003
+$definebone "ValveBiped.Bip01_L_Finger3" "ValveBiped.Bip01_L_Hand" 3.942329 0.046756 -0.431442 4.194167 -46.466351 -8.696355 0.000000 0.000000 0.000001 -0.000000 0.000011 0.000000
+$definebone "ValveBiped.Bip01_L_Finger31" "ValveBiped.Bip01_L_Finger3" 1.539092 0.000008 -0.000007 0.000343 -14.197374 -0.000115 0.000000 0.000000 0.000000 0.000000 0.000005 -0.000002
+$definebone "ValveBiped.Bip01_L_Finger32" "ValveBiped.Bip01_L_Finger31" 1.196321 -0.000004 0.000002 -0.000401 -24.683657 0.000056 0.000001 0.000000 0.000000 -0.000000 -0.000009 -0.000001
+$definebone "ValveBiped.Bip01_L_Finger2" "ValveBiped.Bip01_L_Hand" 3.883690 -0.046782 0.431444 1.251054 -33.682175 4.921822 0.000000 -0.000002 0.000000 0.000002 0.000013 0.000000
+$definebone "ValveBiped.Bip01_L_Finger21" "ValveBiped.Bip01_L_Finger2" 1.719580 -0.000010 0.000010 0.315931 -20.997749 0.000114 -0.000001 0.000000 0.000002 0.000002 0.000006 -0.000001
+$definebone "ValveBiped.Bip01_L_Finger22" "ValveBiped.Bip01_L_Finger21" 1.209180 -0.000004 0.000004 0.177103 -12.398462 -0.000001 0.000000 0.000000 0.000002 0.000002 0.000000 -0.000001
+$definebone "ValveBiped.Bip01_L_Finger1" "ValveBiped.Bip01_L_Hand" 3.859859 -0.137961 1.332468 -2.449452 -30.465588 20.308487 0.000000 0.000000 0.000000 0.000004 0.000012 0.000000
+$definebone "ValveBiped.Bip01_L_Finger11" "ValveBiped.Bip01_L_Finger1" 1.719429 -0.000002 0.000000 0.233713 -20.798590 -0.000231 -0.000001 -0.000002 0.000000 0.000004 0.000005 0.000000
+$definebone "ValveBiped.Bip01_L_Finger12" "ValveBiped.Bip01_L_Finger11" 1.099667 -0.000004 0.000002 0.148687 -13.999191 0.000283 -0.000001 0.000000 0.000000 0.000006 0.000000 0.000000
+$definebone "ValveBiped.Bip01_L_Finger0" "ValveBiped.Bip01_L_Hand" 0.806046 -0.348930 1.321259 -38.916225 -45.196049 -70.054642 0.000000 -0.000002 0.000000 -0.000011 -0.000004 0.000007
+$definebone "ValveBiped.Bip01_L_Finger01" "ValveBiped.Bip01_L_Finger0" 1.789778 0.000004 -0.000008 -0.000069 13.093461 -0.000113 0.000000 0.000000 -0.000002 -0.000012 0.000001 0.000000
+$definebone "ValveBiped.Bip01_L_Finger02" "ValveBiped.Bip01_L_Finger01" 1.207000 0.000004 0.000000 -0.000069 20.790472 0.000111 0.000000 0.000002 0.000000 -0.000011 0.000009 -0.000002
+$definebone "ValveBiped.Bip01_R_Clavicle" "ValveBiped.Bip01_Spine4" 2.033356 1.000772 -1.937610 73.712029 168.618774 -95.596497 0.000000 -0.000000 0.000000 0.000000 0.000000 0.000001
+$definebone "ValveBiped.Bip01_R_UpperArm" "ValveBiped.Bip01_R_Clavicle" 6.028141 0.000002 -0.000001 -54.656620 -52.800243 -50.680870 0.000000 0.000000 0.000000 0.000003 -0.000001 -0.000003
+$definebone "ValveBiped.Bip01_R_Forearm" "ValveBiped.Bip01_R_UpperArm" 11.692554 -0.000000 -0.000003 0.000003 -0.372481 -0.000118 0.000000 0.000000 0.000000 0.000004 -0.000001 -0.000005
+$definebone "ValveBiped.Bip01_R_Hand" "ValveBiped.Bip01_R_Forearm" 12.374609 0.002233 0.000009 7.839103 58.557602 72.588249 0.000000 0.000000 0.000000 0.000004 -0.000005 0.000003
+$definebone "ValveBiped.Bip01_R_Finger4" "ValveBiped.Bip01_R_Hand" 3.859676 -0.132544 1.193108 -9.056623 -50.352509 26.713243 0.000000 0.000000 0.000000 0.000008 -0.000003 0.000005
+$definebone "ValveBiped.Bip01_R_Finger41" "ValveBiped.Bip01_R_Finger4" 1.312563 -0.000002 0.000001 0.000066 -25.191462 0.000114 -0.000000 0.000000 0.000000 0.000009 0.000003 0.000002
+$definebone "ValveBiped.Bip01_R_Finger42" "ValveBiped.Bip01_R_Finger41" 0.729369 0.000000 0.000003 0.000181 -13.995975 0.000000 0.000000 0.000002 -0.000000 0.000010 0.000007 0.000000
+$definebone "ValveBiped.Bip01_R_Finger3" "ValveBiped.Bip01_R_Hand" 3.942295 0.050348 0.431046 -4.537248 -46.420990 8.598779 0.000000 0.000000 -0.000001 0.000005 -0.000003 -0.000001
+$definebone "ValveBiped.Bip01_R_Finger31" "ValveBiped.Bip01_R_Finger3" 1.539101 0.000000 0.000000 -0.000167 -14.196006 0.000171 0.000001 -0.000002 0.000001 0.000005 0.000000 -0.000002
+$definebone "ValveBiped.Bip01_R_Finger32" "ValveBiped.Bip01_R_Finger31" 1.196322 -0.000002 -0.000002 0.000119 -24.680954 -0.000176 0.000000 0.000000 0.000001 0.000004 0.000007 -0.000003
+$definebone "ValveBiped.Bip01_R_Finger2" "ValveBiped.Bip01_R_Hand" 3.883663 -0.050305 -0.431044 -1.512604 -33.672222 -4.921993 0.000000 0.000000 0.000000 0.000005 -0.000007 0.000001
+$definebone "ValveBiped.Bip01_R_Finger21" "ValveBiped.Bip01_R_Finger2" 1.719587 0.000004 0.000008 -0.456757 -20.995352 0.000113 0.000001 0.000002 -0.000002 0.000005 0.000002 -0.000001
+$definebone "ValveBiped.Bip01_R_Finger22" "ValveBiped.Bip01_R_Finger21" 1.209187 0.000002 0.000004 -0.256050 -12.397082 0.000112 0.000000 0.000000 0.000000 0.000004 0.000007 -0.000003
+$definebone "ValveBiped.Bip01_R_Finger1" "ValveBiped.Bip01_R_Hand" 3.859835 -0.148920 -1.331280 2.209960 -30.481359 -20.306940 0.000000 0.000000 0.000000 0.000005 0.000002 0.000003
+$definebone "ValveBiped.Bip01_R_Finger11" "ValveBiped.Bip01_R_Finger1" 1.719427 0.000003 0.000010 -0.378777 -20.796703 0.000172 0.000000 -0.000001 0.000000 0.000006 0.000003 0.000000
+$definebone "ValveBiped.Bip01_R_Finger12" "ValveBiped.Bip01_R_Finger11" 1.099665 0.000003 0.000004 -0.241325 -13.997989 0.000227 0.000000 0.000000 0.000000 0.000005 0.000002 0.000000
+$definebone "ValveBiped.Bip01_R_Finger0" "ValveBiped.Bip01_R_Hand" 0.806025 -0.359832 -1.318336 38.596149 -45.467129 69.981407 -0.000000 0.000002 0.000000 -0.000003 0.000006 -0.000002
+$definebone "ValveBiped.Bip01_R_Finger01" "ValveBiped.Bip01_R_Finger0" 1.789784 -0.000004 -0.000005 -0.000061 13.095014 -0.000116 0.000000 0.000002 0.000000 -0.000003 0.000010 -0.000002
+$definebone "ValveBiped.Bip01_R_Finger02" "ValveBiped.Bip01_R_Finger01" 1.207000 0.000000 -0.000004 -0.000117 20.793215 0.000227 -0.000001 0.000000 0.000000 -0.000002 0.000005 -0.000002
+$definebone "mag" "" 0.489924 -2.838621 -0.180203 -0.000000 0.000000 89.999985 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000
+
+$bonemerge "main"
+$bonemerge "muzzle_long"
+$bonemerge "eject"
+$bonemerge "muzzle"
+$bonemerge "trigger"
+$bonemerge "slide"
+$bonemerge "ValveBiped.Bip01_Spine4"
+$bonemerge "ValveBiped.Bip01_L_Clavicle"
+$bonemerge "ValveBiped.Bip01_L_UpperArm"
+$bonemerge "ValveBiped.Bip01_L_Forearm"
+$bonemerge "ValveBiped.Bip01_L_Hand"
+$bonemerge "ValveBiped.Bip01_L_Finger4"
+$bonemerge "ValveBiped.Bip01_L_Finger41"
+$bonemerge "ValveBiped.Bip01_L_Finger42"
+$bonemerge "ValveBiped.Bip01_L_Finger3"
+$bonemerge "ValveBiped.Bip01_L_Finger31"
+$bonemerge "ValveBiped.Bip01_L_Finger32"
+$bonemerge "ValveBiped.Bip01_L_Finger2"
+$bonemerge "ValveBiped.Bip01_L_Finger21"
+$bonemerge "ValveBiped.Bip01_L_Finger22"
+$bonemerge "ValveBiped.Bip01_L_Finger1"
+$bonemerge "ValveBiped.Bip01_L_Finger11"
+$bonemerge "ValveBiped.Bip01_L_Finger12"
+$bonemerge "ValveBiped.Bip01_L_Finger0"
+$bonemerge "ValveBiped.Bip01_L_Finger01"
+$bonemerge "ValveBiped.Bip01_L_Finger02"
+$bonemerge "ValveBiped.Bip01_R_Clavicle"
+$bonemerge "ValveBiped.Bip01_R_UpperArm"
+$bonemerge "ValveBiped.Bip01_R_Forearm"
+$bonemerge "ValveBiped.Bip01_R_Hand"
+$bonemerge "ValveBiped.Bip01_R_Finger4"
+$bonemerge "ValveBiped.Bip01_R_Finger41"
+$bonemerge "ValveBiped.Bip01_R_Finger42"
+$bonemerge "ValveBiped.Bip01_R_Finger3"
+$bonemerge "ValveBiped.Bip01_R_Finger31"
+$bonemerge "ValveBiped.Bip01_R_Finger32"
+$bonemerge "ValveBiped.Bip01_R_Finger2"
+$bonemerge "ValveBiped.Bip01_R_Finger21"
+$bonemerge "ValveBiped.Bip01_R_Finger22"
+$bonemerge "ValveBiped.Bip01_R_Finger1"
+$bonemerge "ValveBiped.Bip01_R_Finger11"
+$bonemerge "ValveBiped.Bip01_R_Finger12"
+$bonemerge "ValveBiped.Bip01_R_Finger0"
+$bonemerge "ValveBiped.Bip01_R_Finger01"
+$bonemerge "ValveBiped.Bip01_R_Finger02"
+$bonemerge "mag"
+
+$attachment "muzzle" "muzzle" 0 0 0 rotate -90 0 0
+$attachment "shell" "eject" 0 0 0 rotate 180 0 0
+$attachment "muzzle_long" "muzzle_long" 0 0 0 rotate -90 0 0
+
+$cbox 0 0 0 0 0 0
+
+$bbox -20.401 -10.165 -18.377 22.643 6.236 0.745
+
+$collisionmodel "main.smd"
+{
+    $mass 10
+    $inertia 1
+    $damping 0
+    $rotdamping 0
+    $rootbone " "
+}
+
+
+
+$sectionframes 30 210
+
+$sequence "idle" {
+	"anims\idlebutgood.smd"
+	activity "ACT_VM_IDLE" 1
+	fps 60
+}
+
+$sequence "fire" {
+	"anims\fire.smd"
+	activity "ACT_VM_PRIMARYATTACK" 1
+	snap
+	fps 60
+}
+
+$sequence "fire_irons" {
+	"anims\fire_irons.smd"
+	activity "ACT_VM_PRIMARYATTACK" 1
+	snap
+	fps 60
+}
+
+$sequence "draw" {
+	"anims\draw.smd"
+	activity "ACT_VM_DRAW" 1
+	{ event 5004 5 "eap_vp70.draw" }
+	snap
+	fps 60
+}
+
+$sequence "reload" {
+	"anims\reload.smd"
+	activity "ACT_VM_RELOAD" 1
+	{ event 5004 27 "eap_vp70.Magout" }
+	{ event 5004 88 "eap_vp70.Magin" }
+	fps 60
+}
+
+$sequence "reload_extend" {
+	"anims\reload_extend.smd"
+	activity "ACT_VM_RELOAD" 1
+	{ event 5004 27 "eap_vp70.Magout" }
+	{ event 5004 88 "eap_vp70.Magin" }
+	fps 60
+}
+
+$sequence "reload_drum" {
+	"anims\reload_drum.smd"
+	activity "ACT_VM_RELOAD" 1
+	{ event 5004 27 "eap_vp70.Magout" }
+	{ event 5004 88 "eap_vp70.Magin" }
+	fps 60
+}
+
+$sequence "deploy" {
+	"anims\deploy.smd"
+	activity "ACT_VM_DRAW" 1
+	{ event 5004 16 "eap_vp70.Slideback" }
+	{ event 5004 29 "eap_vp70.Sliderelease" }
+	snap
+	fps 60
+}
+
+$sequence "reload_empty" {
+	"anims\reload_empty.smd"
+	activity "ACT_VM_RELOAD" 1
+	{ event 5004 27 "eap_vp70.Magout" }
+	{ event 5004 88 "eap_vp70.Magin" }
+	{ event 5004 123 "eap_vp70.Slideback" }
+	{ event 5004 137 "eap_vp70.Sliderelease" }
+	fps 60
+}
+
+$sequence "reload_empty_extend" {
+	"anims\reload_empty_extend.smd"
+	activity "ACT_VM_RELOAD" 1
+	{ event 5004 27 "eap_vp70.Magout" }
+	{ event 5004 88 "eap_vp70.Magin" }
+	{ event 5004 126 "eap_vp70.Slideback" }
+	{ event 5004 139 "eap_vp70.Sliderelease" }
+	fps 60
+}
+
+$sequence "reload_empty_drum" {
+	"anims\reload_empty_drum.smd"
+	activity "ACT_VM_RELOAD" 1
+	{ event 5004 27 "eap_vp70.Magout" }
+	{ event 5004 88 "eap_vp70.Magin" }
+	{ event 5004 126 "eap_vp70.Slideback" }
+	{ event 5004 139 "eap_vp70.Sliderelease" }
+	fps 60
+}

@@ -9,18 +9,24 @@ $bodygroup "mag"
 	studio "mag.smd"
 	studio "mag_10mm.smd"
 	studio "mag_drum.smd"
+	studio "mag_45_30.smd"
+	studio "mag_15.smd"
+	studio "mag_10mm_20.smd"
+	studio "mag_45_15.smd"
 	blank
 }
 $bodygroup "irons"
 {
 	studio "irons.smd"
 	blank
+	studio "c_arms_combine_c_arms_citizen_hands.smd"
 }
 $bodygroup "handguard"
 {
 	studio "handguard.smd"
 	studio "handguard_wood.smd"
 	studio "handguard_sd.smd"
+	studio "handguard_eod.smd"
 }
 $bodygroup "stock"
 {
@@ -97,8 +103,6 @@ $bonemerge "trigger"
 $bonemerge "magrelease"
 $bonemerge "charginghandle"
 $bonemerge "bolt"
-$bonemerge "bullet2"
-$bonemerge "bullet1"
 $bonemerge "ValveBiped.Bip01_Spine4"
 $bonemerge "ValveBiped.Bip01_L_Clavicle"
 $bonemerge "ValveBiped.Bip01_L_UpperArm"
@@ -141,7 +145,7 @@ $bonemerge "ValveBiped.Bip01_R_Finger02"
 $bonemerge "mag"
 
 $attachment "1" "main" 0 3 13.576 rotate -90 180 90
-$attachment "2" "main" 0 0 0 rotate 30 -165 0
+$attachment "2" "main" 0 0 0 rotate 180 0 0
 
 $collisionmodel "main.smd"
 {
@@ -166,8 +170,6 @@ $sequence "idle" {
 $sequence "fire" {
 	"anims\fire.smd"
 	activity "ACT_VM_PRIMARYATTACK" 1
-	fadein 0.2
-	fadeout 0.2
 	snap
 	fps 60
 }
@@ -175,8 +177,6 @@ $sequence "fire" {
 $sequence "fire_irons" {
 	"anims\fire_irons.smd"
 	activity "ACT_VM_PRIMARYATTACK" 1
-	fadein 0.2
-	fadeout 0.2
 	snap
 	fps 60
 }
@@ -191,7 +191,6 @@ $sequence "draw" {
 
 $sequence "deploy" {
 	"anims\deploy.smd"
-	{ event 5004 21 "eap_csls5.slap" }
 	fadein 0
 	fadeout 0.2
 	fps 60
@@ -200,8 +199,6 @@ $sequence "deploy" {
 $sequence "reload" {
 	"anims\reload.smd"
 	activity "ACT_VM_RELOAD" 1
-	{ event 5004 23 "eap_csls5.magout" }
-	{ event 5004 64 "eap_csls5.magin" }
 	fadein 0.2
 	fadeout 0.2
 	fps 60
@@ -211,11 +208,6 @@ $sequence "reload" {
 $sequence "reload_empty" {
 	"anims\reload_empty.smd"
 	activity "ACT_VM_RELOAD" 1
-	{ event 5004 22 "eap_csls5.back"}
-	{ event 5004 30 "eap_csls5.up" }
-	{ event 5004 77 "eap_csls5.magout" }
-	{ event 5004 118 "eap_csls5.magin" }
-	{ event 5004 159 "eap_csls5.slap" }
 	fadein 0.2
 	fadeout 0.2
 	fps 60
@@ -225,8 +217,6 @@ $sequence "reload_empty" {
 $sequence "reload_drum" {
 	"anims\reload_drum.smd"
 	activity "ACT_VM_RELOAD" 1
-	{ event 5004 23 "eap_csls5.magout" }
-	{ event 5004 64 "eap_csls5.magin" }
 	fadein 0.2
 	fadeout 0.2
 	fps 60
@@ -236,11 +226,6 @@ $sequence "reload_drum" {
 $sequence "reload_drum_empty" {
 	"anims\reload_drum_empty.smd"
 	activity "ACT_VM_RELOAD" 1
-	{ event 5004 22 "eap_csls5.back"}
-	{ event 5004 30 "eap_csls5.up" }
-	{ event 5004 77 "eap_csls5.magout" }
-	{ event 5004 127 "eap_csls5.magin" }
-	{ event 5004 171 "eap_csls5.slap" }
 	fadein 0.2
 	fadeout 0.2
 	fps 60
