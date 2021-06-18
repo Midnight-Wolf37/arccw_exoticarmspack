@@ -11,11 +11,13 @@ Make sure to delete this file and the model dump folder when installing.
 
 Current Version:
 
-Version 1.1
+Version 1.2 Pre-release
 
 Changelog:
-- Added USAS-12
-
+- Completely overhauled PL-15 customization features, including 1 new magazine, 3 new slides, and a muzzle device.
+- Added a 7.92x57mm Mauser caliber conversion to the StG-44, as well as an FG-42 conversion.
+- Set up some things for the XM29, coming tomorrow.
+- Buffed move speed and hipfire spread on the USAS.
 
 Currently Implemented:
 
@@ -29,7 +31,7 @@ Weapons:
 - AEK-971
 - Sturmgewehr 44
 - OTs-14 Groza
-- Daewoo USAS-12 (NEW!)
+- Daewoo USAS-12
 
 Attachments:
 - Coyote Sight 
@@ -49,11 +51,11 @@ Attachments:
 Work in progress:
 
 Weapons:
+- HK XM29 OICW (NEW!)
 - Howa Type 64
 - Chiappa Triple Threat
 - Franchi SPAS-12 
-- HK XM29 OICW
-- HK HK21 
+- HK HK23 
 - Pancor Jackhammer Mk. 3
 
 Attachments:
@@ -70,3 +72,4 @@ Weapons:
 - Calico M950
 - Zip 22
 - Pribor-3B
+- Gyrojet pistol

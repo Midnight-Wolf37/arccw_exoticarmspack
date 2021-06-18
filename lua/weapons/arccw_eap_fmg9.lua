@@ -94,9 +94,9 @@ SWEP.ShellRotateAngle = Angle(0, 180, 0)
 SWEP.MuzzleEffectAttachment = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectAttachment = 3 -- which attachment to put the case effect on
 
-SWEP.SpeedMult = 0.95
+SWEP.SpeedMult = 0.9
 SWEP.SightedSpeedMult = 0.85
-SWEP.SightTime = 0.300
+SWEP.SightTime = 0.275
 
 SWEP.IronSightStruct = {
     Pos = Vector(-6.586, -12.865, -1.282),
@@ -138,10 +138,18 @@ SWEP.AttachmentElements = {
     ["carryhandle"] = {
         VMBodygroups = {{ind = 2, bg = 1}},
     },
-    ["eap_mag_drum_9mm"] = {
+    ["drum"] = {
         VMBodygroups = {{ind = 1, bg = 2}},
     },
-    ["eap_fmg_mag_short"] = {
+    ["forty"] = {
+        NameChange = "SMG40 ARES",
+        TrueNameChange = "FMG-40",
+    },
+    ["sig"] = {
+        NameChange = "SMG357 ARES",
+        TrueNameChange = "FMG-357",
+    },
+    ["short"] = {
         VMBodygroups = {{ind = 1, bg = 1}},
     },
     ["foregrip"] = {

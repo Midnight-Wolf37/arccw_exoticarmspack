@@ -9,7 +9,25 @@ $bodygroup "mag"
 {
 	studio "mag"
 	studio "mag_extend"
+	studio "mag_drum.smd"
 	blank
+}
+$bodygroup "slide"
+{
+	studio "slide_normal.smd"
+	studio "slide_long.smd"
+	studio "slide_short.smd"
+	blank
+}
+$bodygroup "switch"
+{
+	blank
+	studio "mp_selector.smd"
+}
+$bodygroup "executioner"
+{
+	blank
+	studio "executioner.smd"
 }
 
 $surfaceprop "default"
@@ -18,7 +36,9 @@ $contents "solid"
 
 $illumposition -4.341 8.15 -7.773
 
-$cdmaterials "models\weapons\arccw\eap\"
+$cdmaterials "models\weapons\arccw\eap\lebedev"
+$cdmaterials "models\weapons\arccw\eap\brenten"
+$cdmaterials "models\weapons\arccw\eap\atts"
 
 $definebone "body" "" -0.000000 -17.192717 -8.736753 -0.000000 0.000000 89.999985 0.000000 0.000000 0.000000 -0.000000 0.000000 0.000000
 $definebone "slide" "body" 0.000000 1.352263 -1.456539 -0.000000 -0.000057 89.999985 0.000000 0.000000 0.000000 -0.000000 0.000000 -0.000000
@@ -148,6 +168,52 @@ $sequence "idle" {
 	loop
 }
 
+$sequence "idle_empty" {
+	"anims\idle_empty.smd"
+	activity "ACT_VM_IDLE" 1
+	fps 60
+	loop
+}
+
+$sequence "idle_inspect" {
+	"anims\idle_inspect.smd"
+	activity "ACT_VM_IDLE" 1
+	fps 60
+	loop
+}
+
+$sequence "idle_inspect_empty" {
+	"anims\idle_inspect_empty.smd"
+	activity "ACT_VM_IDLE" 1
+	fps 60
+	loop
+}
+
+$sequence "enter_inspect" {
+	"anims\enter_inspect.smd"
+	activity "ACT_VM_IDLE" 1
+	fps 60
+}
+
+$sequence "enter_inspect_empty" {
+	"anims\enter_inspect_empty.smd"
+	activity "ACT_VM_IDLE" 1
+	fps 60
+}
+
+$sequence "exit_inspect" {
+	"anims\exit_inspect.smd"
+	activity "ACT_VM_IDLE" 1
+	snap
+	fps 60
+}
+
+$sequence "exit_inspect_empty" {
+	"anims\exit_inspect_empty.smd"
+	activity "ACT_VM_IDLE" 1
+	snap
+	fps 60
+}
 
 $sequence "fire" {
 	"anims\fire.smd"
@@ -173,10 +239,16 @@ $sequence "draw" {
 	fps 60
 }
 
+$sequence "draw_empty" {
+	"anims\draw_empty.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 60
+}
 $sequence "deploy" {
 	"anims\deploy.smd"
 	{ event 5004 20 "eap_lebby.slideback" }
-	{ event 5004 28 "eap_lebby.magin" }
+	{ event 5004 28 "eap_lebby.sliderelease" }
 	fadein 0.2
 	fadeout 0.2
 	fps 60
@@ -241,6 +313,40 @@ $sequence "reload_extend_empty" {
 
 $sequence "reload_extend_empty_rushed" {
 	"anims\reload_extended_empty_rushed.smd"
+	activity "ACT_VM_RELOAD" 1
+	{ event 5004 25 "eap_lebby.magout" }
+	{ event 5004 73 "eap_lebby.magin" }
+	{ event 5004 109 "eap_lebby.sliderelease" }
+	fadein 0.2
+	fadeout 0.2
+	fps 60
+}
+
+$sequence "reload_drum" {
+	"anims\reload_drum.smd"
+	activity "ACT_VM_RELOAD" 1
+	{ event 5004 25 "eap_lebby.magout" }
+	{ event 5004 73 "eap_lebby.magin" }
+	fadein 0.2
+	fadeout 0.2
+	fps 60
+}
+
+
+$sequence "reload_drum_empty" {
+	"anims\reload_drum_empty.smd"
+	activity "ACT_VM_RELOAD" 1
+	{ event 5004 25 "eap_lebby.magout" }
+	{ event 5004 73 "eap_lebby.magin" }
+	{ event 5004 126 "eap_lebby.slideback" }
+	{ event 5004 134 "eap_lebby.sliderelease" }
+	fadein 0.2
+	fadeout 0.2
+	fps 60
+}
+
+$sequence "reload_drum_empty_rushed" {
+	"anims\reload_drum_empty_rushed.smd"
 	activity "ACT_VM_RELOAD" 1
 	{ event 5004 25 "eap_lebby.magout" }
 	{ event 5004 73 "eap_lebby.magin" }

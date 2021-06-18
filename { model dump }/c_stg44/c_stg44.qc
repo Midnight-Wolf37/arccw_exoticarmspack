@@ -5,7 +5,6 @@ $modelname "weapons\arccw\eap\c_stg44.mdl"
 $bodygroup "studio"
 {
 	studio "main.smd"
-	blank
 }
 $bodygroup "stock"
 {
@@ -20,6 +19,7 @@ $bodygroup "barrel"
 	studio "barrel_short.smd"
 	studio "barrel_long.smd"
 	blank
+	studio "barrel_fg42.smd"
 }
 $bodygroup "sights"
 {
@@ -31,6 +31,7 @@ $bodygroup "handguard"
 	studio "handguard_default.smd"
 	studio "handguard_holger.smd"
 	studio "handguard_sd.smd"
+	blank
 }
 $bodygroup "mag"
 {
@@ -39,6 +40,7 @@ $bodygroup "mag"
 	studio "mag_mp40.smd"
 	studio "mag_drum.smd"
 	studio "mag_mp40_short.smd"
+	studio "mag_mauser.smd"
 }
 $bodygroup "irons"
 {
@@ -47,6 +49,17 @@ $bodygroup "irons"
 	studio "irons_short.smd"
 	studio "irons_sd.smd"
 	blank
+	studio "irons_fg42.smd"
+}
+$bodygroup "reciever"
+{
+	studio "magwell_kurz.smd"
+	studio "magwell_mauser.smd"
+}
+$bodygroup "flashhider"
+{
+	blank
+	studio "fh_fg42.smd"
 }
 
 $surfaceprop "default"
@@ -215,6 +228,14 @@ $sequence "reload" {
 	fps 60
 }
 
+$sequence "reload_mauser" {
+	"anims\reload_mauser.smd"
+	activity "ACT_VM_RELOAD" 1
+	{ event 5004 19 "eap_stg.Magout" }
+	{ event 5004 87 "eap_stg.Magin" }
+	fps 60
+}
+
 $sequence "reload_drum" {
 	"anims\reload_drum.smd"
 	activity "ACT_VM_RELOAD" 1
@@ -245,6 +266,16 @@ $sequence "reload_empty" {
 
 $sequence "reload_empty_drum" {
 	"anims\reload_empty_drum.smd"
+	activity "ACT_VM_RELOAD" 1
+	{ event 5004 19 "eap_stg.Magout" }
+	{ event 5004 87 "eap_stg.Magin" }
+	{ event 5004 115 "eap_stg.Boltback" }
+	{ event 5004 131 "eap_stg.Boltrelease" }
+	fps 60
+}
+
+$sequence "reload_empty_mauser" {
+	"anims\reload_mauser_empty.smd"
 	activity "ACT_VM_RELOAD" 1
 	{ event 5004 19 "eap_stg.Magout" }
 	{ event 5004 87 "eap_stg.Magin" }

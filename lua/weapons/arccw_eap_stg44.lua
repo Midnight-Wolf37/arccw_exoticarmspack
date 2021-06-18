@@ -46,7 +46,7 @@ SWEP.RecoilSide = 0.3
 SWEP.RecoilRise = 0.3
 SWEP.VisualRecoilMult = 1
 
-SWEP.Delay = 60 / 650 -- 60 / RPM.
+SWEP.Delay = 60 / 600 -- 60 / RPM.
 SWEP.Num = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {
@@ -176,6 +176,17 @@ SWEP.AttachmentElements = {
             }
         }
     },
+    ["fg42"] = {
+        VMBodygroups = {{ind = 2, bg = 4}, {ind = 4, bg = 3}, {ind = 6, bg = 5}, {ind = 8, bg = 1}},
+        AttPosMods = {
+            [4] = {
+                vpos = Vector(0, 0, 2.5),
+                vang = Angle(90, 0, -90),
+            }
+        },
+        NameChange = "MG-44",
+        TrueNameChange = "FG-44",
+    },
     ["eap_stg_handguard_sd"] = {
         VMBodygroups = {{ind = 2, bg = 3}, {ind = 4, bg = 2}, {ind = 6, bg = 3}},
         AttPosMods = {
@@ -214,6 +225,13 @@ SWEP.AttachmentElements = {
         VMBodygroups = {{ind = 5, bg = 4}},
         NameChange = "MP44",
     },
+    ["mag_mauser"] = {
+        VMBodygroups = {{ind = 5, bg = 5}, {ind = 7, bg = 1}},
+        AddSuffix = "SG",
+    },
+    ["nofh"] = {
+        VMBodygroups = {{ind = 8, bg = 0}},
+    }
 }
 
 SWEP.ExtraSightDist = 10
@@ -272,13 +290,14 @@ SWEP.Attachments = {
             vpos = Vector(0, 0, 0),
             vang = Angle(90, 0, -90),
         },
-        ExcludeFlags = {"eap_stg_handguard_sd"}
+        ExcludeFlags = {"eap_stg_handguard_sd"},
+        InstalledEles = {"nofh"}
     },
     {
         PrintName = "Barrel",
         Slot = "eap_stg_barrel",
         DefaultAttName = "420mm Standard Barrel",
-        ExcludeFlags = {"eap_stg_handguard_sd"}
+        ExcludeFlags = {"eap_stg_handguard_sd", "fg42"}
     },
     {
         PrintName = "Handguard",
@@ -332,11 +351,13 @@ SWEP.Attachments = {
 SWEP.Hook_SelectReloadAnimation = function(wep, anim)
 	
     local ret = anim
-    if wep.Attachments[7].Installed == "eap_stg_mag_drum" then ret = ret .. "_drum" end
+    if wep.Attachments[7].Installed == "eap_stg_mag_drum" then ret = ret .. "_drum" end --fucking hell why didnt I put these in the attachment luas
+    if wep.Attachments[7].Installed == "eap_stg_mag_mauser" then ret = ret .. "_mauser" end
     if ret ~= anim then return ret end
     
-  end
+end
 
+--USE SOUNDTABLES DUMBFUCK
 SWEP.Animations = {
     ["idle"] = {
         Source = "idle"
@@ -391,6 +412,24 @@ SWEP.Animations = {
     },
     ["reload_empty_drum"] = {
         Source = "reload_empty_drum",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        FrameRate = 60,
+        LHIK = true,
+        LHIKIn = 0.2,
+        LHIKOut = 0.2,
+        LHIKEaseOut = 0.3
+    },
+    ["reload_mauser"] = {
+        Source = "reload_mauser",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        FrameRate = 60,
+        LHIK = true,
+        LHIKIn = 0.2,
+        LHIKOut = 0.2,
+        LHIKEaseOut = 0.3
+    },
+    ["reload_empty_mauser"] = {
+        Source = "reload_empty_mauser",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         FrameRate = 60,
         LHIK = true,

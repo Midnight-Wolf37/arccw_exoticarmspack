@@ -38,7 +38,7 @@ SWEP.MuzzleVelocity = 125
 SWEP.ChamberSize = 1 -- how many rounds can be chambered.
 SWEP.Primary.ClipSize = 10 -- DefaultClip is automatically set.
 
-SWEP.Recoil = 2
+SWEP.Recoil = 1.8
 SWEP.RecoilSide = 1
 
 SWEP.RecoilRise = 0.24
@@ -60,8 +60,8 @@ SWEP.Firemodes = {
     }
 }
 
-SWEP.AccuracyMOA = 40 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
-SWEP.HipDispersion = 500 -- inaccuracy added by hip firing.
+SWEP.AccuracyMOA = 30 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
+SWEP.HipDispersion = 400 -- inaccuracy added by hip firing.
 SWEP.MoveDispersion = 150 -- inaccuracy added by moving. Applies in sights as well! Walking speed is considered as "maximum".
 
 SWEP.Primary.Ammo = "buckshot" -- what ammo type the gun uses
@@ -90,7 +90,7 @@ SWEP.CamAttachment = 4
 
 -- Speed mult --
 
-SWEP.SpeedMult = 0.78
+SWEP.SpeedMult = 0.83
 SWEP.SightedSpeedMult = 0.7
 SWEP.SightTime = 0.42
 SWEP.IronSightStruct = {

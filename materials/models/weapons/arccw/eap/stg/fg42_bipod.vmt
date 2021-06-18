@@ -1,0 +1,23 @@
+VertexLitGeneric
+{
+	$phong 1
+	$basetexture 				"models\weapons\arccw\eap\stg\fg42_bipod_d"
+	$bumpmap 				"models\weapons\arccw\eap\stg\fg42_bipod_n"
+	$phongexponenttexture 		"models\weapons\arccw\eap\stg\fg42_bipod_s"
+	$phongboost				"3"
+	$phongfresnelranges		"[1 4 8]"
+	
+	$envmap 				"env_cubemap"
+	$envmaptint				"[ 0.010 0.010 0.010 ]"
+	$envmapfresnel			"1"
+	$normalmapalphaphongmask        "1"
+	$normalmapalphaenvmapmask       "1"
+	$phongalbedotint	"1"
+	
+	$rimlight               "1"
+	$rimlightexponent       "120"
+	$rimlightboost          "0.55"	
+	$rimmask		"1"
+	
+
+}

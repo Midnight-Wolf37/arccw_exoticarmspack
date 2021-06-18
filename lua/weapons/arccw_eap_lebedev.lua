@@ -116,17 +116,45 @@ SWEP.CrouchAng = Angle(0, 0, -10)
 SWEP.HolsterPos = Vector(3, 3, 0)
 SWEP.HolsterAng = Angle(-7.036, 30.016, 0)
 
-SWEP.CustomizePos = Vector(8, 0, 1)
-SWEP.CustomizeAng = Angle(5, 30, 30)
+SWEP.CustomizePos = Vector(0, 0, 0)
+SWEP.CustomizeAng = Angle(0, 0, 0)
 
 SWEP.BarrelLength = 24
 
 SWEP.AttachmentElements = {
-    ["lebby_mag_extend"] = {
+    ["extend"] = {
 		VMBodygroups = {{ind = 1, bg = 1}}
 	},
+    ["drum"] = {
+		VMBodygroups = {{ind = 1, bg = 2}}
+	},
+    ["long"] = {
+		VMBodygroups = {{ind = 2, bg = 1}},
+        AttPosMods = {
+            [3] = {
+                vpos = Vector(0, -1.158, 7.048),
+                vang = Angle(90, 0, -90),
+            }
+        },
+	},
+    ["snub"] = {
+		VMBodygroups = {{ind = 2, bg = 2}},
+        AttPosMods = {
+            [3] = {
+                vpos = Vector(0, -1.158, 4.448),
+                vang = Angle(90, 0, -90),
+            }
+        },
+	},
+    ["mp"] = {
+		VMBodygroups = {{ind = 3, bg = 1}},
+        NameChange = "PP-17K",
+        TrueNameChange = "PPL-15",
+	},
+    ["executioner"] = {
+		VMBodygroups = {{ind = 4, bg = 1}}
+	},
     ["rail"] = {
-        ExcludeFlags = {"eap_lebby_carbine"},
         VMElements = {
 			{
 				Model = "models/weapons/arccw_go/atts/pistol_rail.mdl",
@@ -182,16 +210,12 @@ SWEP.Attachments = {
             vpos = Vector(0, -1.158, 5.448),
             vang = Angle(90, 0, -90),
         },
-        VMScale = Vector(0.775, 0.775, 0.775)
+        VMScale = Vector(0.775, 0.775, 0.775),
+        MergeSlots = {10}
     },
     {
         PrintName = "Slide",
-        Slot = "eap_lebby_slide",
-        Bone = "body",
-        Offset = {
-            vpos = Vector(0, 0, 0),
-            vang = Angle(90, 0, -90),
-        }
+        Slot = "eap_lebby_slide"
     },
     {
         PrintName = "Magazine",
@@ -229,6 +253,11 @@ SWEP.Attachments = {
         },
 		VMScale = Vector(0.75, 0.75, 0.75)
     },
+    {
+        Hidden = true,
+        Slot = "eap_muzbrake",
+        ExcludeFlags = {"long", "snub"}
+    }
 }
 
 
@@ -237,7 +266,8 @@ SWEP.Attachments = {
 SWEP.Hook_SelectReloadAnimation = function(wep, anim)
 	
   local ret = anim
-  if wep.Attachments[5].Installed == "lebby_mag_extend" then ret = ret .. "_extend" end
+  if wep.Attachments[5].Installed == "eap_lebby_mag_extend" then ret = ret .. "_extend" end
+  if wep.Attachments[5].Installed == "eap_lebby_mag_drum" then ret = ret .. "_drum" end
   if wep.Attachments[8].Installed == "go_perk_fastreload" then ret = ret .. "_rushed" end
   if ret ~= anim then return ret end
   
@@ -250,6 +280,12 @@ SWEP.Animations = {
     },
     ["idle_empty"] = {
         Source = "idle_empty",
+    },
+    ["idle_inspect"] = {
+        Source = "idle_inspect",
+    },
+    ["idle_inspect_empty"] = {
+        Source = "idle_inspect_empty",
     },
     ["draw"] = {
         Source = "draw",
@@ -359,6 +395,72 @@ SWEP.Animations = {
         LHIK = true,
         LHIKIn = 10/30,
         LHIKOut = 0.2,
-	}, 
+	},
+    ["reload_drum"] = {
+        Source = "reload_drum",
+		RareSource = "reload_rare",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        Checkpoints = {16, 30},
+        FrameRate = 30,
+        LHIK = true,
+        LHIKIn = 10/30,
+        LHIKOut = 0.2,
+    },
+    ["reload_drum_rushed"] = {
+        Source = "reload_drum",
+		RareSource = "reload_rare",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        Checkpoints = {16, 30},
+        FrameRate = 30,
+        LHIK = true,
+        LHIKIn = 10/30,
+        LHIKOut = 0.2,
+    },
+    ["reload_empty_drum"] = {
+        Source = "reload_drum_empty",
+		RareSource = "reload_rare_empty",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        FrameRate = 60,
+        LHIK = true,
+        LHIKIn = 10/30,
+        LHIKOut = 0.2,
+    },
+	["reload_empty_drum_rushed"] = {
+        Source = "reload_drum_empty_rushed",
+		RareSource = "reload_rare_empty",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        FrameRate = 60,
+        LHIK = true,
+        LHIKIn = 10/30,
+        LHIKOut = 0.2,
+	},
+    ["enter_inspect"] = {
+        Source = "enter_inspect",
+        FrameRate = 60,
+        LHIK = true,
+        LHIKIn = 0,
+        LHIKOut = 0.2,
+	},
+    ["exit_inspect"] = {
+        Source = "exit_inspect",
+        FrameRate = 60,
+        LHIK = true,
+        LHIKIn = 0,2,
+        LHIKOut = 0,
+	},
+    ["enter_inspect_empty"] = {
+        Source = "enter_inspect_empty",
+        FrameRate = 60,
+        LHIK = true,
+        LHIKIn = 0,
+        LHIKOut = 0.2,
+	},
+    ["exit_inspect_empty"] = {
+        Source = "exit_inspect_empty",
+        FrameRate = 60,
+        LHIK = true,
+        LHIKIn = 0,2,
+        LHIKOut = 0,
+	},
 }
 
