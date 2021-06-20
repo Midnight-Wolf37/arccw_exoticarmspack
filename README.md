@@ -51,7 +51,7 @@ Attachments:
 Work in progress:
 
 Weapons:
-- HK XM29 OICW (NEW!)
+- HK XM29 OICW
 - Howa Type 64
 - Chiappa Triple Threat
 - Franchi SPAS-12 
