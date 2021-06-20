@@ -1,0 +1,12 @@
+"VertexLitGeneric" 
+{
+"$basetexture" "models\weapons\arccw\eap\xm29\ar27_is_d_diff"
+"$bumpmap" "models\weapons\arccw\eap\xm29\ar27_is_d_ddn"
+"$phongExponentTexture" "models\weapons\arccw\eap\xm29\ar27_is_d_spec"
+"$roughnessmultiplier" "1"
+"$envmap" "models\weapons\arccw\eap\xm29\cubemap"
+"$srgbtint" "[2 2.05 2.1]"
+"$nocull" "1"
+
+
+}

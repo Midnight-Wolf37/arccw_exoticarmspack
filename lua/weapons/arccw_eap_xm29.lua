@@ -22,8 +22,8 @@ SWEP.Slot = 2
 
 SWEP.UseHands = true
 
-SWEP.ViewModel = "models/weapons/arccw/m16/c_m16.mdl"
-SWEP.WorldModel = "models/weapons/arccw/m16/c_m16.mdl"
+SWEP.ViewModel = "models/weapons/arccw/eap/c_xm29.mdl"
+SWEP.WorldModel = "models/weapons/arccw/eap/c_xm29.mdl"
 SWEP.ViewModelFOV = 70
 SWEP.ViewModelFlip = false
 
@@ -73,10 +73,9 @@ SWEP.MagID = "stanag" -- the magazine pool this gun draws from
 SWEP.ShootVol = 85 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
 
-SWEP.FirstShootSound = "weapons/arccw/m16/famas-1.wav"
-SWEP.ShootSound = "weapons/arccw/m16/famas-1.wav"
-SWEP.ShootSoundSilenced = "weapons/arccw/m16/fire_sup.wav"
-SWEP.DistantShootSound = "arccw_go/sg556/sg556-1-distant.wav"
+SWEP.ShootSound = "weapons/arccw/eap/xm29/fire.wav"
+SWEP.ShootSoundSilenced = "weapons/arccw/eap/xm29/fire_supp.ogg"
+SWEP.DistantShootSound = "weapons/arccw/eap/xm29/fire_dist.ogg" --reusing acr sounds because same anim :/
 
 SWEP.MeleeSwingSound = "arccw_go/m249/m249_draw.wav"
 SWEP.MeleeMissSound = "weapons/iceaxe/iceaxe_swing1.wav"
@@ -144,15 +143,14 @@ SWEP.Attachments = {
         PrintName = "Optic",
         Slot = {"optic", "optic_lp"},
         Bone = "main",
-        DefaultAttName = "Carry Handle",
-		DefaultAttIcon = Material("entities/m16_carryhandle.png", "mips smooth"),
+        DefaultAttName = "Iron Sights",
         Offset = {
             vpos = Vector(0.06, -3.25, 2),
             vang = Angle(90, 0, -90),
         },
         VMScale = Vector(1, 1, 1),
         CorrectiveAng = Angle(0, 0, 0),
-		InstalledEles = {"carryhandle"}
+		InstalledEles = {"irons"}
     },
     {
         PrintName = "Underbarrel",
@@ -175,46 +173,32 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Barrel",
-        Slot = "m16_barrel",
-        DefaultAttName = "370mm Carbine Barrel",
-		DefaultAttIcon = Material("entities/m16_barrel_default.png", "mips smooth"),
-		DefaultEles = {"handguard_default"}
+        Slot = "eap_xm29_barrel"
     },
     {
         PrintName = "Muzzle",
         Slot = "muzzle",
         Bone = "main",
         Offset = {
-            vpos = Vector(0.001, -1.8, 20.995),
+            vpos = Vector(0, -1.8, 20.995),
             vang = Angle(90, 0, -90),
         },
-        WMScale = Vector(0.7, 0.7, 0.7),
-        DefaultAttName = "Standard-issue flash hider",
 		InstalledEles = {"nofh"},
 		ExcludeFlags = {"handguard_silencer"},
     },
     {
         PrintName = "Magazine",
-        Slot = "m16_mag",
-        DefaultAttName = "30-Round 5.56mm STANAG Mag",
-		DefaultAttIcon = Material("entities/acwatt_go_m4_mag_10_50.png", "mips smooth")
+        Slot = "eap_xm29_mag"
     },
-	{
-		PrintName = "Grip",
-		DefaultAttName = "Standard Pistol Grip",
-		Slot = "m16_grip",
-		DefaultAttIcon = Material("entities/m16_grip_default.png", "mips smooth")
-	},
     {
         PrintName = "Stock",
-        Slot = {"m16_stock", "go_stock", "go_stock_none"},
+        Slot = {"eap_xm29_stock", "go_stock", "go_stock_none"},
 		Bone = "main",
 		Offset = {
             vpos = Vector(0, -1.8, 0),
             vang = Angle(90, 0, -90),
         },
         DefaultAttName = "Standard Stock",
-		DefaultAttIcon = Material("entities/m16_stock_default.png", "mips smooth")
     },
     {
         PrintName = "Ammo Type",
@@ -248,34 +232,6 @@ SWEP.Attachments = {
 
 
 SWEP.Hook_SelectReloadAnimation = function(wep, anim)
-
-	if wep.Attachments[6].Installed == "m16_mag_60" then
-		if anim == "reload_empty" then
-			return "reload_empty_d60"
-		elseif anim == "reload" then
-			return "reload_d60"
-		end
-	elseif wep.Attachments[6].Installed == "m16_mag_25_para" or wep.Attachments[6].Installed == "m16_mag_32_para" or wep.Attachments[6].Installed == "m16_mag_25_45acp" then
-		if anim == "reload_empty" then
-			return "reload_empty_para"
-		elseif anim == "reload" then
-			return "reload_para"
-		end
-	elseif wep.Attachments[6].Installed == "m16_mag_20" or wep.Attachments[6].Installed == "m16_mag_5_beowulf" then
-		if anim == "reload_empty" then
-			return "reload_empty_20"
-		elseif anim == "reload" then
-			return "reload_20"
-		end
-	end
-	
-	if wep.Attachments[10].Installed == "go_perk_fastreload" then
-		if anim == "reload_empty" then
-			return "reload_empty_rushed"
-		end
-	end
-	
-	
 end
 	
 SWEP.Animations = {

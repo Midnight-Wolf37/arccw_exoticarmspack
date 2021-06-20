@@ -1,0 +1,35 @@
+"VertexLitGeneric"
+{
+	"$basetexture"					"models\weapons\arccw\eap\xm29\SL8_Body_d"
+	"$bumpmap"					"models\weapons\arccw\eap\xm29\SL8_Body_n"
+	"$model"						"1"
+	$halflambert					1
+   	"$color"						"[0.9 0.9 0.9]"
+	$nocull 						1
+	$nowritez 					1
+
+//SELFILLUM (subtle to avoid complete occlusion)
+	//"$selfillum"					"1"
+	//"$selfillumtint"				"[.5 .5 .5]"
+	//"$selfillummask"				"models\weapons\arccw\eap\xm29\SL8_body_e"
+
+//PHONG
+	"$phong"                        "1"
+	//"$phongtint"                    "[1 .75 .75 ]"
+	$basemapalphaphongmask 1
+	//$basemapluminancephongmask 1
+	"$phongboost"                   "15"
+	//"$phongexponent"				"50"
+	"$phongexponenttexture"			"models\weapons\arccw\eap\xm29\SL8_Body_G"
+	"$phongfresnelranges"          "[.83 .83 2]"
+	$phongalbedotint		1
+
+//ENVMAP
+	"$envmap"						"env_cubemap"
+	"$normalmapalphaenvmapmask"				"1"
+	"$envmaptint" "[ .08 .08 .08 ]"
+	//$envmapfresnel 1
+
+	$diffuseexp 		"0.9"
+	$lightwarptexture					"models\weapons\arccw\eap\xm29\SL8_LW"
+}
