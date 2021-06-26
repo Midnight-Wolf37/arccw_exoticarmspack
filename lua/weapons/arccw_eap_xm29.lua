@@ -1,10 +1,10 @@
 SWEP.Base = "arccw_base"
-SWEP.Spawnable = false -- this obviously has to be set to true
+SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Exotic Arms" -- edit this if you like
-SWEP.AdminOnly = true
+SWEP.AdminOnly = false
 
 SWEP.PrintName = "M8 Proto"
-SWEP.TrueName = "XM29 Standalone"
+SWEP.TrueName = "XM8 Proof of Concept"
 SWEP.Trivia_Class = "Assault Rifle"
 SWEP.Trivia_Desc = "An interrim proof-of-concept derived from an abandoned US Army prototype."
 SWEP.Trivia_Manufacturer = "Deutsche Weltraummagie"
@@ -96,9 +96,9 @@ SWEP.SightedSpeedMult = 0.7
 SWEP.SightTime = 0.33
 
 SWEP.IronSightStruct = {
-    Pos = Vector(-4.961, 0, -0.48),
+	Pos = Vector(-4.777, -8.638, 0.925),
 	Ang = Angle(0, 0, 0),
-    Magnification = 1.1,
+    Magnification = 1,
     SwitchToSound = "", -- sound that plays when switching to this sight
     CrosshairInSights = false
 }
@@ -109,8 +109,8 @@ SWEP.HoldtypeSights = "rpg"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
-SWEP.ActivePos = Vector(0, 0, 0)
-SWEP.ActiveAng = Angle(0, 0, 0)
+SWEP.ActivePos = Vector(-1.351, 0, -0.561)
+SWEP.ActiveAng = Angle(0, 0, -10)
 
 SWEP.CrouchPos = Vector(-8, 0, 1)
 SWEP.CrouchAng = Angle(0, 0, -45)
@@ -124,9 +124,30 @@ SWEP.CustomizeAng = Angle(0, 0, 0)
 SWEP.BarrelLength = 24
 
 SWEP.AttachmentElements = {
-    
+    ["oicw"] = {
+		VMBodygroups = {{ind = 2, bg = 2}, {ind = 5, bg =3}, {ind = 6, bg = 1}, {ind = 7, bg = 1}},
+		TrueNameChange = "M8/25 Grenadier"
+		TrueNameChange = "XM29"
+	},
+	["irons"] = {
+		VMBodygroups = {{ind = 2, bg = 1}},
+	},
+    ["20"] = {
+        VMBodygroups = {{ind = 1, bg = 3}},
+    },
+    ["9mm"] = {
+        VMBodygroups = {{ind = 1, bg = 5}},
+    },
+    ["60"] = {
+        VMBodygroups = {{ind = 1, bg = 4}},
+    },
+    ["40"] = {
+        VMBodygroups = {{ind = 1, bg = 2}},
+    },
+    ["9mm_short"] = {
+        VMBodygroups = {{ind = 1, bg = 6}},
+    },
 }
-
 SWEP.ExtraSightDist = 10
 SWEP.GuaranteeLaser = true
 
@@ -145,7 +166,7 @@ SWEP.Attachments = {
         Bone = "main",
         DefaultAttName = "Iron Sights",
         Offset = {
-            vpos = Vector(0.06, -3.25, 2),
+            vpos = Vector(0, -2.178, 4.027),
             vang = Angle(90, 0, -90),
         },
         VMScale = Vector(1, 1, 1),
@@ -160,7 +181,6 @@ SWEP.Attachments = {
             vpos = Vector(0.238, -0.659, 9.711),
             vang = Angle(90, 0, -90),
         },
-		MergeSlots = {12}
     },
     {
         PrintName = "Tactical",
@@ -184,7 +204,6 @@ SWEP.Attachments = {
             vang = Angle(90, 0, -90),
         },
 		InstalledEles = {"nofh"},
-		ExcludeFlags = {"handguard_silencer"},
     },
     {
         PrintName = "Magazine",
@@ -237,27 +256,18 @@ end
 SWEP.Animations = {
     ["idle"] = {
         Source = "idle",
-		Time = 2
+    },
+    ["idle_empty"] = {
+        Source = "idle_empty",
+    },
+    ["idle_ubgl"] = {
+        Source = "idle_ubgl",
     },
     ["draw"] = {
         Source = "draw"
     },
     ["ready"] = {
-        Source = "ready",
-		SoundTable = {
-			{
-				s = "weapons/arccw_xm8/draw.wav",
-				t = 0
-			},
-			{
-				s = "weapons/arccw_xm8/boltback.wav",
-				t = 11/30
-			},
-			{
-				s = "weapons/arccw_xm8/boltforward.wav",
-				t = 15/30
-			}
-		},
+        Source = "deploy",
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 0.2,
@@ -266,16 +276,20 @@ SWEP.Animations = {
         Source = "fire",
         ShellEjectAt = 0,
     },
+    ["xm25_fire"] = {
+        Source = "xm25_fire",
+        ShellEjectAt = 0,
+    },
 	["fire_empty"] = {
-        Source = "fire_last",
+        Source = "fire_empty",
         ShellEjectAt = 0,
     },
     ["fire_iron"] = {
-        Source = "fire_irons",
+        Source = "fire_iron",
 		ShellEjectAt = 0,
     },
 	["fire_iron_empty"] = {
-		Source = "fire_last_irons",
+		Source = "fire_iron_empty",
 		ShellEjectAt = 0,
 	},
     ["reload"] = {
@@ -292,7 +306,7 @@ SWEP.Animations = {
 			}
 		},
         Checkpoints = {16, 30},
-        FrameRate = 30,
+        FrameRate = 60,
         LHIK = true,
         LHIKIn = 1/30,
         LHIKOut = 0.2,
@@ -318,7 +332,7 @@ SWEP.Animations = {
 				t = 104/60
 			}
 		},
-        FrameRate = 30,
+        FrameRate = 60,
         LHIK = true,
         LHIKIn = 1/30,
         LHIKOut = 0.2,
@@ -340,7 +354,7 @@ SWEP.Animations = {
 				t = 91/60
 			}
 		},
-        FrameRate = 30,
+        FrameRate = 60,
         LHIK = true,
         LHIKIn = 0.7,
         LHIKOut = 0.2,
@@ -543,20 +557,36 @@ SWEP.Animations = {
         LHIKIn = 1/60,
         LHIKOut = 0.2,
 	},
-	["fix"] = {
-		Source = "fix",
-		TPAnim = ACT_HL2MP_GESTURE_RELOAD_CROSSBOW,
-		FrameRate = 30
-	},
-    ["enter_inspect"] = {
-		Source = "enter_inspect",
-		Time = 0.5
-	},
-    ["idle_inspect"] = {
-		Source = "idle_inspect"
-	},
-    ["exit_inspect"] = {
-		Source = "exit_inspect",
-		Time = 0.5
-	}
+    ["enter_ubgl"] = {
+        Source = "enter_ubgl",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        FrameRate = 60,
+        LHIK = true,
+        LHIKIn = 1/30,
+        LHIKOut = 0.2,
+    },
+    ["exit_ubgl"] = {
+        Source = "exit_ubgl",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        FrameRate = 60,
+        LHIK = true,
+        LHIKIn = 1/30,
+        LHIKOut = 0.2,
+    },
+    ["xm25_reload"] = {
+        Source = "xm25_reload",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        FrameRate = 60,
+        LHIK = true,
+        LHIKIn = 1/30,
+        LHIKOut = 0.2,
+    },
+    ["xm25_reload_empty"] = {
+        Source = "xm25_reload_empty",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        FrameRate = 60,
+        LHIK = true,
+        LHIKIn = 1/30,
+        LHIKOut = 0.2,
+    },
 }

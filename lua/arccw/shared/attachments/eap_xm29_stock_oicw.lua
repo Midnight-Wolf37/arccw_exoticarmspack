@@ -43,7 +43,7 @@ end
 att.UBGL_Fire = function(wep, ubgl)
     if (wep:Clip2() <= 0) then return end
 
-    wep:PlayAnimation("xm29_fire")
+    wep:PlayAnimation("xm25_fire")
 
     wep:FireRocket("arccw_eap_oicw_he", 30000)
 
@@ -57,7 +57,7 @@ att.UBGL_Fire = function(wep, ubgl)
 end
 
 att.UBGL_Reload = function(wep, ubgl)
-	local clip = 5 + 1
+	local clip = 4 + 1
 	
     if wep:Clip2() >= clip then return end
 
@@ -65,13 +65,13 @@ att.UBGL_Reload = function(wep, ubgl)
 
     wep:SetNextSecondaryFire(CurTime() + (wep:Clip2() == 0 and 3.5 or 3))
 
-    wep:PlayAnimation(wep:Clip2() == 0 and "xm29_reload_empty" or "xm29_reload", nil, true)
+    wep:PlayAnimation(wep:Clip2() == 0 and "xm25_reload_empty" or "xm25_reload", nil, true)
 
     local reserve = Ammo(wep)
 
     reserve = reserve + wep:Clip2()
 
-    local load = math.Clamp(6, 0, reserve)
+    local load = math.Clamp(5, 0, reserve)
 
     wep.Owner:SetAmmo(reserve - load, "smg1_grenade")
 
