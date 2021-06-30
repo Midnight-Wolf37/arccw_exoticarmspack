@@ -47,7 +47,7 @@ att.UBGL_Fire = function(wep, ubgl)
 
     wep:FireRocket("arccw_eap_oicw_he", 30000)
 
-    wep:EmitSound("weapons/grenade_launcher1.wav", 100)
+    wep:EmitSound("weapons/arccw/eap/xm29/ChinaLake-1.wav", 100)
 
     wep:SetClip2(wep:Clip2() - 1)
 

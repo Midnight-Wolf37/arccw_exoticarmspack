@@ -87,9 +87,10 @@ SWEP.ShellModel = "models/shells/shell_556.mdl"
 SWEP.ShellEjectPosCorrection = Vector(0, 0, 0)
 SWEP.ShellPitch = 95
 SWEP.ShellScale = 1.25
-SWEP.ShellRotateAngle = Angle(0, 180, 0)
- -- which attachment to put the muzzle on
-SWEP.CaseEffectAttachment = 1 -- which attachment to put the case effect on
+SWEP.ShellRotateAngle = Angle(0, 180, 0) -- which attachment to put the muzzle on
+SWEP.MuzzleEffectAttachment = 1 -- which attachment to put the muzzle on
+SWEP.CaseEffectAttachment = 2 -- which attachment to put the case effect on
+SWEP.CamAttachment = 5 -- which attachment to put the case effect on
 
 SWEP.SpeedMult = 0.93
 SWEP.SightedSpeedMult = 0.7
@@ -123,11 +124,15 @@ SWEP.CustomizeAng = Angle(0, 0, 0)
 
 SWEP.BarrelLength = 24
 
+
+SWEP.ProceduralRegularFire = false
+SWEP.ProceduralIronFire = false
+
 SWEP.AttachmentElements = {
     ["oicw"] = {
 		VMBodygroups = {{ind = 2, bg = 2}, {ind = 5, bg =3}, {ind = 6, bg = 1}, {ind = 7, bg = 1}},
-		TrueNameChange = "M8/25 Grenadier"
-		TrueNameChange = "XM29"
+		TrueNameChange = "M8/25 Grenadier",
+		TrueNameChange = "XM29",
 	},
 	["irons"] = {
 		VMBodygroups = {{ind = 2, bg = 1}},
@@ -147,6 +152,36 @@ SWEP.AttachmentElements = {
     ["9mm_short"] = {
         VMBodygroups = {{ind = 1, bg = 6}},
     },
+	["long"] = {
+        VMBodygroups = {{ind = 4, bg = 1}, {ind = 3, bg = 1}},
+        AttPosMods = {
+            [5] = {
+                vpos = Vector(0, 0, 2),
+                vang = Angle(90, 0, -90)
+            }
+        }
+    },
+	["short"] = {
+        VMBodygroups = {{ind = 4, bg = 2}, {ind = 3, bg = 2}, {ind = 0, bg = 1}},
+        AttPosMods = {
+            [5] = {
+                vpos = Vector(0, 0, -2),
+                vang = Angle(90, 0, -90)
+            }
+        }
+    },
+	["nofh"] = {
+        VMBodygroups = {{ind = 4, bg = 3}}
+    },
+	["go_stock"] = {
+        VMBodygroups = {{ind = 5, bg = 2}},
+    },
+	["go_stock_none"] = {
+        VMBodygroups = {{ind = 5, bg = 3}},
+    },
+    ["sl8"] = {
+        VMBodygroups = {{ind = 5, bg = 1}, {ind = 8, bg = 1}},
+    }
 }
 SWEP.ExtraSightDist = 10
 SWEP.GuaranteeLaser = true
@@ -198,9 +233,9 @@ SWEP.Attachments = {
     {
         PrintName = "Muzzle",
         Slot = "muzzle",
-        Bone = "main",
+        Bone = "muzzle",
         Offset = {
-            vpos = Vector(0, -1.8, 20.995),
+            vpos = Vector(0, 0, 0),
             vang = Angle(90, 0, -90),
         },
 		InstalledEles = {"nofh"},
@@ -249,9 +284,7 @@ SWEP.Attachments = {
 	}
 }
 
-
-SWEP.Hook_SelectReloadAnimation = function(wep, anim)
-end
+local path = "weapons/arccw/eap/xm29/"
 	
 SWEP.Animations = {
     ["idle"] = {
@@ -296,267 +329,127 @@ SWEP.Animations = {
         Source = "reload",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
 		SoundTable = {
-			{
-				s = "weapons/arccw/m16/famas_clipout.wav",
-				t = 15/60
-			},
-			{
-				s = "weapons/arccw/m16/famas_clipin1.wav",
-				t = 1
-			}
+            {s = path .. "magout.ogg", 	 t = 23/60},
+            {s = path .. "magin.ogg",    t = 70/60},
 		},
-        Checkpoints = {16, 30},
         FrameRate = 60,
         LHIK = true,
-        LHIKIn = 1/30,
+        LHIKIn = 0.2,
         LHIKOut = 0.2,
     },
     ["reload_empty"] = {
         Source = "reload_empty",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
 		SoundTable = {
-			{
-				s = "weapons/arccw/m16/famas_clipout.wav",
-				t = 15/60
-			},
-			{
-				s = "weapons/arccw/m16/famas_clipin1.wav",
-				t = 1
-			},
-			{
-				s = "weapons/arccw/m16/famas_forearm.wav",
-				t = 94/60
-			},
-			{
-				s = "weapons/arccw/m16/famas_forearm1.wav",
-				t = 104/60
-			}
+            {s = path .. "magout.ogg", 	 t = 23/60},
+            {s = path .. "magin.ogg",    t = 70/60},
+            {s = path .. "boltdrop.ogg", t = 109/60},
 		},
         FrameRate = 60,
         LHIK = true,
-        LHIKIn = 1/30,
+        LHIKIn = 0.2,
         LHIKOut = 0.2,
     },
-	["reload_empty_rushed"] = {
-        Source = "reload_empty_catch",
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-		SoundTable = {
-			{
-				s = "weapons/arccw/m16/famas_clipout.wav",
-				t = 15/60
-			},
-			{
-				s = "weapons/arccw/m16/famas_clipin1.wav",
-				t = 1
-			},
-			{
-				s = "weapons/arccw/m16/famas_forearm1.wav",
-				t = 91/60
-			}
-		},
-        FrameRate = 60,
-        LHIK = true,
-        LHIKIn = 0.7,
-        LHIKOut = 0.2,
-	},
-	["reload_para"] = {
-        Source = "reload_para",
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-		SoundTable = {
-			{
-				s = "weapons/arccw/m16/famas_clipout.wav",
-				t = 15/60
-			},
-			{
-				s = "weapons/arccw/m16/famas_clipin1.wav",
-				t = 1
-			}
-		},
-        FrameRate = 30,
-        LHIK = true,
-        LHIKIn = 0.7,
-        LHIKOut = 0.2,
-	},
-	["reload_empty_para"] = {
-        Source = "reload_empty_para",
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        SoundTable = {
-			{
-				s = "weapons/arccw/m16/famas_clipout.wav",
-				t = 15/60
-			},
-			{
-				s = "weapons/arccw/m16/famas_clipin1.wav",
-				t = 1
-			},
-			{
-				s = "weapons/arccw/m16/famas_forearm.wav",
-				t = 94/60
-			},
-			{
-				s = "weapons/arccw/m16/famas_forearm1.wav",
-				t = 104/60
-			}
-		},
-        FrameRate = 30,
-        LHIK = true,
-        LHIKIn = 1/60,
-        LHIKOut = 0.2,
-	},
-	["reload_empty_para_rushed"] = {
-        Source = "reload_empty_para_catch",
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-		SoundTable = {
-			{
-				s = "weapons/arccw/m16/famas_clipout.wav",
-				t = 15/60
-			},
-			{
-				s = "weapons/arccw/m16/famas_clipin1.wav",
-				t = 1
-			},
-			{
-				s = "weapons/arccw/m16/famas_forearm1.wav",
-				t = 91/60
-			}
-		},
-        FrameRate = 30,
-        LHIK = true,
-        LHIKIn = 1/60,
-        LHIKOut = 0.2,
-	},
-	["reload_20"] = {
+    ["reload_20"] = {
         Source = "reload_20",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
 		SoundTable = {
-			{
-				s = "weapons/arccw/m16/famas_clipout.wav",
-				t = 15/60
-			},
-			{
-				s = "weapons/arccw/m16/famas_clipin1.wav",
-				t = 1
-			}
+            {s = path .. "magout.ogg", 	 t = 23/60},
+            {s = path .. "magin.ogg",    t = 70/60},
 		},
-        FrameRate = 30,
+        FrameRate = 60,
         LHIK = true,
-        LHIKIn = 1/60,
+        LHIKIn = 0.2,
         LHIKOut = 0.2,
-	},
-	["reload_empty_20"] = {
+    },
+    ["reload_empty_20"] = {
         Source = "reload_empty_20",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        SoundTable = {
-			{
-				s = "weapons/arccw/m16/famas_clipout.wav",
-				t = 15/60
-			},
-			{
-				s = "weapons/arccw/m16/famas_clipin1.wav",
-				t = 1
-			},
-			{
-				s = "weapons/arccw/m16/famas_forearm.wav",
-				t = 94/60
-			},
-			{
-				s = "weapons/arccw/m16/famas_forearm1.wav",
-				t = 104/60
-			}
+		SoundTable = {
+            {s = path .. "magout.ogg", 	 t = 23/60},
+            {s = path .. "magin.ogg",    t = 70/60},
+            {s = path .. "boltdrop.ogg", t = 109/60},
 		},
-        FrameRate = 30,
+        FrameRate = 60,
         LHIK = true,
-        LHIKIn = 1/60,
+        LHIKIn = 0.2,
         LHIKOut = 0.2,
-	},
-	["reload_empty_20_rushed"] = {
-        Source = "reload_empty_20_catch",
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        SoundTable = {
-			{
-				s = "weapons/arccw/m16/famas_clipout.wav",
-				t = 15/60
-			},
-			{
-				s = "weapons/arccw/m16/famas_clipin1.wav",
-				t = 1
-			},
-			{
-				s = "weapons/arccw/m16/famas_forearm1.wav",
-				t = 91/60
-			}
-		},
-        FrameRate = 30,
-        LHIK = true,
-        LHIKIn = 1/60,
-        LHIKOut = 0.2,
-	},
-	["reload_d60"] = {
-        Source = "reload_d60",
+    },
+    ["reload_40"] = {
+        Source = "reload_40",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
 		SoundTable = {
-			{
-				s = "weapons/arccw/m16/famas_clipout.wav",
-				t = 15/60
-			},
-			{
-				s = "weapons/arccw/m16/famas_clipin1.wav",
-				t = 1
-			}
+            {s = path .. "magout.ogg", 	 t = 23/60},
+            {s = path .. "magin.ogg",    t = 70/60},
 		},
-        FrameRate = 30,
+        FrameRate = 60,
         LHIK = true,
-        LHIKIn = 1/60,
+        LHIKIn = 0.2,
         LHIKOut = 0.2,
-	},
-	["reload_empty_d60"] = {
-        Source = "reload_empty_d60",
+    },
+    ["reload_empty_40"] = {
+        Source = "reload_empty_40",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        SoundTable = {
-			{
-				s = "weapons/arccw/m16/famas_clipout.wav",
-				t = 15/60
-			},
-			{
-				s = "weapons/arccw/m16/famas_clipin1.wav",
-				t = 1
-			},
-			{
-				s = "weapons/arccw/m16/famas_forearm.wav",
-				t = 94/60
-			},
-			{
-				s = "weapons/arccw/m16/famas_forearm1.wav",
-				t = 104/60
-			}
+		SoundTable = {
+            {s = path .. "magout.ogg", 	 t = 23/60},
+            {s = path .. "magin.ogg",    t = 70/60},
+            {s = path .. "boltdrop.ogg", t = 109/60},
 		},
-        FrameRate = 30,
+        FrameRate = 60,
         LHIK = true,
-        LHIKIn = 1/60,
+        LHIKIn = 0.2,
         LHIKOut = 0.2,
-	},
-	["reload_empty_d60_rushed"] = {
-        Source = "reload_empty_d60_catch",
+    },
+    ["reload_60"] = {
+        Source = "reload_60",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        SoundTable = {
-			{
-				s = "weapons/arccw/m16/famas_clipout.wav",
-				t = 15/60
-			},
-			{
-				s = "weapons/arccw/m16/famas_clipin1.wav",
-				t = 1
-			},
-			{
-				s = "weapons/arccw/m16/famas_forearm1.wav",
-				t = 91/60
-			}
+		SoundTable = {
+            {s = path .. "magout.ogg", 	 t = 23/60},
+            {s = path .. "magin.ogg",    t = 70/60},
 		},
-        FrameRate = 30,
+        FrameRate = 60,
         LHIK = true,
-        LHIKIn = 1/60,
+        LHIKIn = 0.2,
         LHIKOut = 0.2,
-	},
+    },
+    ["reload_empty_60"] = {
+        Source = "reload_empty_60",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+		SoundTable = {
+            {s = path .. "magout.ogg", 	 t = 23/60},
+            {s = path .. "magin.ogg",    t = 70/60},
+            {s = path .. "boltdrop.ogg", t = 109/60},
+		},
+        FrameRate = 60,
+        LHIK = true,
+        LHIKIn = 0.2,
+        LHIKOut = 0.2,
+    },
+    ["reload_9mm"] = {
+        Source = "reload_9mm",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+		SoundTable = {
+            {s = path .. "magout.ogg", 	 t = 28/60},
+            {s = path .. "magin.ogg",    t = 70/60},
+		},
+        FrameRate = 60,
+        LHIK = true,
+        LHIKIn = 0.2,
+        LHIKOut = 0.2,
+    },
+    ["reload_empty_9mm"] = {
+        Source = "reload_9mm_empty",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+		SoundTable = {
+            {s = path .. "magout.ogg", 	 t = 28/60},
+            {s = path .. "magin.ogg",    t = 70/60},
+            {s = path .. "boltdrop.ogg", t = 109/60}
+		},
+        FrameRate = 60,
+        LHIK = true,
+        LHIKIn = 0.2,
+        LHIKOut = 0.2,
+    },
     ["enter_ubgl"] = {
         Source = "enter_ubgl",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,

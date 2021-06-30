@@ -15,3 +15,11 @@ att.Mult_MoveSpeed = 1.1
 att.Mult_SightTime = 0.85
 att.Override_ClipSize = 20
 att.Mult_ReloadTime = 0.85
+
+att.Hook_SelectReloadAnimation = function(wep, anim)
+    if anim == "reload" then
+        return "reload_20"
+    elseif anim == "reload_empty" then
+        return "reload_empty_20"
+    end
+end

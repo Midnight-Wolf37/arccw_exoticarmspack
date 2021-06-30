@@ -15,3 +15,11 @@ att.Override_ClipSize = 40
 att.Mult_ReloadTime = 1.15
 
 att.ActivateElements = {"40"}
+
+att.Hook_SelectReloadAnimation = function(wep, anim)
+    if anim == "reload" then
+        return "reload_40"
+    elseif anim == "reload_empty" then
+        return "reload_empty_40"
+    end
+end
