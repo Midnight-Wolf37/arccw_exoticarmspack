@@ -38,7 +38,7 @@ SWEP.MuzzleVelocity = 720 -- projectile muzzle velocity
 SWEP.ChamberSize = 1 -- how many rounds can be chambered.
 SWEP.Primary.ClipSize = 30 -- DefaultClip is automatically set.
 
-SWEP.Recoil = 0.7
+SWEP.Recoil = 0.5
 SWEP.RecoilSide = 0.5
 SWEP.RecoilRise = 0.5
 SWEP.VisualRecoilMult = 1.25

@@ -38,7 +38,7 @@ SWEP.MuzzleVelocity = 125
 SWEP.ChamberSize = 1 -- how many rounds can be chambered.
 SWEP.Primary.ClipSize = 10 -- DefaultClip is automatically set.
 
-SWEP.Recoil = 1.8
+SWEP.Recoil = 1.5
 SWEP.RecoilSide = 1
 
 SWEP.RecoilRise = 0.24
@@ -60,7 +60,7 @@ SWEP.Firemodes = {
     }
 }
 
-SWEP.AccuracyMOA = 30 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
+SWEP.AccuracyMOA = 25 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
 SWEP.HipDispersion = 400 -- inaccuracy added by hip firing.
 SWEP.MoveDispersion = 150 -- inaccuracy added by moving. Applies in sights as well! Walking speed is considered as "maximum".
 

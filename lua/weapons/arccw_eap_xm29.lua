@@ -133,6 +133,11 @@ SWEP.AttachmentElements = {
 		VMBodygroups = {{ind = 2, bg = 2}, {ind = 5, bg =3}, {ind = 6, bg = 1}, {ind = 7, bg = 1}},
 		TrueNameChange = "M8/25 Grenadier",
 		TrueNameChange = "XM29",
+        Override_IronSightStruct = {
+            Pos = Vector(-10.777, -8.638, 0.925),
+            Ang = Angle(0, 0, 0),
+            Magnification = 1,
+        },
 	},
 	["irons"] = {
 		VMBodygroups = {{ind = 2, bg = 1}},
