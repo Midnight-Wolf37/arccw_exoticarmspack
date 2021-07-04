@@ -111,7 +111,7 @@ SWEP.HoldtypeSights = "rpg"
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
 SWEP.ActivePos = Vector(-1.351, 0, -0.561)
-SWEP.ActiveAng = Angle(0, 0, -10)
+SWEP.ActiveAng = Angle(0, 0, 0)
 
 SWEP.CrouchPos = Vector(-8, 0, 1)
 SWEP.CrouchAng = Angle(0, 0, -45)
@@ -134,7 +134,7 @@ SWEP.AttachmentElements = {
 		TrueNameChange = "M8/25 Grenadier",
 		TrueNameChange = "XM29",
         Override_IronSightStruct = {
-            Pos = Vector(-10.777, -8.638, 0.925),
+            Pos = Vector(-4.777, -1.638, -1.725),
             Ang = Angle(0, 0, 0),
             Magnification = 1,
         },
