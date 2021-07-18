@@ -13,4 +13,4 @@ att.Slot = "eap_aek_mag"
 att.Mult_MoveSpeed = 0.85
 att.Mult_SightTime = 1.25
 att.Override_ClipSize = 60
-att.Mult_ReloadTime = 1.25
+att.Mult_ReloadTime = 1.15

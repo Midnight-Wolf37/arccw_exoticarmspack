@@ -14,4 +14,4 @@ att.Override_ClipSize = 60
 
 att.Mult_SpeedMult = 0.85
 att.Mult_SightTime = 1.15
-att.Mult_ReloadTime = 1.2
+att.Mult_ReloadTime = 1.15

@@ -10,6 +10,7 @@ att.AutoStats = true
 att.Slot = "muzzle"
 
 att.Model = "models/weapons/arccw/eap/atts/eap_supp_groza.mdl"
+att.ModelScale = 1.2
 att.Override_MuzzleEffect = "muzzleflash_suppressed"
 att.IsMuzzleDevice = true
 att.Silencer = true

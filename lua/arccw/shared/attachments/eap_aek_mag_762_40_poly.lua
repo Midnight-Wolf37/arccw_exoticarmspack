@@ -17,7 +17,7 @@ att.Mult_Recoil = 1.2
 att.Mult_RPM = 0.9
 
 att.Override_ClipSize = 40
-att.Mult_ReloadTime = 1.1
+att.Mult_ReloadTime = 1.05
 att.Mult_DrawTime = 1.1
 att.Mult_SightTime = 1.1
 att.Mult_MoveSpeed = 0.95

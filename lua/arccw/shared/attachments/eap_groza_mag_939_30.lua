@@ -15,7 +15,6 @@ att.ActivateElements = {"mag_939_30"}
 att.Override_ClipSize = 30
 att.Mult_MoveSpeed = 0.95
 att.Mult_SightTime = 1.1
-att.Mult_ReloadTime = 1.1
 
 -- 7.62x39 -> 9x39mm stats
 att.Mult_Damage = 0.75

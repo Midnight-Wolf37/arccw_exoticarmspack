@@ -14,6 +14,7 @@ att.Slot = "eap_groza_mag"
 -- 20rnd stats
 att.ActivateElements = {"mag_939_20"}
 att.Override_ClipSize = 20
+att.Mult_ReloadTime = 0.9
 
 -- 7.62x39 -> 9x39mm stats
 att.Mult_Damage = 0.75
