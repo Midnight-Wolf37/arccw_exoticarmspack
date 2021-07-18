@@ -3,8 +3,8 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Exotic Arms" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "M8 Proto"
-SWEP.TrueName = "XM8 Proof of Concept"
+SWEP.PrintName = "M8E2"
+SWEP.TrueName = "XM29 Standalone"
 SWEP.Trivia_Class = "Assault Rifle"
 SWEP.Trivia_Desc = "An interrim proof-of-concept derived from an abandoned US Army prototype."
 SWEP.Trivia_Manufacturer = "Deutsche Weltraummagie"
@@ -131,8 +131,8 @@ SWEP.ProceduralIronFire = false
 SWEP.AttachmentElements = {
     ["oicw"] = {
 		VMBodygroups = {{ind = 2, bg = 2}, {ind = 5, bg =3}, {ind = 6, bg = 1}, {ind = 7, bg = 1}},
-		TrueNameChange = "M8/25 Grenadier",
-		TrueNameChange = "XM29",
+		TrueNameChange = "M8E1 SPAR",
+		TrueNameChange = "XM29 OICW",
         Override_IronSightStruct = {
             Pos = Vector(-4.777, -1.638, -1.725),
             Ang = Angle(0, 0, 0),
@@ -158,7 +158,7 @@ SWEP.AttachmentElements = {
         VMBodygroups = {{ind = 1, bg = 6}},
     },
 	["long"] = {
-        VMBodygroups = {{ind = 4, bg = 1}, {ind = 3, bg = 1}},
+        VMBodygroups = {{ind = 4, bg = 1}, {ind = 3, bg = 1}, {ind = 0, bg = 0}},
         AttPosMods = {
             [5] = {
                 vpos = Vector(0, 0, 2),
@@ -211,7 +211,8 @@ SWEP.Attachments = {
         },
         VMScale = Vector(1, 1, 1),
         CorrectiveAng = Angle(0, 0, 0),
-		InstalledEles = {"irons"}
+		InstalledEles = {"irons"},
+        MergeSlots = {12},
     },
     {
         PrintName = "Underbarrel",
@@ -286,7 +287,16 @@ SWEP.Attachments = {
             vpos = Vector(0.238, -0.659, 7.711),
             vang = Angle(90, 0, -90),
         },
-	}
+	},
+    {
+        Hidden = true,
+        Slot = "optic_xm29"
+        Bone = "main",
+        Offset = {
+            vpos = Vector(0, 0 , 0),
+            vang = Angle(0, 0 ,0),
+        },
+    },
 }
 
 local path = "weapons/arccw/eap/xm29/"
