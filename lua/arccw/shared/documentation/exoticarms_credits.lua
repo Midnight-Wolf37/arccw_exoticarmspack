@@ -61,14 +61,23 @@ Model & Textures - EA / DICE (BF3 Model)
 Misc. Parts - White Snow
 Sounds - rzen1th & Midnight_Wolf
 
+XM29 / M8E1
+Model & Textures - Lt. Rocky
+Pmag models - F34R
+Surefire 60rd casket mag model - Tigg
+ARX-160 ironsights - Cele
+CAR-15 buffer tube & stock - Kally
+Sounds - rzen1th
+
 General:
 Credit to Dr Gordon Freeman & Infinity ward for that drum mag you see on almost every gun.
 Credit to Pavlendia for making the hand rig used to animate all the weapons.
 
 Special thanks to everyone else who has helped make this pack a possibility, including:
-    - rzen1th, who made some amazing sounds and fixed idle positions
+    - rzen1th, who made some amazing sounds, fixed my crappy idle positions, and even provided a reference video for the XM29's reload.
     - slogkot/fleshy mammal, who lent me a few models from his FAS2 pack to use, gave me advice, and helped me improve as an animator
     - russianlad, who also helped me improve as an animator
+    - GFL Mosin-Nagant, a gmod YouTuber who has made high quality showcases of all the weapons in this pack.
 
 And an extra special thanks to YOU for downloading this!
 
