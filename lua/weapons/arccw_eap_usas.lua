@@ -60,8 +60,8 @@ SWEP.Firemodes = {
     }
 }
 
-SWEP.AccuracyMOA = 25 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
-SWEP.HipDispersion = 400 -- inaccuracy added by hip firing.
+SWEP.AccuracyMOA = 10 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
+SWEP.HipDispersion = 300 -- inaccuracy added by hip firing.
 SWEP.MoveDispersion = 150 -- inaccuracy added by moving. Applies in sights as well! Walking speed is considered as "maximum".
 
 SWEP.Primary.Ammo = "buckshot" -- what ammo type the gun uses
@@ -152,10 +152,10 @@ SWEP.AttachmentElements = {
     ["eap_usas_stock_reinforced"] = {
         VMBodygroups = {{ind = 3, bg = 1}},
     },
-    ["eap_usas_go_stock_none"] = {
+    ["go_stock_none"] = {
         VMBodygroups = {{ind = 3, bg = 4}},
     },
-    ["eap_usas_go_stock"] = {
+    ["go_stock"] = {
         VMBodygroups = {{ind = 3, bg = 4}},
         VMElements = {
             {

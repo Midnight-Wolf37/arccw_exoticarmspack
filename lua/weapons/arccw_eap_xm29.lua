@@ -3,8 +3,8 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Exotic Arms" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "M8E2"
-SWEP.TrueName = "XM29 Standalone"
+SWEP.PrintName = "M8E2" -- collar doody black mops 2
+SWEP.TrueName = "XM29"
 SWEP.Trivia_Class = "Assault Rifle"
 SWEP.Trivia_Desc = "An interrim proof-of-concept derived from an abandoned US Army prototype."
 SWEP.Trivia_Manufacturer = "Deutsche Weltraummagie"
@@ -29,8 +29,8 @@ SWEP.ViewModelFlip = false
 
 SWEP.DefaultBodygroups = "0000000000"
 
-SWEP.Damage = 30
-SWEP.DamageMin = 23 -- damage done at maximum range
+SWEP.Damage = 34 -- 3 shot kill
+SWEP.DamageMin = 20 -- 5 shot kill
 SWEP.Range = 100 -- in METRES
 SWEP.Penetration = 11
 SWEP.DamageType = DMG_BULLET
@@ -131,7 +131,7 @@ SWEP.ProceduralIronFire = false
 SWEP.AttachmentElements = {
     ["oicw"] = {
 		VMBodygroups = {{ind = 2, bg = 2}, {ind = 5, bg =3}, {ind = 6, bg = 1}, {ind = 7, bg = 1}},
-		TrueNameChange = "M8E1 SPAR",
+		NameChange = "M8E1 SPAR",
 		TrueNameChange = "XM29 OICW",
         Override_IronSightStruct = {
             Pos = Vector(-4.777, -1.638, -1.725),
@@ -222,6 +222,7 @@ SWEP.Attachments = {
             vpos = Vector(0.238, -0.659, 9.711),
             vang = Angle(90, 0, -90),
         },
+        MergeSlots = {11},
     },
     {
         PrintName = "Tactical",

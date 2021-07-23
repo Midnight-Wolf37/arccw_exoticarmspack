@@ -29,9 +29,9 @@ SWEP.ViewModelFlip = false
 
 SWEP.Defaultmaingroups = "0000000000"
 
-SWEP.Damage = 24
-SWEP.DamageMin = 19 -- damage done at maximum range
-SWEP.Range = 40 -- in METRES
+SWEP.Damage = 25
+SWEP.DamageMin = 20 -- damage done at maximum range
+SWEP.Range = 45 -- in METRES
 SWEP.Penetration = 3
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
