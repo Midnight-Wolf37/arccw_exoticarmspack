@@ -1,5 +1,5 @@
 att.PrintName = "XM25 Module (HE)"
-att.Icon = Material("entities/acwatt_ubgl_mass.png")
+att.Icon = Material("entities/he_module.png", "mips smooth")
 att.Description = "Variable range, magazine-fed 25mm grenade launcher."
 att.Desc_Pros = {
     "pro.ubgl",

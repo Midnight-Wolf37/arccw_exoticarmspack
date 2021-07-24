@@ -119,8 +119,8 @@ SWEP.CrouchAng = Angle(0, 0, -45)
 SWEP.HolsterPos = Vector(3, 3, 0)
 SWEP.HolsterAng = Angle(-7.036, 30.016, 0)
 
-SWEP.CustomizePos = Vector(0, 0, 0)
-SWEP.CustomizeAng = Angle(0, 0, 0)
+SWEP.CustomizePos = Vector(5.32, -2.211, 1.406)
+SWEP.CustomizeAng = Angle(21.106, 19.697, 26.03)
 
 SWEP.BarrelLength = 24
 
@@ -170,7 +170,7 @@ SWEP.AttachmentElements = {
         VMBodygroups = {{ind = 4, bg = 2}, {ind = 3, bg = 2}, {ind = 0, bg = 1}},
         AttPosMods = {
             [5] = {
-                vpos = Vector(0, 0, -2),
+                vpos = Vector(0, 0, -4),
                 vang = Angle(90, 0, -90)
             }
         }
@@ -188,6 +188,8 @@ SWEP.AttachmentElements = {
         VMBodygroups = {{ind = 5, bg = 1}, {ind = 8, bg = 1}},
     }
 }
+
+
 SWEP.ExtraSightDist = 10
 SWEP.GuaranteeLaser = true
 
@@ -219,7 +221,7 @@ SWEP.Attachments = {
         Slot = {"foregrip", "bipod"},
         Bone = "main",
         Offset = {
-            vpos = Vector(0.238, -0.659, 9.711),
+            vpos = Vector(0, 0.326, 10.149),
             vang = Angle(90, 0, -90),
         },
         MergeSlots = {11},
@@ -229,7 +231,7 @@ SWEP.Attachments = {
         Slot = "tac",
         Bone = "main",
         Offset = {
-            vpos = Vector(-1.173, -1.852, 10.909),
+            vpos = Vector(-1.356, -1.183, 7.972),
             vang = Angle(90, 0, 180),
         },
     },
@@ -242,7 +244,7 @@ SWEP.Attachments = {
         Slot = "muzzle",
         Bone = "muzzle",
         Offset = {
-            vpos = Vector(0, 0, 0),
+            vpos = Vector(0, 0, -2),
             vang = Angle(90, 0, -90),
         },
 		InstalledEles = {"nofh"},
@@ -256,7 +258,7 @@ SWEP.Attachments = {
         Slot = {"eap_xm29_stock", "go_stock", "go_stock_none"},
 		Bone = "main",
 		Offset = {
-            vpos = Vector(0, -1.8, 0),
+            vpos = Vector(0, -0.5, -4),
             vang = Angle(90, 0, -90),
         },
         DefaultAttName = "Standard Stock",
@@ -276,7 +278,7 @@ SWEP.Attachments = {
         FreeSlot = true,
         Bone = "main", -- relevant bone any attachments will be mostly referring to
         Offset = {
-            vpos = Vector(0.5, -0.5, 1), -- offset that the attachment will be relative to the bone
+            vpos = Vector(0.776, -1.147, -1.237), -- offset that the attachment will be relative to the bone
             vang = Angle(90, 0, -90),
         },
     },
@@ -285,18 +287,19 @@ SWEP.Attachments = {
         Slot = "ubgl",
         Bone = "main",
         Offset = {
-            vpos = Vector(0.238, -0.659, 7.711),
+            vpos = Vector(0, 0.263, 7),
             vang = Angle(90, 0, -90),
         },
 	},
     {
         Hidden = true,
-        Slot = "optic_xm29"
+        Slot = "optic_xm29",
         Bone = "main",
         Offset = {
-            vpos = Vector(0, 0 , 0),
-            vang = Angle(0, 0 ,0),
+            vpos = Vector(0, -4.2, 0),
+            vang = Angle(90, 0 ,-90),
         },
+        InstalledEles = {"irons"},
     },
 }
 
@@ -485,6 +488,10 @@ SWEP.Animations = {
     ["xm25_reload"] = {
         Source = "xm25_reload",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+		SoundTable = {
+            {s = path .. "hem_magout.ogg", 	 t = 34/60},
+            {s = path .. "hem_magin.ogg",    t = 83/60}
+		},
         FrameRate = 60,
         LHIK = true,
         LHIKIn = 1/30,
@@ -493,6 +500,12 @@ SWEP.Animations = {
     ["xm25_reload_empty"] = {
         Source = "xm25_reload_empty",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+		SoundTable = {
+            {s = path .. "hem_magout.ogg", 	 t = 34/60},
+            {s = path .. "hem_magin.ogg",    t = 83/60},
+            {s = "eap_usas.boltback", t = 136/60},
+            {s = "eap_usas.boltrelease", t = 140/60}
+		},
         FrameRate = 60,
         LHIK = true,
         LHIKIn = 1/30,

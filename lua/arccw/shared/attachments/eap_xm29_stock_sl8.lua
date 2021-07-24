@@ -1,5 +1,5 @@
 att.PrintName = "SL8 Thumbhole Stock"
-att.Icon = nil
+att.Icon = Material("entities/sl8_stock.png", "mips smooth")
 att.Description = "Fixed thumbhole gripstock taken from an HK SL8 sporting rifle. Dampens recoil and helps keep the shooter on target, but is more cumbersome to fire from the hip."
 att.Desc_Pros = {
 }

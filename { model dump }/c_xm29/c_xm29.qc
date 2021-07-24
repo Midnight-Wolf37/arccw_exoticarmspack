@@ -6,9 +6,6 @@ $bodygroup "studio"
 {
 	studio "main.smd"
 	studio "main_short.smd"
-	studio "c_arms_combine_c_arms_citizen.smd"
-	studio "c_arms_combine_c_arms_citizen_glove.smd"
-	studio "camerahelper.smd"
 }
 $bodygroup "mag"
 {
@@ -84,8 +81,6 @@ $definebone "ValveBiped.Bip01_Spine4" "" 0.000006 0.000000 0.000000 -79.749939 -
 $definebone "ValveBiped.Bip01_L_Clavicle" "ValveBiped.Bip01_Spine4" 2.033348 1.000767 1.937660 -73.711861 168.619339 91.480484 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
 $definebone "ValveBiped.Bip01_L_UpperArm" "ValveBiped.Bip01_L_Clavicle" 6.028145 0.000004 0.000000 29.030626 -14.134697 -141.425400 0.000000 -0.000000 0.000000 0.000000 0.000002 -0.000002
 $definebone "ValveBiped.Bip01_L_Forearm" "ValveBiped.Bip01_L_UpperArm" 11.692554 0.000084 -0.000005 -0.000114 -0.373394 -0.000174 0.000000 0.000000 0.000000 0.000003 0.000000 -0.000003
-$definebone "ValveBiped.Bip01_L_Wrist" "ValveBiped.Bip01_L_Forearm" 12.095787 0.001525 -0.000015 6.572516 -3.114769 10.697634 0.000002 -0.000000 0.000000 0.000002 0.000000 -0.000003
-$definebone "ValveBiped.Bip01_L_Ulna" "ValveBiped.Bip01_L_Forearm" 5.740854 0.000001 -0.000004 0.000002 0.000401 7.505975 0.000000 0.000000 -0.000000 0.000002 -0.000002 -0.000003
 $definebone "ValveBiped.Bip01_R_Clavicle" "ValveBiped.Bip01_Spine4" 2.033356 1.000772 -1.937610 73.712029 168.618774 -95.596497 0.000000 -0.000000 0.000000 0.000000 0.000000 0.000001
 $definebone "ValveBiped.Bip01_R_UpperArm" "ValveBiped.Bip01_R_Clavicle" 6.028142 0.000001 -0.000002 -36.700962 -75.227104 -166.769485 0.000000 0.000000 0.000000 0.000002 0.000004 0.000005
 $definebone "ValveBiped.Bip01_R_Forearm" "ValveBiped.Bip01_R_UpperArm" 11.692554 -0.000001 -0.000003 0.000003 -62.942852 -0.000114 0.000000 -0.000000 0.000000 0.000003 -0.000003 0.000004
@@ -171,15 +166,16 @@ $bonemerge "ValveBiped.Bip01_R_Finger11"
 $bonemerge "ValveBiped.Bip01_R_Finger12"
 $bonemerge "ValveBiped.Bip01_R_Finger0"
 $bonemerge "ValveBiped.Bip01_R_Finger01"
+$bonemerge "ValveBiped.Bip01_R_Finger02"
 $bonemerge "mag"
 $bonemerge "mag_xm25"
 $bonemerge "camera"
 
 
-$attachment "muzzle" "muzzle" 0 0 0 rotate 0 0 0
+$attachment "muzzle" "muzzle" 0 0 0 rotate -90 0 0
 $attachment "shell" "eject" 0 0 0 rotate 180 0 0
-$attachment "muzzle_long" "muzzle_long" 0 0 0 rotate 0 0 0
-$attachment "muzzle_short" "muzzle_short" 0 0 0 rotate 0 0 0
+$attachment "muzzle_long" "muzzle_long" 0 0 0 rotate -90 0 0
+$attachment "muzzle_short" "muzzle_short" 0 0 0 rotate -90 0 0
 $attachment "camera" "camera" 0 0 0 rotate 0 0 0
 
 $collisionmodel "main.smd"
@@ -252,14 +248,12 @@ $sequence "fire_iron_empty" {
 $sequence "deploy" {
 	"anims\deploy.smd"
 	activity "ACT_VM_DRAW" 1
-	snap
 	fps 60
 }
 
 $sequence "draw" {
 	"anims\draw.smd"
 	activity "ACT_VM_DRAW" 1
-	snap
 	fps 60
 }
 

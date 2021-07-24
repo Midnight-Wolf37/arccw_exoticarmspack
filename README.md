@@ -50,15 +50,11 @@ Attachments:
 
 
 Known issues:
-- Many attachments on the XM29 float away from the gun.
-- There are two "Reniforced Stock" attachments for the USAS.
-- VP70 throws errors when trying to ADS (WS build only).
-- On the 9x39mm caliber conversions for the Groza, ammo type is smg1.
+- No matter what, the OICW scope refuses to hide via the flag system.
 - LHIK fucked (all guns).
 
 To-do:
 - Implement XM29
-- possibly rebalance other weapons
 - complete overhaul of AEK-971 viewmodel (animations, bodygroups, etc.).
 - reanimate Bren Ten
 - unfuck textures
