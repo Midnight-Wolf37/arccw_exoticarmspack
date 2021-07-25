@@ -1,13 +1,14 @@
 att.PrintName = "XM25 Module (HE)"
 att.Icon = Material("entities/he_module.png", "mips smooth")
-att.Description = "Variable range, magazine-fed 25mm grenade launcher."
+att.Description = "Variable range, magazine-fed 25mm grenade launcher. Loaded with High-explosive rounds that explode on impact."
+att.SortOrder = 1000
 att.Desc_Pros = {
     "pro.ubgl",
 }
 att.Desc_Cons = {
 }
 att.Desc_Neutrals = {
-    "Double tap +ZOOM to equip/dequip"
+    "Double tap +ZOOM to switch to and from the HE module."
 }
 att.AutoStats = true
 att.ActivateElements = {"oicw"}
@@ -19,6 +20,8 @@ att.Mult_SightTime = 1.5
 att.Mult_Recoil = 0.8
 att.Mult_RPM = 0.9
 
+
+att.GivesFlags = {"amongusinreallifesussus"}
 
 att.Add_BarrelLength = 15
 
@@ -36,6 +39,7 @@ att.UBGL_RPM = 120
 att.UBGL_Recoil = 1
 att.UBGL_Capacity = 5
 
+
 local function Ammo(wep)
     return wep.Owner:GetAmmoCount("smg1_grenade")
 end
@@ -45,7 +49,7 @@ att.UBGL_Fire = function(wep, ubgl)
 
     wep:PlayAnimation("xm25_fire")
 
-    wep:FireRocket("arccw_eap_oicw_he", 30000)
+    wep:FireRocket("arccw_eap_oicw_he", 30000 )
 
     wep:EmitSound("weapons/arccw/eap/xm29/ChinaLake-1.wav", 100)
 

@@ -50,11 +50,9 @@ Attachments:
 
 
 Known issues:
-- No matter what, the OICW scope refuses to hide via the flag system.
 - LHIK fucked (all guns).
 
 To-do:
-- Implement XM29
 - complete overhaul of AEK-971 viewmodel (animations, bodygroups, etc.).
 - reanimate Bren Ten
 - unfuck textures

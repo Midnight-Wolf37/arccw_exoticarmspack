@@ -1,5 +1,5 @@
 att.PrintName = "200mm Extended Slide"
-att.Icon = nil
+att.Icon = Material("entities/lebedev_l.png", "smooth")
 att.Description = "Long slide that helps accuracy, but isn't as balanced in handling."
 att.Desc_Pros = {
 }

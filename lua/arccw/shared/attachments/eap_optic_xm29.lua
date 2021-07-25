@@ -2,7 +2,7 @@ att.PrintName = "OICW Scope(6x)"
 att.Icon = Material("entities/oicw_scope.png", "mips smooth")
 att.Description = "Bulky thermal imaging scope meant to be used at long range, primarily for the grenade launcher."
 
-att.SortOrder = 100
+att.SortOrder = 100000
 
 att.Desc_Pros = {
     "autostat.holosight",
@@ -46,4 +46,6 @@ att.HolosightReticle = Material("eap_scopes/xm25.png", "mips smooth") --mmmm yes
 att.Mult_SightTime = 1.115
 att.Mult_SpeedMult = 0.9
 
-att.Mult_VisualRecoil = 0.25
+att.Mult_VisualRecoil = 0.05
+
+att.RequireFlags = {"amongusinreallifesussus"}

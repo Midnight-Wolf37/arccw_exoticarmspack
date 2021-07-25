@@ -1,11 +1,10 @@
 att.PrintName = "Machine Pistol Conversion"
-att.Icon = nil
+att.Icon = Material("entities/lebedev_mp.png", "smooth")
 att.Description = "Sear and slide modifications that enables fully-automatic fire. While controllable in bursts, recoil can be hard to manage in sustained fire."
 att.Desc_Pros = {
     "Fully-automatic fire",
 }
 att.Desc_Cons = {
-    "Knock Knock, it\'s the ATF!"
 }
 att.Desc_Neutrals = {
 }

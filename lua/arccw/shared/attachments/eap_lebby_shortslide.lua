@@ -1,6 +1,6 @@
 att.PrintName = "97mm Snub Slide"
-att.Icon = nil
-att.Description = "Compact slide that improves weapon handling and trigger response. Without an underbarrel rail, it is impossible to mount an optic or LAM."
+att.Icon = Material("entities/lebedev_snub.png", "smooth")
+att.Description = "Compact slide that improves weapon handling and trigger response."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
@@ -17,4 +17,4 @@ att.Mult_DrawTime = 0.75
 
 att.Mult_RPM = 1.15
 
-att.ActivateElements = {"snub"}
+att.ActivateElements = {"snub"} 
