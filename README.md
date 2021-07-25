@@ -11,7 +11,7 @@ Make sure to delete this file and the model dump folder when installing.
 
 Current Version:
 
-Version 2 Pre-release
+Version 2
 
 Changelog:
 - Completely overhauled PL-15 customization features, including 1 new magazine, 3 new slides, and a muzzle device.
