@@ -11,16 +11,12 @@ Make sure to delete this file and the model dump folder when installing.
 
 Current Version:
 
-Version 2
+Version 2.1
 
 Changelog:
-- Completely overhauled PL-15 customization features, including 1 new magazine, 3 new slides, and a muzzle device.
-- Added a 7.92x57mm Mauser caliber conversion to the StG-44, as well as an FG-42 conversion.
-- Added XM29 OICW
-- Tweaked stats across the board
-- Groza suppressor is now comically large like its IRL counterpart.
-- Fixed VP70 ironsights
-- Weapon damage now combines an "x shot to kill" dynamic with modifications here and there in order to be more balanced.
+- Aligned XM29 sights & optic positions
+- Fixed awkward muzzle attachment positions on the Bren Ten
+- Zoomed out Coyote slightly
 
 What's here?
 
@@ -50,7 +46,7 @@ Attachments:
 
 
 Known issues:
-- LHIK fucked (all guns).
+- Textures for the StG-44 and Spectre are overly compressed.
 
 To-do:
 - complete overhaul of AEK-971 viewmodel (animations, bodygroups, etc.).

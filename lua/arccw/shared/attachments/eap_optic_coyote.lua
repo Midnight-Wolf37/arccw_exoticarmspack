@@ -20,7 +20,7 @@ att.HolosightPiece = "models/weapons/arccw/eap/atts/eap_optic_coyote_hsp.mdl"
 
 att.AdditionalSights = {
     {
-        Pos = Vector(0, 4, -1.375),
+        Pos = Vector(0, 10, -1.375),
         Ang = Angle(0, 0, 0),
         Magnification = 1,
         ScrollFunc = ArcCW.SCROLL_NONE

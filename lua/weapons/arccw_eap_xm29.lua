@@ -138,6 +138,12 @@ SWEP.AttachmentElements = {
             Ang = Angle(0, 0, 0),
             Magnification = 1,
         },
+        AttPosMods = {
+            [1] = {
+                vpos = Vector(0, -4.6, 1.027),
+                vang = Angle(90, 0, -90)
+            }
+        }
 	},
 	["irons"] = {
 		VMBodygroups = {{ind = 2, bg = 1}},
@@ -189,8 +195,17 @@ SWEP.AttachmentElements = {
     }
 }
 
+SWEP.Hook_ModifyBodygroups = function(wep, data)
+    local vm = data.vm
+    local eles = data.eles
+    for i, k in pairs(eles or {}) do
+        if k == "oicw" and wep.Attachments[1].Installed then
+            vm:SetBodygroup(2, 3)
+        end
+    end
+end
 
-SWEP.ExtraSightDist = 10
+SWEP.ExtraSightDist = 15
 SWEP.GuaranteeLaser = true
 
 SWEP.WorldModelOffset = {
