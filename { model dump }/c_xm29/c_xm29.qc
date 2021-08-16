@@ -59,12 +59,13 @@ $bodygroup "grip"
 	studio "grip_default.smd"
 	blank
 }
+
 $surfaceprop "default"
 $contents "solid"
 
 $illumposition -2.654 -18.972 -10.157
 
-$cdmaterials "models\Weapons\arccw\eap\xm29"
+$cdmaterials "models\weapons\arccw\eap\xm29"
 
 $cbox 0 0 0 0 0 0
 
